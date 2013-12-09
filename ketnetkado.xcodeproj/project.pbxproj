@@ -22,6 +22,10 @@
 		102619471855B6DC004D6D2F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1026192B1855B6DC004D6D2F /* CoreData.framework */; };
 		1026194F1855B6DC004D6D2F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1026194D1855B6DC004D6D2F /* InfoPlist.strings */; };
 		102619511855B6DC004D6D2F /* ketnetkadoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 102619501855B6DC004D6D2F /* ketnetkadoTests.m */; };
+		1026195E1855B7FB004D6D2F /* HoofdschermViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1026195D1855B7FB004D6D2F /* HoofdschermViewController.m */; };
+		102619611855C866004D6D2F /* FilmCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102619601855C866004D6D2F /* FilmCameraViewController.m */; };
+		102619631855C950004D6D2F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102619621855C950004D6D2F /* AVFoundation.framework */; };
+		102619651855EBB8004D6D2F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102619641855EBB8004D6D2F /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,12 @@
 		1026194C1855B6DC004D6D2F /* ketnetkadoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ketnetkadoTests-Info.plist"; sourceTree = "<group>"; };
 		1026194E1855B6DC004D6D2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		102619501855B6DC004D6D2F /* ketnetkadoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ketnetkadoTests.m; sourceTree = "<group>"; };
+		1026195C1855B7FB004D6D2F /* HoofdschermViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HoofdschermViewController.h; path = viewcontrollers/HoofdschermViewController.h; sourceTree = "<group>"; };
+		1026195D1855B7FB004D6D2F /* HoofdschermViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HoofdschermViewController.m; path = viewcontrollers/HoofdschermViewController.m; sourceTree = "<group>"; };
+		1026195F1855C866004D6D2F /* FilmCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmCameraViewController.h; path = viewcontrollers/FilmCameraViewController.h; sourceTree = "<group>"; };
+		102619601855C866004D6D2F /* FilmCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmCameraViewController.m; path = viewcontrollers/FilmCameraViewController.m; sourceTree = "<group>"; };
+		102619621855C950004D6D2F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		102619641855EBB8004D6D2F /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				102619651855EBB8004D6D2F /* AssetsLibrary.framework in Frameworks */,
+				102619631855C950004D6D2F /* AVFoundation.framework in Frameworks */,
 				102619281855B6DC004D6D2F /* CoreGraphics.framework in Frameworks */,
 				1026192C1855B6DC004D6D2F /* CoreData.framework in Frameworks */,
 				1026192A1855B6DC004D6D2F /* UIKit.framework in Frameworks */,
@@ -103,6 +115,8 @@
 		102619241855B6DC004D6D2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				102619641855EBB8004D6D2F /* AssetsLibrary.framework */,
+				102619621855C950004D6D2F /* AVFoundation.framework */,
 				102619251855B6DC004D6D2F /* Foundation.framework */,
 				102619271855B6DC004D6D2F /* CoreGraphics.framework */,
 				102619291855B6DC004D6D2F /* UIKit.framework */,
@@ -115,6 +129,7 @@
 		1026192D1855B6DC004D6D2F /* ketnetkado */ = {
 			isa = PBXGroup;
 			children = (
+				1026195B1855B7DA004D6D2F /* Viewcontrollers */,
 				102619361855B6DC004D6D2F /* AppDelegate.h */,
 				102619371855B6DC004D6D2F /* AppDelegate.m */,
 				1026193C1855B6DC004D6D2F /* Images.xcassets */,
@@ -153,6 +168,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1026195B1855B7DA004D6D2F /* Viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				1026195C1855B7FB004D6D2F /* HoofdschermViewController.h */,
+				1026195D1855B7FB004D6D2F /* HoofdschermViewController.m */,
+				1026195F1855C866004D6D2F /* FilmCameraViewController.h */,
+				102619601855C866004D6D2F /* FilmCameraViewController.m */,
+			);
+			name = Viewcontrollers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,6 +188,7 @@
 			buildPhases = (
 				1026191E1855B6DC004D6D2F /* Sources */,
 				1026191F1855B6DC004D6D2F /* Frameworks */,
+				1026195A1855B721004D6D2F /* ShellScript */,
 				102619201855B6DC004D6D2F /* Resources */,
 			);
 			buildRules = (
@@ -200,6 +227,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "VRT Onderzoek en Innovatie";
 				TargetAttributes = {
+					102619211855B6DC004D6D2F = {
+						DevelopmentTeam = 79BMQESM94;
+					};
 					102619411855B6DC004D6D2F = {
 						TestTargetID = 102619211855B6DC004D6D2F;
 					};
@@ -243,6 +273,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1026195A1855B721004D6D2F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1026191E1855B6DC004D6D2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -251,6 +297,8 @@
 				102619381855B6DC004D6D2F /* AppDelegate.m in Sources */,
 				102619341855B6DC004D6D2F /* main.m in Sources */,
 				1026193B1855B6DC004D6D2F /* ketnetkado.xcdatamodeld in Sources */,
+				102619611855C866004D6D2F /* FilmCameraViewController.m in Sources */,
+				1026195E1855B7FB004D6D2F /* HoofdschermViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ketnetkado/ketnetkado-Prefix.pch";
 				INFOPLIST_FILE = "ketnetkado/ketnetkado-Info.plist";
@@ -382,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ketnetkado/ketnetkado-Prefix.pch";
 				INFOPLIST_FILE = "ketnetkado/ketnetkado-Info.plist";
