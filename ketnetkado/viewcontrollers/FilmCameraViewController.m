@@ -11,6 +11,8 @@
 #define kMaxAantalSeconden 60
 #define kFramesPerSeconde 50
 
+#define kOpnameKnopGrootte 100
+
 @interface FilmCameraViewController ()
 
 @end
@@ -48,7 +50,10 @@
 #pragma mark - Elementen
     
 - (void)addRecordButton {
-    UIButton *btnRecord = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 100, 100)];
+    UIButton *btnRecord = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetHeight(self.view.bounds) - kOpnameKnopGrootte - 25,
+                                                                     CGRectGetMidX(self.view.bounds) - kOpnameKnopGrootte/2,
+                                                                     kOpnameKnopGrootte,
+                                                                     kOpnameKnopGrootte)];
     [btnRecord addTarget:self action:@selector(StartStopButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [btnRecord setBackgroundColor:[UIColor redColor]];
     [self.view addSubview:btnRecord];
