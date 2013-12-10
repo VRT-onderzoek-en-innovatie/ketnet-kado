@@ -7,6 +7,7 @@
 //
 
 #import "FilmCameraViewController.h"
+#import "VideoAlbumManager.h"
 
 #define kMaxAantalSeconden 60
 #define kFramesPerSeconde 50
@@ -182,19 +183,21 @@
         }
     }
     if (opnameIsSuccesvol) {
-        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-        if ([library videoAtPathIsCompatibleWithSavedPhotosAlbum:outputFileURL])
-        {
-            [library writeVideoAtPathToSavedPhotosAlbum:outputFileURL
-                                        completionBlock:^(NSURL *assetURL, NSError *error) {
-                                            //error handling
-                                            if (error!=nil) {
-                                                return;
-                                            }
-                                            
-                                            
-                                        }];
-        }
+		[VideoAlbumManager addVideoWithAssetURL:outputFileURL toAlbumWithName:@"Ketnet Kado"];
+		
+//        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+//        if ([library videoAtPathIsCompatibleWithSavedPhotosAlbum:outputFileURL])
+//        {
+//            [library writeVideoAtPathToSavedPhotosAlbum:outputFileURL
+//                                        completionBlock:^(NSURL *assetURL, NSError *error) {
+//                                            //error handling
+//                                            if (error!=nil) {
+//                                                return;
+//                                            }
+//                                            
+//                                            
+//                                        }];
+//        }
     }
 }
 
