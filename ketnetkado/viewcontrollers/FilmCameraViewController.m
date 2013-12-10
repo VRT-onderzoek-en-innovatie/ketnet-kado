@@ -187,10 +187,13 @@
         {
             [library writeVideoAtPathToSavedPhotosAlbum:outputFileURL
                                         completionBlock:^(NSURL *assetURL, NSError *error) {
-                                            if (error)
-                                            {
-                                                
-                                            }}];
+                                            //error handling
+                                            if (error!=nil) {
+                                                return;
+                                            }
+                                            
+                                            
+                                        }];
         }
     }
 }
