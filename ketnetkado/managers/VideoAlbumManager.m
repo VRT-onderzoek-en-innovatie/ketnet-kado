@@ -10,8 +10,26 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 
 @implementation VideoAlbumManager
-    
-+ (void)addVideoWithAssetURL:(NSURL*)assetURL toAlbumWithName:(NSString*)albumName {
+
++ (BOOL)albumWithAlbumName:(NSString*)albumName {
+	__block BOOL exists = NO;
+	ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+	[library enumerateGroupsWithTypes:ALAssetsGroupAlbum
+						   usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+							   if ([[group valueForProperty:ALAssetsGroupPropertyName] isEqualToString:albumName]) {
+								   NSLog(@"<VideoAlbumManager> Album '%@' gevonden", albumName);
+								   exists = YES;
+							   }
+						   }
+						 failureBlock:^(NSError* error) {
+							 NSLog(@"<VideoAlbumManager> Fout bij het opsommen van de albums:\nFoutmelding: %@", [error localizedDescription]);
+							 exists = NO;
+						 }];
+	return exists;
+}
+
++ (void)addAlbumWithAlbumName:(NSString *)albumName {
+	NSLog(@"<VideoAlbumManager> Poging om album '%@' aan te maken", albumName);
 	ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
 	[library addAssetsGroupAlbumWithName:albumName
 							 resultBlock:^(ALAssetsGroup *group) {
@@ -20,12 +38,15 @@
 							failureBlock:^(NSError *error) {
 								NSLog(@"<VideoAlbumManager> Fout bij het aanmaken van het album!");
 							}];
-	
+}
+    
++ (void)addVideoWithAssetURL:(NSURL*)assetURL toAlbumWithName:(NSString*)albumName {
 	__block ALAssetsGroup* groupToAddTo;
-    [library enumerateGroupsWithTypes:ALAssetsGroupAlbum
+    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+	[library enumerateGroupsWithTypes:ALAssetsGroupAlbum
 						   usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
 							   if ([[group valueForProperty:ALAssetsGroupPropertyName] isEqualToString:albumName]) {
-								   NSLog(@"<VideoAlbumManager> Album '%@' gevonden", albumName);
+								   NSLog(@"<VideoAlbumManager> Album '%@' gevonden, open voor toevoeging...", albumName);
 								   groupToAddTo = group;
 							   }
 						   }

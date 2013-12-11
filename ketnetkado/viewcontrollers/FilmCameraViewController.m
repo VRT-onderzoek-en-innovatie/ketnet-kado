@@ -183,21 +183,21 @@
         }
     }
     if (opnameIsSuccesvol) {
-		[VideoAlbumManager addVideoWithAssetURL:outputFileURL toAlbumWithName:@"Ketnet Kado"];
-		
-//        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-//        if ([library videoAtPathIsCompatibleWithSavedPhotosAlbum:outputFileURL])
-//        {
-//            [library writeVideoAtPathToSavedPhotosAlbum:outputFileURL
-//                                        completionBlock:^(NSURL *assetURL, NSError *error) {
-//                                            //error handling
-//                                            if (error!=nil) {
-//                                                return;
-//                                            }
-//                                            
-//                                            
-//                                        }];
-//        }
+		ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+        if ([library videoAtPathIsCompatibleWithSavedPhotosAlbum:outputFileURL])
+        {
+            [library writeVideoAtPathToSavedPhotosAlbum:outputFileURL
+                                        completionBlock:^(NSURL *assetURL, NSError *error) {
+                                            //error handling
+                                            if (error != nil) {
+												//Errorhandling
+                                            }
+											else {
+												NSLog(@"assetURL: %@", assetURL);
+                                                [VideoAlbumManager addVideoWithAssetURL:assetURL toAlbumWithName:@"Ketnet Kado"];
+											}
+                                        }];
+        }
     }
 }
 

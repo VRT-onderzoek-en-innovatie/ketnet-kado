@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "VideoAlbumManager.h"
 
 @implementation AppDelegate
 
@@ -25,6 +26,12 @@
     [self.window setRootViewController:rootNavigationController];
     
     [self.window makeKeyAndVisible];
+	
+	if (![VideoAlbumManager albumWithAlbumName:@"Ketnet Kado"]) {
+		NSLog(@"<AppDelegate> Album bestaat nog niet, aanmaken...");
+		[VideoAlbumManager addAlbumWithAlbumName:@"Ketnet Kado"];
+	}
+
     return YES;
 }
 

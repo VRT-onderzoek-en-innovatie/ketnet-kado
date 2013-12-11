@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface VideoAlbumManager : NSObject {
-	NSConditionLock* albumReadLock;    
 }
-    
+
++ (BOOL)albumWithAlbumName:(NSString*)albumName;
++ (void)addAlbumWithAlbumName:(NSString *)albumName;
 + (void)addVideoWithAssetURL:(NSURL*)assetURL toAlbumWithName:(NSString*)albumName;
 
 @end
