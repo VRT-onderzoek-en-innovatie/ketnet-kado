@@ -76,22 +76,22 @@
                                                            CGRectGetMidX(self.view.bounds)/2 + kKnopHoogte/2,
                                                            kKnopBreedte,
                                                            kKnopHoogte)];
-    [btnFilmen setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [btnFilmen addTarget:self
                   action:@selector(startFilmen)
         forControlEvents:UIControlEventTouchUpInside];
 	[btnFilmen setBackgroundImage:[UIImage imageNamed:@"filmen"] forState:UIControlStateNormal];
+	[btnFilmen setBackgroundImage:[UIImage imageNamed:@"filmen_pressed"] forState:UIControlStateHighlighted];
     [self.view addSubview:btnFilmen];
     
     btnOpdracht = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMidY(self.view.bounds) + kMargeTussenKnoppen/2,
                                                              CGRectGetMidX(self.view.bounds)/2 + kKnopHoogte/2,
                                                              kKnopBreedte,
                                                              kKnopHoogte)];
-    [btnOpdracht setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [btnOpdracht addTarget:self
                     action:@selector(startFilmenMetOpdracht)
           forControlEvents:UIControlEventTouchUpInside];
 	[btnOpdracht setBackgroundImage:[UIImage imageNamed:@"opdrachtbekijken"] forState:UIControlStateNormal];
+	[btnOpdracht setBackgroundImage:[UIImage imageNamed:@"opdrachtbekijken_pressed"] forState:UIControlStateHighlighted];
     [self.view addSubview:btnOpdracht];
 }
 
