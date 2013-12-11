@@ -12,7 +12,7 @@
 #define kMaxAantalSeconden 60
 #define kFramesPerSeconde 50
 
-#define kOpnameKnopGrootte 100
+#define kOpnameKnopGrootte 104
 
 @interface FilmCameraViewController ()
 
@@ -51,12 +51,12 @@
 #pragma mark - Elementen
     
 - (void)addRecordButton {
-    UIButton *btnRecord = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetHeight(self.view.bounds) - kOpnameKnopGrootte - 25,
-                                                                     CGRectGetMidX(self.view.bounds) - kOpnameKnopGrootte/2,
-                                                                     kOpnameKnopGrootte,
-                                                                     kOpnameKnopGrootte)];
+    btnRecord = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetHeight(self.view.bounds) - kOpnameKnopGrootte,
+														   CGRectGetMidX(self.view.bounds) - kOpnameKnopGrootte/2,
+														   kOpnameKnopGrootte,
+														   kOpnameKnopGrootte)];
     [btnRecord addTarget:self action:@selector(StartStopButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    [btnRecord setBackgroundColor:[UIColor redColor]];
+    [btnRecord setBackgroundImage:[UIImage imageNamed:@"record_pushme"] forState:UIControlStateNormal];
     [self.view addSubview:btnRecord];
 }
     
@@ -69,6 +69,7 @@
         {
             NSLog(@"Start opname");
             isInOpname = YES;
+			[btnRecord setBackgroundImage:[UIImage imageNamed:@"record_busy"] forState:UIControlStateNormal];
             
             //Tijdelijke url aanmaken om naar op te slaan
             NSString *outputPath = [[NSString alloc] initWithFormat:@"%@%@", NSTemporaryDirectory(), @"output.mov"];
@@ -89,6 +90,7 @@
         {
             NSLog(@"Stop opname");
             isInOpname = NO;
+			[btnRecord setBackgroundImage:[UIImage imageNamed:@"record_idle"] forState:UIControlStateNormal];
             
             [filmOutput stopRecording];
         }

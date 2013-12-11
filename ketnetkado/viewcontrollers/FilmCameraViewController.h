@@ -13,6 +13,8 @@
 @interface FilmCameraViewController : UIViewController <AVCaptureFileOutputRecordingDelegate> {
     AVCaptureSession *session;
     AVCaptureMovieFileOutput *filmOutput;
+	
+	UIButton *btnRecord;
     
     BOOL isInOpname;
 }

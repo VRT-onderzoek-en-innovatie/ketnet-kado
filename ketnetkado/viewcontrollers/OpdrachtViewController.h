@@ -12,6 +12,6 @@
 	
 }
 
-- (NSURL*)movieNumberForToday;
+- (NSURL*)movieURLForToday;
 
 @end

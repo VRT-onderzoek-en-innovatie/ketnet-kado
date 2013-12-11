@@ -17,6 +17,11 @@
 		10111A7E18589A3C00179450 /* 05.mov in Resources */ = {isa = PBXBuildFile; fileRef = 10111A7918589A3C00179450 /* 05.mov */; };
 		10111A7F18589A3C00179450 /* 01.mov in Resources */ = {isa = PBXBuildFile; fileRef = 10111A7A18589A3C00179450 /* 01.mov */; };
 		10111A8018589A3C00179450 /* 02.mov in Resources */ = {isa = PBXBuildFile; fileRef = 10111A7B18589A3C00179450 /* 02.mov */; };
+		10111A8318589CF900179450 /* filmen_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A8118589CF900179450 /* filmen_pressed@2x.png */; };
+		10111A8418589CF900179450 /* opdrachtbekijken_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A8218589CF900179450 /* opdrachtbekijken_pressed@2x.png */; };
+		10111A8818589D5100179450 /* record_busy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A8518589D5100179450 /* record_busy@2x.png */; };
+		10111A8918589D5100179450 /* record_idle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A8618589D5100179450 /* record_idle@2x.png */; };
+		10111A8A18589D5100179450 /* record_pushme@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A8718589D5100179450 /* record_pushme@2x.png */; };
 		102619261855B6DC004D6D2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102619251855B6DC004D6D2F /* Foundation.framework */; };
 		102619281855B6DC004D6D2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102619271855B6DC004D6D2F /* CoreGraphics.framework */; };
 		1026192A1855B6DC004D6D2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102619291855B6DC004D6D2F /* UIKit.framework */; };
@@ -61,6 +66,11 @@
 		10111A7918589A3C00179450 /* 05.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 05.mov; path = assets/movies/05.mov; sourceTree = "<group>"; };
 		10111A7A18589A3C00179450 /* 01.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 01.mov; path = assets/movies/01.mov; sourceTree = "<group>"; };
 		10111A7B18589A3C00179450 /* 02.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 02.mov; path = assets/movies/02.mov; sourceTree = "<group>"; };
+		10111A8118589CF900179450 /* filmen_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "filmen_pressed@2x.png"; path = "assets/images/filmen_pressed@2x.png"; sourceTree = "<group>"; };
+		10111A8218589CF900179450 /* opdrachtbekijken_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "opdrachtbekijken_pressed@2x.png"; path = "assets/images/opdrachtbekijken_pressed@2x.png"; sourceTree = "<group>"; };
+		10111A8518589D5100179450 /* record_busy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "record_busy@2x.png"; path = "assets/images/record_busy@2x.png"; sourceTree = "<group>"; };
+		10111A8618589D5100179450 /* record_idle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "record_idle@2x.png"; path = "assets/images/record_idle@2x.png"; sourceTree = "<group>"; };
+		10111A8718589D5100179450 /* record_pushme@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "record_pushme@2x.png"; path = "assets/images/record_pushme@2x.png"; sourceTree = "<group>"; };
 		102619221855B6DC004D6D2F /* ketnetkado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ketnetkado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		102619251855B6DC004D6D2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		102619271855B6DC004D6D2F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -138,6 +148,11 @@
 		10111A6018587C0100179450 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				10111A8518589D5100179450 /* record_busy@2x.png */,
+				10111A8618589D5100179450 /* record_idle@2x.png */,
+				10111A8718589D5100179450 /* record_pushme@2x.png */,
+				10111A8118589CF900179450 /* filmen_pressed@2x.png */,
+				10111A8218589CF900179450 /* opdrachtbekijken_pressed@2x.png */,
 				10111A6318587C3A00179450 /* achtergrond@2x.png */,
 				10111A6418587C3A00179450 /* filmen@2x.png */,
 				10111A6518587C3A00179450 /* opdrachtbekijken@2x.png */,
@@ -336,15 +351,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				10111A7C18589A3C00179450 /* 04.mov in Resources */,
+				10111A8A18589D5100179450 /* record_pushme@2x.png in Resources */,
 				10111A6818587C3A00179450 /* opdrachtbekijken@2x.png in Resources */,
+				10111A8318589CF900179450 /* filmen_pressed@2x.png in Resources */,
 				10111A8018589A3C00179450 /* 02.mov in Resources */,
 				10111A7D18589A3C00179450 /* 03.mov in Resources */,
 				10111A6618587C3A00179450 /* achtergrond@2x.png in Resources */,
 				10111A7F18589A3C00179450 /* 01.mov in Resources */,
+				10111A8918589D5100179450 /* record_idle@2x.png in Resources */,
 				10111A6718587C3A00179450 /* filmen@2x.png in Resources */,
+				10111A8818589D5100179450 /* record_busy@2x.png in Resources */,
 				102619321855B6DC004D6D2F /* InfoPlist.strings in Resources */,
 				10111A7E18589A3C00179450 /* 05.mov in Resources */,
 				10111A6218587C2000179450 /* Ovink-Black.otf in Resources */,
+				10111A8418589CF900179450 /* opdrachtbekijken_pressed@2x.png in Resources */,
 				1026193D1855B6DC004D6D2F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
