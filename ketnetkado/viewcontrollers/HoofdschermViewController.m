@@ -43,7 +43,10 @@
 	[self maakAchtergrond];
     
     [self maakKnoppen];
-    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+
 }
 
 - (void)didReceiveMemoryWarning

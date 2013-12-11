@@ -14,6 +14,8 @@
 @interface HoofdschermViewController : UIViewController {
     UIButton *btnFilmen;
     UIButton *btnOpdracht;
+	
+	UIImageView *gordijn;
 }
 
 @end
