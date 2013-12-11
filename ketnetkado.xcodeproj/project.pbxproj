@@ -11,6 +11,12 @@
 		10111A6618587C3A00179450 /* achtergrond@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6318587C3A00179450 /* achtergrond@2x.png */; };
 		10111A6718587C3A00179450 /* filmen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6418587C3A00179450 /* filmen@2x.png */; };
 		10111A6818587C3A00179450 /* opdrachtbekijken@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6518587C3A00179450 /* opdrachtbekijken@2x.png */; };
+		10111A7618589A0A00179450 /* OpdrachtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10111A7518589A0A00179450 /* OpdrachtViewController.m */; };
+		10111A7C18589A3C00179450 /* Leonard.mov in Resources */ = {isa = PBXBuildFile; fileRef = 10111A7718589A3C00179450 /* Leonard.mov */; };
+		10111A7D18589A3C00179450 /* SanderEen.mov in Resources */ = {isa = PBXBuildFile; fileRef = 10111A7818589A3C00179450 /* SanderEen.mov */; };
+		10111A7E18589A3C00179450 /* SienEen.mov in Resources */ = {isa = PBXBuildFile; fileRef = 10111A7918589A3C00179450 /* SienEen.mov */; };
+		10111A7F18589A3C00179450 /* SienTwee.mov in Resources */ = {isa = PBXBuildFile; fileRef = 10111A7A18589A3C00179450 /* SienTwee.mov */; };
+		10111A8018589A3C00179450 /* Veronique.mov in Resources */ = {isa = PBXBuildFile; fileRef = 10111A7B18589A3C00179450 /* Veronique.mov */; };
 		102619261855B6DC004D6D2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102619251855B6DC004D6D2F /* Foundation.framework */; };
 		102619281855B6DC004D6D2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102619271855B6DC004D6D2F /* CoreGraphics.framework */; };
 		1026192A1855B6DC004D6D2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102619291855B6DC004D6D2F /* UIKit.framework */; };
@@ -48,6 +54,13 @@
 		10111A6318587C3A00179450 /* achtergrond@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "achtergrond@2x.png"; path = "assets/images/achtergrond@2x.png"; sourceTree = "<group>"; };
 		10111A6418587C3A00179450 /* filmen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "filmen@2x.png"; path = "assets/images/filmen@2x.png"; sourceTree = "<group>"; };
 		10111A6518587C3A00179450 /* opdrachtbekijken@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "opdrachtbekijken@2x.png"; path = "assets/images/opdrachtbekijken@2x.png"; sourceTree = "<group>"; };
+		10111A7418589A0A00179450 /* OpdrachtViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpdrachtViewController.h; path = viewcontrollers/OpdrachtViewController.h; sourceTree = "<group>"; };
+		10111A7518589A0A00179450 /* OpdrachtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpdrachtViewController.m; path = viewcontrollers/OpdrachtViewController.m; sourceTree = "<group>"; };
+		10111A7718589A3C00179450 /* Leonard.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Leonard.mov; path = assets/movies/Leonard.mov; sourceTree = "<group>"; };
+		10111A7818589A3C00179450 /* SanderEen.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = SanderEen.mov; path = assets/movies/SanderEen.mov; sourceTree = "<group>"; };
+		10111A7918589A3C00179450 /* SienEen.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = SienEen.mov; path = assets/movies/SienEen.mov; sourceTree = "<group>"; };
+		10111A7A18589A3C00179450 /* SienTwee.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = SienTwee.mov; path = assets/movies/SienTwee.mov; sourceTree = "<group>"; };
+		10111A7B18589A3C00179450 /* Veronique.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Veronique.mov; path = assets/movies/Veronique.mov; sourceTree = "<group>"; };
 		102619221855B6DC004D6D2F /* ketnetkado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ketnetkado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		102619251855B6DC004D6D2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		102619271855B6DC004D6D2F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -107,6 +120,7 @@
 		10111A5E18587BF200179450 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				10111A691858983900179450 /* movies */,
 				10111A6018587C0100179450 /* images */,
 				10111A5F18587BF700179450 /* fonts */,
 			);
@@ -129,6 +143,18 @@
 				10111A6518587C3A00179450 /* opdrachtbekijken@2x.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		10111A691858983900179450 /* movies */ = {
+			isa = PBXGroup;
+			children = (
+				10111A7718589A3C00179450 /* Leonard.mov */,
+				10111A7818589A3C00179450 /* SanderEen.mov */,
+				10111A7918589A3C00179450 /* SienEen.mov */,
+				10111A7A18589A3C00179450 /* SienTwee.mov */,
+				10111A7B18589A3C00179450 /* Veronique.mov */,
+			);
+			name = movies;
 			sourceTree = "<group>";
 		};
 		102619191855B6DB004D6D2F = {
@@ -215,6 +241,8 @@
 				1026195D1855B7FB004D6D2F /* HoofdschermViewController.m */,
 				1026195F1855C866004D6D2F /* FilmCameraViewController.h */,
 				102619601855C866004D6D2F /* FilmCameraViewController.m */,
+				10111A7418589A0A00179450 /* OpdrachtViewController.h */,
+				10111A7518589A0A00179450 /* OpdrachtViewController.m */,
 			);
 			name = Viewcontrollers;
 			sourceTree = "<group>";
@@ -307,10 +335,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10111A7C18589A3C00179450 /* Leonard.mov in Resources */,
 				10111A6818587C3A00179450 /* opdrachtbekijken@2x.png in Resources */,
+				10111A8018589A3C00179450 /* Veronique.mov in Resources */,
+				10111A7D18589A3C00179450 /* SanderEen.mov in Resources */,
 				10111A6618587C3A00179450 /* achtergrond@2x.png in Resources */,
+				10111A7F18589A3C00179450 /* SienTwee.mov in Resources */,
 				10111A6718587C3A00179450 /* filmen@2x.png in Resources */,
 				102619321855B6DC004D6D2F /* InfoPlist.strings in Resources */,
+				10111A7E18589A3C00179450 /* SienEen.mov in Resources */,
 				10111A6218587C2000179450 /* Ovink-Black.otf in Resources */,
 				1026193D1855B6DC004D6D2F /* Images.xcassets in Resources */,
 			);
@@ -347,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10111A7618589A0A00179450 /* OpdrachtViewController.m in Sources */,
 				102619381855B6DC004D6D2F /* AppDelegate.m in Sources */,
 				1026196818571D7F004D6D2F /* VideoAlbumManager.m in Sources */,
 				102619341855B6DC004D6D2F /* main.m in Sources */,
