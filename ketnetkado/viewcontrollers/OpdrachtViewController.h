@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OpdrachtViewController : UIViewController
+@interface OpdrachtViewController : UIViewController {
+	
+}
+
+- (NSURL*)movieNumberForToday;
 
 @end
