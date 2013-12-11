@@ -8,10 +8,10 @@
 
 #import "HoofdschermViewController.h"
 
-#define kKnopBreedte 150
-#define kKnopHoogte 150
+#define kKnopBreedte 214
+#define kKnopHoogte 104
 
-#define kMargeTussenKnoppen 50
+#define kMargeTussenKnoppen 0
 
 @interface HoofdschermViewController ()
 
@@ -33,6 +33,8 @@
     [super viewDidLoad];
     
     [self.navigationController setNavigationBarHidden:YES];
+	
+	[self maakAchtergrond];
     
     [self maakKnoppen];
     
@@ -62,28 +64,34 @@
 }
     
 #pragma mark - View setup
+
+- (void)maakAchtergrond {
+	UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"achtergrond"]];
+	[self.view addSubview:backgroundView];
+	[self.view sendSubviewToBack:backgroundView];
+}
     
 - (void)maakKnoppen {
     btnFilmen = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMidY(self.view.bounds) - kMargeTussenKnoppen/2 - kKnopBreedte,
-                                                           CGRectGetMidX(self.view.bounds) - kKnopHoogte/2,
+                                                           CGRectGetMidX(self.view.bounds)/2 + kKnopHoogte/2,
                                                            kKnopBreedte,
                                                            kKnopHoogte)];
-    [btnFilmen setTitle:@"Filmen" forState:UIControlStateNormal];
     [btnFilmen setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [btnFilmen addTarget:self
                   action:@selector(startFilmen)
         forControlEvents:UIControlEventTouchUpInside];
+	[btnFilmen setBackgroundImage:[UIImage imageNamed:@"filmen"] forState:UIControlStateNormal];
     [self.view addSubview:btnFilmen];
     
     btnOpdracht = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMidY(self.view.bounds) + kMargeTussenKnoppen/2,
-                                                             CGRectGetMidX(self.view.bounds) - kKnopHoogte/2,
+                                                             CGRectGetMidX(self.view.bounds)/2 + kKnopHoogte/2,
                                                              kKnopBreedte,
                                                              kKnopHoogte)];
-    [btnOpdracht setTitle:@"Opdracht bekijken" forState:UIControlStateNormal];
     [btnOpdracht setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [btnOpdracht addTarget:self
                     action:@selector(startFilmenMetOpdracht)
           forControlEvents:UIControlEventTouchUpInside];
+	[btnOpdracht setBackgroundImage:[UIImage imageNamed:@"opdrachtbekijken"] forState:UIControlStateNormal];
     [self.view addSubview:btnOpdracht];
 }
 
