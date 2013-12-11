@@ -212,7 +212,6 @@
 				1026195B1855B7DA004D6D2F /* Viewcontrollers */,
 				102619361855B6DC004D6D2F /* AppDelegate.h */,
 				102619371855B6DC004D6D2F /* AppDelegate.m */,
-				1026193C1855B6DC004D6D2F /* Images.xcassets */,
 				102619391855B6DC004D6D2F /* ketnetkado.xcdatamodeld */,
 				1026192E1855B6DC004D6D2F /* Supporting Files */,
 			);
@@ -222,6 +221,7 @@
 		1026192E1855B6DC004D6D2F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1026193C1855B6DC004D6D2F /* Images.xcassets */,
 				10111A5E18587BF200179450 /* assets */,
 				1026192F1855B6DC004D6D2F /* ketnetkado-Info.plist */,
 				102619301855B6DC004D6D2F /* InfoPlist.strings */,
