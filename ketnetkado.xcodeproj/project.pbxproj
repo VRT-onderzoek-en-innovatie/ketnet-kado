@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10111A6218587C2000179450 /* Ovink-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6118587C2000179450 /* Ovink-Black.otf */; };
+		10111A6618587C3A00179450 /* achtergrond@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6318587C3A00179450 /* achtergrond@2x.png */; };
+		10111A6718587C3A00179450 /* filmen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6418587C3A00179450 /* filmen@2x.png */; };
+		10111A6818587C3A00179450 /* opdrachtbekijken@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6518587C3A00179450 /* opdrachtbekijken@2x.png */; };
 		102619261855B6DC004D6D2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102619251855B6DC004D6D2F /* Foundation.framework */; };
 		102619281855B6DC004D6D2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102619271855B6DC004D6D2F /* CoreGraphics.framework */; };
 		1026192A1855B6DC004D6D2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102619291855B6DC004D6D2F /* UIKit.framework */; };
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10111A6118587C2000179450 /* Ovink-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ovink-Black.otf"; path = "assets/fonts/Ovink-Black.otf"; sourceTree = "<group>"; };
+		10111A6318587C3A00179450 /* achtergrond@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "achtergrond@2x.png"; path = "assets/images/achtergrond@2x.png"; sourceTree = "<group>"; };
+		10111A6418587C3A00179450 /* filmen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "filmen@2x.png"; path = "assets/images/filmen@2x.png"; sourceTree = "<group>"; };
+		10111A6518587C3A00179450 /* opdrachtbekijken@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "opdrachtbekijken@2x.png"; path = "assets/images/opdrachtbekijken@2x.png"; sourceTree = "<group>"; };
 		102619221855B6DC004D6D2F /* ketnetkado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ketnetkado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		102619251855B6DC004D6D2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		102619271855B6DC004D6D2F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -96,6 +104,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10111A5E18587BF200179450 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				10111A6018587C0100179450 /* images */,
+				10111A5F18587BF700179450 /* fonts */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
+		10111A5F18587BF700179450 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				10111A6118587C2000179450 /* Ovink-Black.otf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
+		10111A6018587C0100179450 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				10111A6318587C3A00179450 /* achtergrond@2x.png */,
+				10111A6418587C3A00179450 /* filmen@2x.png */,
+				10111A6518587C3A00179450 /* opdrachtbekijken@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		102619191855B6DB004D6D2F = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +181,7 @@
 		1026192E1855B6DC004D6D2F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				10111A5E18587BF200179450 /* assets */,
 				1026192F1855B6DC004D6D2F /* ketnetkado-Info.plist */,
 				102619301855B6DC004D6D2F /* InfoPlist.strings */,
 				102619331855B6DC004D6D2F /* main.m */,
@@ -271,7 +307,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10111A6818587C3A00179450 /* opdrachtbekijken@2x.png in Resources */,
+				10111A6618587C3A00179450 /* achtergrond@2x.png in Resources */,
+				10111A6718587C3A00179450 /* filmen@2x.png in Resources */,
 				102619321855B6DC004D6D2F /* InfoPlist.strings in Resources */,
+				10111A6218587C2000179450 /* Ovink-Black.otf in Resources */,
 				1026193D1855B6DC004D6D2F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
