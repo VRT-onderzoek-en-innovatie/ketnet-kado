@@ -11,7 +11,6 @@
 		10111A6618587C3A00179450 /* achtergrond@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6318587C3A00179450 /* achtergrond@2x.png */; };
 		10111A6718587C3A00179450 /* filmen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6418587C3A00179450 /* filmen@2x.png */; };
 		10111A6818587C3A00179450 /* opdrachtbekijken@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6518587C3A00179450 /* opdrachtbekijken@2x.png */; };
-		10111A7618589A0A00179450 /* OpdrachtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10111A7518589A0A00179450 /* OpdrachtViewController.m */; };
 		10111A7C18589A3C00179450 /* 04.mov in Resources */ = {isa = PBXBuildFile; fileRef = 10111A7718589A3C00179450 /* 04.mov */; };
 		10111A7D18589A3C00179450 /* 03.mov in Resources */ = {isa = PBXBuildFile; fileRef = 10111A7818589A3C00179450 /* 03.mov */; };
 		10111A7E18589A3C00179450 /* 05.mov in Resources */ = {isa = PBXBuildFile; fileRef = 10111A7918589A3C00179450 /* 05.mov */; };
@@ -22,6 +21,7 @@
 		10111A8818589D5100179450 /* record_busy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A8518589D5100179450 /* record_busy@2x.png */; };
 		10111A8918589D5100179450 /* record_idle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A8618589D5100179450 /* record_idle@2x.png */; };
 		10111A8A18589D5100179450 /* record_pushme@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A8718589D5100179450 /* record_pushme@2x.png */; };
+		10111A8E1858A2F500179450 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10111A8D1858A2F500179450 /* MediaPlayer.framework */; };
 		102619261855B6DC004D6D2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102619251855B6DC004D6D2F /* Foundation.framework */; };
 		102619281855B6DC004D6D2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102619271855B6DC004D6D2F /* CoreGraphics.framework */; };
 		1026192A1855B6DC004D6D2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102619291855B6DC004D6D2F /* UIKit.framework */; };
@@ -59,8 +59,6 @@
 		10111A6318587C3A00179450 /* achtergrond@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "achtergrond@2x.png"; path = "assets/images/achtergrond@2x.png"; sourceTree = "<group>"; };
 		10111A6418587C3A00179450 /* filmen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "filmen@2x.png"; path = "assets/images/filmen@2x.png"; sourceTree = "<group>"; };
 		10111A6518587C3A00179450 /* opdrachtbekijken@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "opdrachtbekijken@2x.png"; path = "assets/images/opdrachtbekijken@2x.png"; sourceTree = "<group>"; };
-		10111A7418589A0A00179450 /* OpdrachtViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpdrachtViewController.h; path = viewcontrollers/OpdrachtViewController.h; sourceTree = "<group>"; };
-		10111A7518589A0A00179450 /* OpdrachtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpdrachtViewController.m; path = viewcontrollers/OpdrachtViewController.m; sourceTree = "<group>"; };
 		10111A7718589A3C00179450 /* 04.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 04.mov; path = assets/movies/04.mov; sourceTree = "<group>"; };
 		10111A7818589A3C00179450 /* 03.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 03.mov; path = assets/movies/03.mov; sourceTree = "<group>"; };
 		10111A7918589A3C00179450 /* 05.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 05.mov; path = assets/movies/05.mov; sourceTree = "<group>"; };
@@ -71,6 +69,8 @@
 		10111A8518589D5100179450 /* record_busy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "record_busy@2x.png"; path = "assets/images/record_busy@2x.png"; sourceTree = "<group>"; };
 		10111A8618589D5100179450 /* record_idle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "record_idle@2x.png"; path = "assets/images/record_idle@2x.png"; sourceTree = "<group>"; };
 		10111A8718589D5100179450 /* record_pushme@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "record_pushme@2x.png"; path = "assets/images/record_pushme@2x.png"; sourceTree = "<group>"; };
+		10111A8B1858A28200179450 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		10111A8D1858A2F500179450 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		102619221855B6DC004D6D2F /* ketnetkado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ketnetkado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		102619251855B6DC004D6D2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		102619271855B6DC004D6D2F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -104,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10111A8E1858A2F500179450 /* MediaPlayer.framework in Frameworks */,
 				102619651855EBB8004D6D2F /* AssetsLibrary.framework in Frameworks */,
 				102619631855C950004D6D2F /* AVFoundation.framework in Frameworks */,
 				102619281855B6DC004D6D2F /* CoreGraphics.framework in Frameworks */,
@@ -194,6 +195,8 @@
 		102619241855B6DC004D6D2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				10111A8D1858A2F500179450 /* MediaPlayer.framework */,
+				10111A8B1858A28200179450 /* CoreMedia.framework */,
 				102619641855EBB8004D6D2F /* AssetsLibrary.framework */,
 				102619621855C950004D6D2F /* AVFoundation.framework */,
 				102619251855B6DC004D6D2F /* Foundation.framework */,
@@ -256,8 +259,6 @@
 				1026195D1855B7FB004D6D2F /* HoofdschermViewController.m */,
 				1026195F1855C866004D6D2F /* FilmCameraViewController.h */,
 				102619601855C866004D6D2F /* FilmCameraViewController.m */,
-				10111A7418589A0A00179450 /* OpdrachtViewController.h */,
-				10111A7518589A0A00179450 /* OpdrachtViewController.m */,
 			);
 			name = Viewcontrollers;
 			sourceTree = "<group>";
@@ -400,7 +401,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10111A7618589A0A00179450 /* OpdrachtViewController.m in Sources */,
 				102619381855B6DC004D6D2F /* AppDelegate.m in Sources */,
 				1026196818571D7F004D6D2F /* VideoAlbumManager.m in Sources */,
 				102619341855B6DC004D6D2F /* main.m in Sources */,

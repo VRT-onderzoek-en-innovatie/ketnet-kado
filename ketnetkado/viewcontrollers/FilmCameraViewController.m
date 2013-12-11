@@ -20,6 +20,8 @@
 
 @implementation FilmCameraViewController
 
+@synthesize opdrachtNummer;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -36,6 +38,8 @@
     [self setupAVSession];
     
     [self addRecordButton];
+	
+	NSLog(@"<FilmCameraViewController> Opdrachtnummer: %i", opdrachtNummer);
 }
     
 - (void)viewDidLayoutSubviews {

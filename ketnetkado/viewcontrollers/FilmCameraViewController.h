@@ -17,7 +17,11 @@
 	UIButton *btnRecord;
     
     BOOL isInOpname;
+	
+	int opdrachtNummer;
 }
+
+@property (nonatomic) int opdrachtNummer;
     
 - (IBAction)StartStopButtonPressed:(id)sender;
 
