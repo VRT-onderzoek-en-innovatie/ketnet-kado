@@ -7,6 +7,7 @@
 //
 
 #import "LoginManager.h"
+#import "AppDelegate.h"
 
 @implementation LoginManager
 
@@ -14,16 +15,17 @@
     return NO;
 }
 
-+ (void)logGebruikerIn {
-    UIViewController *vragendeVC = [window rootViewController];
+- (void)logGebruikerIn {
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     LoginViewController *loginVC = [[LoginViewController alloc] init];
-    [loginVC setDelegate:self];
     
-    [vragendeVC presentViewController:loginVC
-                             animated:YES
-                           completion:^{
-                               
-                           }];
+    [appDelegate.window.rootViewController.navigationController presentViewController:loginVC
+                                                                             animated:YES
+                                                                           completion:nil];
+    
+    [loginVC setDelegate:self];
 }
+
+#pragma mark - LoginViewController
 
 @end

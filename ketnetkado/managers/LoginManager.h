@@ -17,11 +17,12 @@
 
 @end
 
-@interface LoginManager : NSObject {
+@interface LoginManager : NSObject <LoginViewControllerDelegate> {
     
 }
 
 + (BOOL)isIngelogd;
-+ (void)logGebruikerIn;
+
+- (void)logGebruikerIn;
 
 @end
