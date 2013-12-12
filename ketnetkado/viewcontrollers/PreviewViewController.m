@@ -62,10 +62,45 @@
     [moviePlayer.view setFrame:self.view.bounds];
     [self.view addSubview:moviePlayer.view];
     
+    
+    // Remove the movie player view controller from the "playback did finish" notification observers
+    [[NSNotificationCenter defaultCenter] removeObserver:moviePlayer
+                                                    name:MPMoviePlayerPlaybackDidFinishNotification
+                                                  object:moviePlayer];
+	
+    // Register this class as an observer instead
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(movieFinishedCallback:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+                                               object:moviePlayer];
+    
     [moviePlayer setScalingMode:MPMovieScalingModeAspectFit];
     [moviePlayer setControlStyle:MPMovieControlStyleNone];
     
     [moviePlayer play];
+}
+
+#pragma mark - Einde bekijken
+
+- (void)movieFinishedCallback:(NSNotification*)aNotification
+{
+    //Probeer te weten hoe de movieplayer gestopt werd
+    NSNumber *finishReason = [[aNotification userInfo] objectForKey:MPMoviePlayerPlaybackDidFinishReasonUserInfoKey];
+	
+    // Dismiss the view controller ONLY when the reason is not "playback ended"
+    if ([finishReason intValue] == MPMovieFinishReasonPlaybackEnded)
+    {
+		NSLog(@"<PreviewViewController> Gebruiker heeft het filmpje uitgekeken.");
+		
+        //Verwijder de notificatie van de movieplayer
+		MPMoviePlayerController *speler = [aNotification object];
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:MPMoviePlayerPlaybackDidFinishNotification
+                                                      object:speler];
+        
+        //Ga door naar het doorstuurvenster
+		
+    }
 }
 
 #pragma mark - View setup
