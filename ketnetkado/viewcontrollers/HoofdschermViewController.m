@@ -40,7 +40,7 @@
     
     [self.navigationController setNavigationBarHidden:YES];
 	
-	[self maakAchtergrond];
+	[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"achtergrond"]]];
     [self maakKnoppen];
 }
 
@@ -110,12 +110,6 @@
 }
     
 #pragma mark - View setup
-
-- (void)maakAchtergrond {
-	UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"achtergrond"]];
-	[self.view addSubview:backgroundView];
-	[self.view sendSubviewToBack:backgroundView];
-}
     
 - (void)maakKnoppen {
     btnFilmen = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMidY(self.view.bounds) - kMargeTussenKnoppen/2 - kKnopBreedte,
