@@ -8,6 +8,8 @@
 
 #import "VerzendViewController.h"
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 @interface VerzendViewController ()
 
 @end
@@ -40,6 +42,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Acties
+
+- (void)maakNieuwFilmpje {
+    
+}
+
+- (void)stuurFilmpjeDoor {
+    
+}
+
+- (void)terugNaarStart {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 #pragma mark - View setup
 
 - (void)setupButtons {
@@ -48,7 +64,7 @@
                                                               214,
                                                               104)];
     [btnStuurDoor addTarget:self
-                     action:nil
+                     action:@selector(stuurFilmpjeDoor)
            forControlEvents:UIControlEventTouchUpInside];
 	[btnStuurDoor setBackgroundImage:[UIImage imageNamed:@"04stuurdoor"] forState:UIControlStateNormal];
 	[btnStuurDoor setBackgroundImage:[UIImage imageNamed:@"04stuurdoor_pressed"] forState:UIControlStateHighlighted];
@@ -60,7 +76,7 @@
                                                                214,
                                                                104)];
     [btnMaakNieuwe addTarget:self
-                      action:nil
+                      action:@selector(maakNieuwFilmpje)
             forControlEvents:UIControlEventTouchUpInside];
 	[btnMaakNieuwe setBackgroundImage:[UIImage imageNamed:@"04maaknieuwe"] forState:UIControlStateNormal];
 	[btnMaakNieuwe setBackgroundImage:[UIImage imageNamed:@"04maaknieuwe_pressed"] forState:UIControlStateHighlighted];
@@ -74,10 +90,10 @@
                                                                  
     [btnTerugNaarStart.titleLabel setFont:[UIFont fontWithName:@"Ovink-Black" size:20.0]];
     [btnTerugNaarStart setTitle:@"Terug naar start" forState:UIControlStateNormal];
-    [btnTerugNaarStart setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [btnTerugNaarStart setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+    [btnTerugNaarStart setTitleColor:UIColorFromRGB(0x3cc0f0) forState:UIControlStateNormal];
+    [btnTerugNaarStart setTitleColor:UIColorFromRGB(0xed145b) forState:UIControlStateHighlighted];
     [btnTerugNaarStart addTarget:self
-                          action:nil
+                          action:@selector(terugNaarStart)
                 forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnTerugNaarStart];
     [self.view bringSubviewToFront:btnTerugNaarStart];
