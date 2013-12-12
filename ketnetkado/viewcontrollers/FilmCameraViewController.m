@@ -104,12 +104,9 @@
 - (void)prepareForTransportOfAssetURL:(NSURL*)assetURL {
     NSLog(@"<FilmCameraViewController> Klaarmaken voor transport");
     
-    PreviewViewController *previewVC = [[PreviewViewController alloc] initWithAssetURL:assetURL];
-    [self.navigationController presentViewController:previewVC
-                                            animated:YES
-                                          completion:^{
-                                              
-                                              }];
+    PreviewViewController *previewVC = [[PreviewViewController alloc] initWithAssetURL:assetURL andOpdrachtID:opdrachtID];
+    [self.navigationController pushViewController:previewVC
+                                         animated:YES];
 }
     
 #pragma mark - Filmsessie setup

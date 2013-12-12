@@ -13,13 +13,15 @@
 @interface PreviewViewController : UIViewController {
     MPMoviePlayerController *moviePlayer;
     NSURL *videoLocatie;
+    NSString *opdrachtID;
     
     UIImageView *thumbnailView;
 }
 
 @property (nonatomic, retain) MPMoviePlayerController *moviePlayer;
 @property (nonatomic, retain) NSURL *videoLocatie;
+@property (nonatomic, retain) NSString *opdrachtID;
 
-- (id)initWithAssetURL:(NSURL*)assetURL;
+- (id)initWithAssetURL:(NSURL*)assetURL andOpdrachtID:(NSString*)opdracht;
 
 @end

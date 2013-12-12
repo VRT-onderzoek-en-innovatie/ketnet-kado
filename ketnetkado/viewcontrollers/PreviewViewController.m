@@ -15,7 +15,7 @@
 @implementation PreviewViewController
 
 @synthesize moviePlayer;
-@synthesize videoLocatie;
+@synthesize videoLocatie, opdrachtID;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,10 +26,12 @@
     return self;
 }
 
-- (id)initWithAssetURL:(NSURL*)assetURL {
+- (id)initWithAssetURL:(NSURL*)assetURL andOpdrachtID:(NSString *)opdracht {
     self = [super init];
     if (self) {
-        self.videoLocatie = assetURL;
+        NSLog(@"<PreviewViewController> Video voor opdracht %@ ontvangen. Thumbnail tonen...", opdrachtID);
+        [self setVideoLocatie:assetURL];
+        [self setOpdrachtID:opdrachtID];
         [self setupThumbnailWithAssetURL:assetURL];
     }
     return self;
@@ -63,8 +65,8 @@
              resultBlock:^(ALAsset *asset) {
                  thumbnailView = [[UIImageView alloc] initWithFrame:CGRectMake(0,
                                                                                0,
-                                                                               CGRectGetHeight(self.view.frame),
-                                                                               CGRectGetWidth(self.view.frame))];
+                                                                               CGRectGetWidth(self.view.frame),
+                                                                               CGRectGetHeight(self.view.frame))];
                  [thumbnailView setImage:[UIImage imageWithCGImage:[[asset defaultRepresentation] fullScreenImage]]];
                  [self.view addSubview:thumbnailView];
              }
