@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 @interface LoginViewController ()
 
 @end
@@ -28,6 +30,8 @@
     [super viewDidLoad];
 	
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05achtergrond"]]];
+    
+    [self setupUitleg];
     [self setupTextFields];
     [self setupLoginButton];
 }
@@ -40,9 +44,21 @@
 
 #pragma mark - View setup
 
+- (void)setupUitleg {
+    UILabel *uitleg = [[UILabel alloc] initWithFrame:CGRectMake(0,
+                                                                25,
+                                                                self.view.frame.size.height,
+                                                                30)];
+    [uitleg setText:@"Log in met je Ketprofiel"];
+    [uitleg setFont:[UIFont fontWithName:@"Ovink-Black" size:20.0]];
+    [uitleg setTextAlignment:NSTextAlignmentCenter];
+    [uitleg setTextColor:UIColorFromRGB(0xed145b)];
+    [self.view addSubview:uitleg];
+}
+
 - (void)setupLoginButton  {
-    btnLogin = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMidY(self.view.bounds) - 214,
-                                                          CGRectGetMidX(self.view.bounds) + 104/2,
+    btnLogin = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMidX(self.view.bounds),
+                                                          200,
                                                           214,
                                                           104)];
     
@@ -59,16 +75,17 @@
     txtUsername = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMidY(self.view.bounds) - 348/2,
                                                                 50,
                                                                 348,
-                                                                70)];
-
+                                                                114)];
+    [txtUsername setFont:[UIFont fontWithName:@"Ovink-Black" size:20.0]];
     [txtUsername setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05username"]]];
     [self.view addSubview:txtUsername];
     [self.view bringSubviewToFront:txtUsername];
     
     txtPassword = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMidY(self.view.bounds) - 348/2,
-                                                                100,
+                                                                125,
                                                                 348,
-                                                                70)];
+                                                                114)];
+    [txtPassword setFont:[UIFont fontWithName:@"Ovink-Black" size:20.0]];
     [txtPassword setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05paswoord"]]];
     [txtPassword setSecureTextEntry:YES];
     [self.view addSubview:txtPassword];
