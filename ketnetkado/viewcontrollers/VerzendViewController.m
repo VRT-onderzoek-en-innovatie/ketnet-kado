@@ -52,6 +52,7 @@
 - (void)stuurFilmpjeDoor {
     if (![LoginManager isIngelogd]) {
         NSLog(@"<VerzendViewController> De gebruiker is nog niet aangemeld. Toont loginscherm...");
+        
     }
     else {
         NSLog(@"<VerzendViewController> De gebruiker is aangemeld, we kunnen verzenden...");

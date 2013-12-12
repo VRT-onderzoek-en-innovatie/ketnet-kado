@@ -26,7 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
+    [self setupTextFields];
+    [self setupLoginButton];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,6 +39,20 @@
 
 #pragma mark - View setup
 
+- (void)setupLoginButton  {
+    btnLogin = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMidY(self.view.bounds) - 214,
+                                                              CGRectGetMidX(self.view.bounds) + 104/2,
+                                                              214,
+                                                              104)];
+    [btnLogin addTarget:self
+                     action:nil
+           forControlEvents:UIControlEventTouchUpInside];
+	[btnLogin setBackgroundImage:[UIImage imageNamed:@"05loginbutton"] forState:UIControlStateNormal];
+//	[btnLogin setBackgroundImage:[UIImage imageNamed:@"05loginbutton"] forState:UIControlStateHighlighted];
+    [self.view addSubview:btnLogin];
+    [self.view bringSubviewToFront:btnLogin];
+}
+
 - (void)setupTextFields {
     txtUsername = [[UITextField alloc] initWithFrame:CGRectMake(0,
                                                                 0,
@@ -44,6 +60,7 @@
                                                                 70)];
     [txtUsername setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05username"]]];
     [self.view addSubview:txtUsername];
+    [self.view bringSubviewToFront:txtUsername];
     
     txtPassword = [[UITextField alloc] initWithFrame:CGRectMake(0,
                                                                 100,
@@ -52,6 +69,7 @@
     [txtPassword setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05password"]]];
     [txtPassword setSecureTextEntry:YES];
     [self.view addSubview:txtPassword];
+    [self.view bringSubviewToFront:txtPassword];
 }
 
 @end
