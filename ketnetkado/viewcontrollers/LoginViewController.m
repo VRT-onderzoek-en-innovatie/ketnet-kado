@@ -42,11 +42,12 @@
 
 - (void)setupLoginButton  {
     btnLogin = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMidY(self.view.bounds) - 214,
-                                                              CGRectGetMidX(self.view.bounds) + 104/2,
-                                                              214,
-                                                              104)];
+                                                          CGRectGetMidX(self.view.bounds) + 104/2,
+                                                          214,
+                                                          104)];
+    
     [btnLogin addTarget:self
-                     action:nil
+                     action:@selector(logGebruikerIn)
            forControlEvents:UIControlEventTouchUpInside];
 	[btnLogin setBackgroundImage:[UIImage imageNamed:@"05loginbutton"] forState:UIControlStateNormal];
 	[btnLogin setBackgroundImage:[UIImage imageNamed:@"05loginbutton_pressed"] forState:UIControlStateHighlighted];
@@ -55,8 +56,8 @@
 }
 
 - (void)setupTextFields {
-    txtUsername = [[UITextField alloc] initWithFrame:CGRectMake(0,
-                                                                0,
+    txtUsername = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMidY(self.view.bounds) - 348/2,
+                                                                50,
                                                                 348,
                                                                 70)];
 
@@ -64,14 +65,24 @@
     [self.view addSubview:txtUsername];
     [self.view bringSubviewToFront:txtUsername];
     
-    txtPassword = [[UITextField alloc] initWithFrame:CGRectMake(200,
-                                                                200,
+    txtPassword = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMidY(self.view.bounds) - 348/2,
+                                                                150,
                                                                 348,
                                                                 70)];
     [txtPassword setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05paswoord"]]];
     [txtPassword setSecureTextEntry:YES];
     [self.view addSubview:txtPassword];
     [self.view bringSubviewToFront:txtPassword];
+}
+
+#pragma mark - Acties
+
+- (void)logGebruikerIn {
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    loginManager = appDelegate.loginManager;
+    [loginManager setDelegate:self];
+    
+    [loginManager logGebruikerInMetGebruikersnaam:txtUsername.text enPaswoord:txtPassword.text];
 }
 
 #pragma mark - LoginManager delegate
