@@ -32,7 +32,7 @@
     if (self) {
         NSLog(@"<PreviewViewController> Video voor opdracht %@ ontvangen. Thumbnail tonen...", opdrachtID);
         [self setVideoLocatie:assetURL];
-        [self setOpdrachtID:opdrachtID];
+        [self setOpdrachtID:opdracht];
         [self setupThumbnailWithAssetURL:assetURL];
         [self setupPlayButtons];
     }
@@ -101,6 +101,8 @@
         
         //Ga door naar het doorstuurvenster
 		VerzendViewController *verzendVC = [[VerzendViewController alloc] init];
+        [verzendVC setVideoLocatie:videoLocatie];
+        [verzendVC setOpdrachtID:opdrachtID];
         [self.navigationController pushViewController:verzendVC
                                              animated:YES];
     }

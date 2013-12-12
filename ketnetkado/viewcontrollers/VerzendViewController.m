@@ -28,7 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    NSLog(@"<VerzendViewController> Opdracht tot verzenden ontvangen voor video (%@) met opdrachtID '%@'", videoLocatie, opdrachtID);
 }
 
 - (void)didReceiveMemoryWarning
