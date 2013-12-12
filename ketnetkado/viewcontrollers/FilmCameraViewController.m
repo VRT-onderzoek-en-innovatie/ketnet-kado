@@ -99,6 +99,10 @@
             [filmOutput stopRecording];
         }
     }
+
+- (void)prepareForTransport {
+    NSLog(@"<FilmCameraViewController> Klaarmaken voor transport");
+}
     
 #pragma mark - Filmsessie setup
     
@@ -199,8 +203,9 @@
 												//Errorhandling
                                             }
 											else {
-												NSLog(@"assetURL: %@", assetURL);
+												NSLog(@"<FilmCameraViewController> Doorgeven van de assetURL: %@", assetURL);
                                                 [VideoAlbumManager addVideoWithAssetURL:assetURL toAlbumWithName:@"Ketnet Kado"];
+                                                [self prepareForTransport];
 											}
                                         }];
         }

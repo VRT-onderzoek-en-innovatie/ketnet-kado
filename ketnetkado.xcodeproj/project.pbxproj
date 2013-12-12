@@ -43,6 +43,7 @@
 		102619631855C950004D6D2F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102619621855C950004D6D2F /* AVFoundation.framework */; };
 		102619651855EBB8004D6D2F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102619641855EBB8004D6D2F /* AssetsLibrary.framework */; };
 		1026196818571D7F004D6D2F /* VideoAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1026196718571D7F004D6D2F /* VideoAlbumManager.m */; };
+		105257B81859A69300A3D7A6 /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105257B71859A69300A3D7A6 /* PreviewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,8 @@
 		102619641855EBB8004D6D2F /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		1026196618571D7F004D6D2F /* VideoAlbumManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoAlbumManager.h; path = managers/VideoAlbumManager.h; sourceTree = "<group>"; };
 		1026196718571D7F004D6D2F /* VideoAlbumManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoAlbumManager.m; path = managers/VideoAlbumManager.m; sourceTree = "<group>"; };
+		105257B61859A69300A3D7A6 /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreviewViewController.h; path = viewcontrollers/PreviewViewController.h; sourceTree = "<group>"; };
+		105257B71859A69300A3D7A6 /* PreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreviewViewController.m; path = viewcontrollers/PreviewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +265,8 @@
 				1026195D1855B7FB004D6D2F /* HoofdschermViewController.m */,
 				1026195F1855C866004D6D2F /* FilmCameraViewController.h */,
 				102619601855C866004D6D2F /* FilmCameraViewController.m */,
+				105257B61859A69300A3D7A6 /* PreviewViewController.h */,
+				105257B71859A69300A3D7A6 /* PreviewViewController.m */,
 			);
 			name = Viewcontrollers;
 			sourceTree = "<group>";
@@ -409,6 +414,7 @@
 				1026196818571D7F004D6D2F /* VideoAlbumManager.m in Sources */,
 				102619341855B6DC004D6D2F /* main.m in Sources */,
 				1026193B1855B6DC004D6D2F /* ketnetkado.xcdatamodeld in Sources */,
+				105257B81859A69300A3D7A6 /* PreviewViewController.m in Sources */,
 				102619611855C866004D6D2F /* FilmCameraViewController.m in Sources */,
 				1026195E1855B7FB004D6D2F /* HoofdschermViewController.m in Sources */,
 			);
