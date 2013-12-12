@@ -10,6 +10,7 @@
 		1002AF1B1859C93700566840 /* opdrachtbekijken_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF181859C93700566840 /* opdrachtbekijken_pressed@2x.png */; };
 		1002AF1C1859C93700566840 /* opdrachtbekijken@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF191859C93700566840 /* opdrachtbekijken@2x.png */; };
 		1002AF1D1859C93700566840 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF1A1859C93700566840 /* play@2x.png */; };
+		1002AF201859D19400566840 /* VerzendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1002AF1F1859D19400566840 /* VerzendViewController.m */; };
 		10111A6218587C2000179450 /* Ovink-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6118587C2000179450 /* Ovink-Black.otf */; };
 		10111A6618587C3A00179450 /* achtergrond@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6318587C3A00179450 /* achtergrond@2x.png */; };
 		10111A6718587C3A00179450 /* filmen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6418587C3A00179450 /* filmen@2x.png */; };
@@ -65,6 +66,8 @@
 		1002AF181859C93700566840 /* opdrachtbekijken_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "opdrachtbekijken_pressed@2x.png"; path = "assets/images/opdrachtbekijken_pressed@2x.png"; sourceTree = "<group>"; };
 		1002AF191859C93700566840 /* opdrachtbekijken@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "opdrachtbekijken@2x.png"; path = "assets/images/opdrachtbekijken@2x.png"; sourceTree = "<group>"; };
 		1002AF1A1859C93700566840 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play@2x.png"; path = "assets/images/play@2x.png"; sourceTree = "<group>"; };
+		1002AF1E1859D19400566840 /* VerzendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerzendViewController.h; path = viewcontrollers/VerzendViewController.h; sourceTree = "<group>"; };
+		1002AF1F1859D19400566840 /* VerzendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VerzendViewController.m; path = viewcontrollers/VerzendViewController.m; sourceTree = "<group>"; };
 		10111A6118587C2000179450 /* Ovink-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ovink-Black.otf"; path = "assets/fonts/Ovink-Black.otf"; sourceTree = "<group>"; };
 		10111A6318587C3A00179450 /* achtergrond@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "achtergrond@2x.png"; path = "assets/images/achtergrond@2x.png"; sourceTree = "<group>"; };
 		10111A6418587C3A00179450 /* filmen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "filmen@2x.png"; path = "assets/images/filmen@2x.png"; sourceTree = "<group>"; };
@@ -306,6 +309,8 @@
 				102619601855C866004D6D2F /* FilmCameraViewController.m */,
 				105257B61859A69300A3D7A6 /* PreviewViewController.h */,
 				105257B71859A69300A3D7A6 /* PreviewViewController.m */,
+				1002AF1E1859D19400566840 /* VerzendViewController.h */,
+				1002AF1F1859D19400566840 /* VerzendViewController.m */,
 			);
 			name = Viewcontrollers;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				102619381855B6DC004D6D2F /* AppDelegate.m in Sources */,
+				1002AF201859D19400566840 /* VerzendViewController.m in Sources */,
 				1026196818571D7F004D6D2F /* VideoAlbumManager.m in Sources */,
 				102619341855B6DC004D6D2F /* main.m in Sources */,
 				105257BE1859A6D000A3D7A6 /* LoginManager.m in Sources */,

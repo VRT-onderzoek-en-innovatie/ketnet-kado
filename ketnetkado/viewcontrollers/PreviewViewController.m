@@ -7,6 +7,7 @@
 //
 
 #import "PreviewViewController.h"
+#import "VerzendViewController.h"
 
 @interface PreviewViewController ()
 
@@ -90,7 +91,7 @@
     // Dismiss the view controller ONLY when the reason is not "playback ended"
     if ([finishReason intValue] == MPMovieFinishReasonPlaybackEnded)
     {
-		NSLog(@"<PreviewViewController> Gebruiker heeft het filmpje uitgekeken.");
+		NSLog(@"<PreviewViewController> Gebruiker heeft het filmpje uitgekeken. Doorgeven voor verzending...");
 		
         //Verwijder de notificatie van de movieplayer
 		MPMoviePlayerController *speler = [aNotification object];
@@ -99,7 +100,9 @@
                                                       object:speler];
         
         //Ga door naar het doorstuurvenster
-		
+		VerzendViewController *verzendVC = [[VerzendViewController alloc] init];
+        [self.navigationController pushViewController:verzendVC
+                                             animated:YES];
     }
 }
 
