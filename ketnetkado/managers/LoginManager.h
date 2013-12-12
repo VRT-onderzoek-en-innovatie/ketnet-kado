@@ -7,11 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LoginViewController.h"
+
+@class LoginManager;
+
+@protocol LoginManagerDelegate <NSObject>
+
+@optional
+
+@end
 
 @interface LoginManager : NSObject {
     
 }
 
 + (BOOL)isIngelogd;
++ (void)logGebruikerIn;
 
 @end

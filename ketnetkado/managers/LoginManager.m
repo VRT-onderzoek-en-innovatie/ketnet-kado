@@ -14,4 +14,16 @@
     return NO;
 }
 
++ (void)logGebruikerIn {
+    UIViewController *vragendeVC = [window rootViewController];
+    LoginViewController *loginVC = [[LoginViewController alloc] init];
+    [loginVC setDelegate:self];
+    
+    [vragendeVC presentViewController:loginVC
+                             animated:YES
+                           completion:^{
+                               
+                           }];
+}
+
 @end
