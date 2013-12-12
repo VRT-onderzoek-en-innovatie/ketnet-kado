@@ -18,10 +18,10 @@
     
     BOOL isInOpname;
 	
-	int opdrachtNummer;
+	NSString *opdrachtID;
 }
 
-@property (nonatomic) int opdrachtNummer;
+@property (nonatomic, retain) NSString* opdrachtID;
     
 - (IBAction)StartStopButtonPressed:(id)sender;
 

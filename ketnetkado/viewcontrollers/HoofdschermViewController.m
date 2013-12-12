@@ -73,23 +73,18 @@
                                                  name:MPMoviePlayerPlaybackDidFinishNotification
                                                object:opdrachtVC.moviePlayer];
 
-    [self.navigationController presentViewController:opdrachtVC
-                                            animated:YES
-                                          completion:^{
-                                              
-                                          }];
+    [self.navigationController pushViewController:opdrachtVC
+                                         animated:YES];
+    
 }
     
-- (void)startFilmenMetOpdrachtNummer:(int)opdrachtNummer {
-    NSLog(@"<HoofdschermViewController> Filmen met opdrachtnummer %i", opdrachtNummer);
+- (void)startFilmenMetOpdrachtID:(NSString*)opdrachtID {
+    NSLog(@"<HoofdschermViewController> Filmen met opdrachtID %@", opdrachtID);
 	
 	FilmCameraViewController *filmCameraVC = [[FilmCameraViewController alloc] init];
-	[filmCameraVC setOpdrachtNummer:opdrachtNummer];
-    [self.navigationController presentViewController:filmCameraVC
-                                            animated:YES
-                                          completion:^{
-                                              
-                                          }];
+	[filmCameraVC setOpdrachtID:opdrachtID];
+    [self.navigationController pushViewController:filmCameraVC
+                                         animated:YES];
 }
 
 #pragma mark - Einde opdracht
@@ -129,7 +124,7 @@
 }
 		 
 - (void)opdrachtIsVerdwenen {
-	[self startFilmenMetOpdrachtNummer:[self opdrachtNummerForToday]];
+	[self startFilmenMetOpdrachtID:[self opdrachtIDForToday]];
 }
 			 
 
@@ -171,8 +166,8 @@
 	return url;
 }
 
-- (int)opdrachtNummerForToday {
-	int opdrachtNummer = 0;
+- (NSString*)opdrachtIDForToday {
+	NSString* opdrachtID = @"0";
 	
 	NSDateFormatter *mmddccyy = [[NSDateFormatter alloc] init];
     [mmddccyy  setTimeStyle:NSDateFormatterNoStyle];
@@ -187,22 +182,22 @@
     NSDate *day5 = [mmddccyy dateFromString:dag05];
     
     if([day1 compare:today] == NSOrderedAscending) {
-        opdrachtNummer = 1;
+        opdrachtID = @"1";
     }
 	else if([day2 compare:today] == NSOrderedAscending) {
-        opdrachtNummer = 2;
+        opdrachtID = @"2";
     }
 	else if([day3 compare:today] == NSOrderedAscending) {
-        opdrachtNummer = 3;
+        opdrachtID = @"3";
     }
 	else if([day4 compare:today] == NSOrderedAscending) {
-        opdrachtNummer = 4;
+        opdrachtID = @"4";
     }
 	else if([day5 compare:today] == NSOrderedAscending) {
-        opdrachtNummer = 5;
+        opdrachtID = @"5";
     }
 	
-	return opdrachtNummer;
+	return opdrachtID;
 }
     
 #pragma mark - View setup
@@ -219,7 +214,7 @@
                                                            kKnopBreedte,
                                                            kKnopHoogte)];
     [btnFilmen addTarget:self
-                  action:@selector(startFilmenMetOpdrachtNummer:)
+                  action:@selector(startFilmenMetOpdrachtID:)
         forControlEvents:UIControlEventTouchUpInside];
 	[btnFilmen setBackgroundImage:[UIImage imageNamed:@"filmen"] forState:UIControlStateNormal];
 	[btnFilmen setBackgroundImage:[UIImage imageNamed:@"filmen_pressed"] forState:UIControlStateHighlighted];

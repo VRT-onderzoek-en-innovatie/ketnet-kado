@@ -58,6 +58,7 @@
 			 resultBlock:^(ALAsset *asset) {
 				 //Voeg de video toe aan de groep
 				 [groupToAddTo addAsset:asset];
+                 
 				 NSLog(@"<VideoAlbumManager> Video '%@' toegevoegd aan het album '%@'", [[asset defaultRepresentation] filename], albumName);
 			 }
 			failureBlock:^(NSError* error) {

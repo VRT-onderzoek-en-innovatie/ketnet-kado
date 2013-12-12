@@ -339,7 +339,7 @@
 				ORGANIZATIONNAME = "VRT Onderzoek en Innovatie";
 				TargetAttributes = {
 					102619211855B6DC004D6D2F = {
-						DevelopmentTeam = 79BMQESM94;
+						DevelopmentTeam = 78U3SVG38Y;
 					};
 					102619411855B6DC004D6D2F = {
 						TestTargetID = 102619211855B6DC004D6D2F;

@@ -8,6 +8,7 @@
 
 #import "FilmCameraViewController.h"
 #import "VideoAlbumManager.h"
+#import "PreviewViewController.h"
 
 #define kMaxAantalSeconden 60
 #define kFramesPerSeconde 50
@@ -20,7 +21,7 @@
 
 @implementation FilmCameraViewController
 
-@synthesize opdrachtNummer;
+@synthesize opdrachtID;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,7 +40,7 @@
     
     [self addRecordButton];
 	
-	NSLog(@"<FilmCameraViewController> Opdrachtnummer: %i", opdrachtNummer);
+	NSLog(@"<FilmCameraViewController> OpdrachtID: %@", opdrachtID);
 }
     
 - (void)viewDidLayoutSubviews {
@@ -100,8 +101,15 @@
         }
     }
 
-- (void)prepareForTransport {
+- (void)prepareForTransportOfAssetURL:(NSURL*)assetURL {
     NSLog(@"<FilmCameraViewController> Klaarmaken voor transport");
+    
+    PreviewViewController *previewVC = [[PreviewViewController alloc] initWithAssetURL:assetURL];
+    [self.navigationController presentViewController:previewVC
+                                            animated:YES
+                                          completion:^{
+                                              
+                                              }];
 }
     
 #pragma mark - Filmsessie setup
@@ -205,7 +213,7 @@
 											else {
 												NSLog(@"<FilmCameraViewController> Doorgeven van de assetURL: %@", assetURL);
                                                 [VideoAlbumManager addVideoWithAssetURL:assetURL toAlbumWithName:@"Ketnet Kado"];
-                                                [self prepareForTransport];
+                                                [self prepareForTransportOfAssetURL:assetURL];
 											}
                                         }];
         }
