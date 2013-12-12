@@ -102,6 +102,49 @@
     [self.view bringSubviewToFront:txtPassword];
 }
 
+- (void)toonBezig {
+    UIView *bezigView = [[UIView alloc] initWithFrame:CGRectMake(0,
+                                                                 0,
+                                                                 self.view.frame.size.height,
+                                                                 self.view.frame.size.width)];
+    [bezigView setBackgroundColor:UIColorFromRGB(0xed145b)];
+    
+    UILabel *bezigLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,
+                                                                    self.view.frame.size.width/2 - 50/2,
+                                                                    self.view.frame.size.height,
+                                                                    50)];
+    [bezigLabel setText:@"Even wachten..."];
+    [bezigLabel setFont:[UIFont fontWithName:@"Ovink-Black" size:25.0]];
+    [bezigLabel setTextAlignment:NSTextAlignmentCenter];
+    [bezigLabel setTextColor:[UIColor whiteColor]];
+    
+    [bezigView setTag:99];
+    [bezigView setAlpha:0];
+    [self.view addSubview:bezigView];
+    [self.view bringSubviewToFront:bezigView];
+    [UIView animateWithDuration:0.25
+                     animations:^{
+                         [bezigView setAlpha:1];
+                     }
+                     completion:^(BOOL finished) {
+                         
+                     }];
+}
+
+- (void)verbergBezig {
+    for (UIView *subView in [self.view subviews]) {
+        if (subView.tag == 99) {
+            [UIView animateWithDuration:0.25
+                             animations:^{
+                                 [subView setAlpha:0];
+                             }
+                             completion:^(BOOL finished) {
+                                 [subView removeFromSuperview];
+                             }];
+        }
+    }
+}
+
 #pragma mark - Acties
 
 - (void)logGebruikerIn {
@@ -109,6 +152,8 @@
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     loginManager = appDelegate.loginManager;
     [loginManager setDelegate:self];
+    
+    [self toonBezig];
     
     [loginManager logGebruikerInMetGebruikersnaam:txtUsername.text enPaswoord:txtPassword.text];
 }
@@ -123,6 +168,8 @@
 #pragma mark - LoginManager delegate
 
 - (void)isIngelogdMetSessieID:(NSString *)sessieID {
+    [self verbergBezig];
+    
     NSLog(@"<LoginViewController> SessieID (%@) ontvangen, doorgaan met upload", sessieID);
     
     [self.presentingViewController dismissViewControllerAnimated:YES
@@ -132,6 +179,8 @@
 }
 
 - (void)isNietIngelogdMetFout:(NSError *)fout {
+    [self verbergBezig];
+    
     NSLog(@"<LoginViewController> Foutmelding tonen");
     UIAlertView *foutmelding = [[UIAlertView alloc] initWithTitle:@"Oeps!"
                                                           message:@"Je gebruikersnaam of je paswoord zijn niet helemaal juist. Vul je ze even opnieuw in?"
