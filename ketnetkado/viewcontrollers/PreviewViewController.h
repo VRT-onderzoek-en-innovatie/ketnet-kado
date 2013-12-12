@@ -16,6 +16,9 @@
     NSString *opdrachtID;
     
     UIImageView *thumbnailView;
+    UIImageView *achtergrond;
+    UIButton *btnPlay;
+    UIButton *btnAfspelenUitleg;
 }
 
 @property (nonatomic, retain) MPMoviePlayerController *moviePlayer;

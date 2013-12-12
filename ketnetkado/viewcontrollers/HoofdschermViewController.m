@@ -77,6 +77,10 @@
                                          animated:YES];
     
 }
+
+- (void)startFilmenZonderOpdracht {
+    [self startFilmenMetOpdrachtID:@"0"];
+}
     
 - (void)startFilmenMetOpdrachtID:(NSString*)opdrachtID {
     NSLog(@"<HoofdschermViewController> Filmen met opdrachtID %@", opdrachtID);
@@ -214,7 +218,7 @@
                                                            kKnopBreedte,
                                                            kKnopHoogte)];
     [btnFilmen addTarget:self
-                  action:@selector(startFilmenMetOpdrachtID:)
+                  action:@selector(startFilmenZonderOpdracht)
         forControlEvents:UIControlEventTouchUpInside];
 	[btnFilmen setBackgroundImage:[UIImage imageNamed:@"filmen"] forState:UIControlStateNormal];
 	[btnFilmen setBackgroundImage:[UIImage imageNamed:@"filmen_pressed"] forState:UIControlStateHighlighted];

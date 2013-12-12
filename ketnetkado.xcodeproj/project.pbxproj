@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1002AF1B1859C93700566840 /* opdrachtbekijken_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF181859C93700566840 /* opdrachtbekijken_pressed@2x.png */; };
+		1002AF1C1859C93700566840 /* opdrachtbekijken@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF191859C93700566840 /* opdrachtbekijken@2x.png */; };
+		1002AF1D1859C93700566840 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF1A1859C93700566840 /* play@2x.png */; };
 		10111A6218587C2000179450 /* Ovink-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6118587C2000179450 /* Ovink-Black.otf */; };
 		10111A6618587C3A00179450 /* achtergrond@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6318587C3A00179450 /* achtergrond@2x.png */; };
 		10111A6718587C3A00179450 /* filmen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6418587C3A00179450 /* filmen@2x.png */; };
@@ -59,6 +62,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1002AF181859C93700566840 /* opdrachtbekijken_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "opdrachtbekijken_pressed@2x.png"; path = "assets/images/opdrachtbekijken_pressed@2x.png"; sourceTree = "<group>"; };
+		1002AF191859C93700566840 /* opdrachtbekijken@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "opdrachtbekijken@2x.png"; path = "assets/images/opdrachtbekijken@2x.png"; sourceTree = "<group>"; };
+		1002AF1A1859C93700566840 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play@2x.png"; path = "assets/images/play@2x.png"; sourceTree = "<group>"; };
 		10111A6118587C2000179450 /* Ovink-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ovink-Black.otf"; path = "assets/fonts/Ovink-Black.otf"; sourceTree = "<group>"; };
 		10111A6318587C3A00179450 /* achtergrond@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "achtergrond@2x.png"; path = "assets/images/achtergrond@2x.png"; sourceTree = "<group>"; };
 		10111A6418587C3A00179450 /* filmen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "filmen@2x.png"; path = "assets/images/filmen@2x.png"; sourceTree = "<group>"; };
@@ -139,6 +145,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1002AF0F1859C8A500566840 /* filmcameraviewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				10111A8518589D5100179450 /* record_busy@2x.png */,
+				10111A8618589D5100179450 /* record_idle@2x.png */,
+				10111A8718589D5100179450 /* record_pushme@2x.png */,
+			);
+			name = filmcameraviewcontroller;
+			sourceTree = "<group>";
+		};
+		1002AF101859C8BC00566840 /* hoofdscherm */ = {
+			isa = PBXGroup;
+			children = (
+				10111A8118589CF900179450 /* filmen_pressed@2x.png */,
+				10111A8218589CF900179450 /* opdrachtbekijken_pressed@2x.png */,
+				10111A6318587C3A00179450 /* achtergrond@2x.png */,
+				10111A6418587C3A00179450 /* filmen@2x.png */,
+				10111A6518587C3A00179450 /* opdrachtbekijken@2x.png */,
+			);
+			name = hoofdscherm;
+			sourceTree = "<group>";
+		};
+		1002AF111859C8D700566840 /* previewviewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				1002AF181859C93700566840 /* opdrachtbekijken_pressed@2x.png */,
+				1002AF191859C93700566840 /* opdrachtbekijken@2x.png */,
+				1002AF1A1859C93700566840 /* play@2x.png */,
+			);
+			name = previewviewcontroller;
+			sourceTree = "<group>";
+		};
 		10111A5E18587BF200179450 /* assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,15 +198,10 @@
 		10111A6018587C0100179450 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				10111A8518589D5100179450 /* record_busy@2x.png */,
+				1002AF111859C8D700566840 /* previewviewcontroller */,
+				1002AF101859C8BC00566840 /* hoofdscherm */,
+				1002AF0F1859C8A500566840 /* filmcameraviewcontroller */,
 				10111A921858AFD000179450 /* Default-568h@2x.png */,
-				10111A8618589D5100179450 /* record_idle@2x.png */,
-				10111A8718589D5100179450 /* record_pushme@2x.png */,
-				10111A8118589CF900179450 /* filmen_pressed@2x.png */,
-				10111A8218589CF900179450 /* opdrachtbekijken_pressed@2x.png */,
-				10111A6318587C3A00179450 /* achtergrond@2x.png */,
-				10111A6418587C3A00179450 /* filmen@2x.png */,
-				10111A6518587C3A00179450 /* opdrachtbekijken@2x.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -372,12 +405,14 @@
 				10111A7C18589A3C00179450 /* 04.mov in Resources */,
 				10111A8A18589D5100179450 /* record_pushme@2x.png in Resources */,
 				10111A6818587C3A00179450 /* opdrachtbekijken@2x.png in Resources */,
+				1002AF1B1859C93700566840 /* opdrachtbekijken_pressed@2x.png in Resources */,
 				10111A8318589CF900179450 /* filmen_pressed@2x.png in Resources */,
 				10111A8018589A3C00179450 /* 02.mov in Resources */,
 				10111A7D18589A3C00179450 /* 03.mov in Resources */,
 				10111A6618587C3A00179450 /* achtergrond@2x.png in Resources */,
 				10111A7F18589A3C00179450 /* 01.mov in Resources */,
 				10111A8918589D5100179450 /* record_idle@2x.png in Resources */,
+				1002AF1D1859C93700566840 /* play@2x.png in Resources */,
 				10111A931858AFD000179450 /* Default-568h@2x.png in Resources */,
 				10111A6718587C3A00179450 /* filmen@2x.png in Resources */,
 				10111A8818589D5100179450 /* record_busy@2x.png in Resources */,
@@ -385,6 +420,7 @@
 				10111A7E18589A3C00179450 /* 05.mov in Resources */,
 				10111A6218587C2000179450 /* Ovink-Black.otf in Resources */,
 				10111A8418589CF900179450 /* opdrachtbekijken_pressed@2x.png in Resources */,
+				1002AF1C1859C93700566840 /* opdrachtbekijken@2x.png in Resources */,
 				1026193D1855B6DC004D6D2F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
