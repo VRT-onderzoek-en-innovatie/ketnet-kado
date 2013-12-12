@@ -78,11 +78,19 @@
 #pragma mark - Acties
 
 - (void)logGebruikerIn {
+    NSLog(@"<LoginViewController> Login starten...");
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     loginManager = appDelegate.loginManager;
     [loginManager setDelegate:self];
     
     [loginManager logGebruikerInMetGebruikersnaam:txtUsername.text enPaswoord:txtPassword.text];
+}
+
+- (void)touchesEnded: (NSSet *)touches withEvent: (UIEvent *)event {
+	for (UIView* view in self.view.subviews) {
+		if ([view isKindOfClass:[UITextField class]])
+			[view resignFirstResponder];
+	}
 }
 
 #pragma mark - LoginManager delegate
