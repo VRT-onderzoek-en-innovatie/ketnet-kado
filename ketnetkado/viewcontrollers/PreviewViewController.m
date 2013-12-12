@@ -57,7 +57,16 @@
 
 #pragma mark - Werking
 
-
+- (void)speelVideoAf {
+    moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:videoLocatie];
+    [moviePlayer.view setFrame:self.view.bounds];
+    [self.view addSubview:moviePlayer.view];
+    
+    [moviePlayer setScalingMode:MPMovieScalingModeAspectFit];
+    [moviePlayer setControlStyle:MPMovieControlStyleNone];
+    
+    [moviePlayer play];
+}
 
 #pragma mark - View setup
 
@@ -74,7 +83,7 @@
                                                                    214,
                                                                    104)];
     [btnAfspelenUitleg addTarget:self
-                          action:nil
+                          action:@selector(speelVideoAf)
                 forControlEvents:UIControlEventTouchUpInside];
 	[btnAfspelenUitleg setBackgroundImage:[UIImage imageNamed:@"opdrachtbekijken"] forState:UIControlStateNormal];
 	[btnAfspelenUitleg setBackgroundImage:[UIImage imageNamed:@"opdrachtbekijken_pressed"] forState:UIControlStateHighlighted];
@@ -86,7 +95,7 @@
                                                          104,
                                                          104)];
     [btnPlay addTarget:self
-                action:nil
+                action:@selector(speelVideoAf)
       forControlEvents:UIControlEventTouchUpInside];
 	[btnPlay setBackgroundImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
     [self.view addSubview:btnPlay];
