@@ -9,6 +9,12 @@
 #import "AppDelegate.h"
 #import "VideoAlbumManager.h"
 
+#ifdef DEBUG
+#define verwijderCookies YES
+#else
+#define verwijderCookies NO
+#endif
+
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -36,6 +42,18 @@
     
     //Zet de cookies aan zodat we aan sessies kunnen doen
     [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
+    
+    //Verwijder cookies bij debug zodat we opnieuw moeten inloggen...
+    if (verwijderCookies) {
+        for(NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies])
+        {
+            if([[cookie domain] rangeOfString:@"ketnet.be"].location != NSNotFound)
+            {
+                NSLog(@"Verwijder cookie:\n%@\n", cookie);
+                [[NSHTTPCookieStorage sharedHTTPCookieStorage] deleteCookie:cookie];
+            }
+        }
+    }
     
     //Maak de loginmanager aan
     loginManager = [[LoginManager alloc] init];

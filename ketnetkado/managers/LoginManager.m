@@ -132,8 +132,6 @@
     else {
         NSLog(@"<LoginManager> Antwoord van server is niet goed, login heeft gefaald.");
     }
-    
-
 }
 
 @end
