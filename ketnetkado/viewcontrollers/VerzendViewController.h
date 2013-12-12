@@ -11,6 +11,10 @@
 @interface VerzendViewController : UIViewController {
     NSURL *videoLocatie;
     NSString *opdrachtID;
+    
+    UIButton *btnMaakNieuwe;
+    UIButton *btnStuurDoor;
+    UIButton *btnTerugNaarStart;
 }
 
 @property (nonatomic, retain) NSURL *videoLocatie;

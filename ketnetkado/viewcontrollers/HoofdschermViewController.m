@@ -61,6 +61,7 @@
     NSLog(@"<HoofdschermViewController> Toon de opdracht van de dag");
     
 	MPMoviePlayerViewController *opdrachtVC = [[MPMoviePlayerViewController alloc] initWithContentURL:[self movieURLForToday]];
+    [opdrachtVC.moviePlayer setControlStyle:MPMovieControlStyleNone];
 	
 	// Remove the movie player view controller from the "playback did finish" notification observers
     [[NSNotificationCenter defaultCenter] removeObserver:opdrachtVC
