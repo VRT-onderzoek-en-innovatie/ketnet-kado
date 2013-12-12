@@ -59,7 +59,7 @@
     NSLog(@"<LoginManager> Antwoord van de server: %d", [urlResponse statusCode]);
     if ([urlResponse statusCode] == 200) {
         NSDictionary *resultDictionary = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&error];
-        if ([[resultDictionary objectForKey:@"success"] isEqualToString:@"true"]) {
+        if ([[resultDictionary objectForKey:@"success"] isEqualToNumber:[NSNumber numberWithInt:1]]) {
             NSLog(@"<LoginManager> Login succesvol!");
             if ([self.delegate respondsToSelector:@selector(isIngelogdMetSessieID:)]) {
                 NSLog(@"<LoginManager> SessieID doorgeven");

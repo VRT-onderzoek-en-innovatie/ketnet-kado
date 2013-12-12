@@ -78,6 +78,11 @@
                                                                 114)];
     [txtUsername setFont:[UIFont fontWithName:@"Ovink-Black" size:20.0]];
     [txtUsername setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05username"]]];
+    
+    UIView *spacerViewUser = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 45, 10)];
+    [txtUsername setLeftViewMode:UITextFieldViewModeAlways];
+    [txtUsername setLeftView:spacerViewUser];
+    
     [self.view addSubview:txtUsername];
     [self.view bringSubviewToFront:txtUsername];
     
@@ -88,6 +93,11 @@
     [txtPassword setFont:[UIFont fontWithName:@"Ovink-Black" size:20.0]];
     [txtPassword setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05paswoord"]]];
     [txtPassword setSecureTextEntry:YES];
+    
+    UIView *spacerViewPass = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 45, 10)];
+    [txtPassword setLeftViewMode:UITextFieldViewModeAlways];
+    [txtPassword setLeftView:spacerViewPass];
+    
     [self.view addSubview:txtPassword];
     [self.view bringSubviewToFront:txtPassword];
 }
@@ -114,6 +124,11 @@
 
 - (void)isIngelogdMetSessieID:(NSString *)sessieID {
     NSLog(@"<LoginViewController> SessieID (%@) ontvangen, doorgaan met upload", sessieID);
+    
+    [self.presentingViewController dismissViewControllerAnimated:YES
+                                                      completion:^{
+                                                          NSLog(@"<LoginViewController> Start the dance...");
+                                                      }];
 }
 
 - (void)isNietIngelogdMetFout:(NSError *)fout {
