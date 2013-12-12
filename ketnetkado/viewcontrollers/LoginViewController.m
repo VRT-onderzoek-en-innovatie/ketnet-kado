@@ -35,4 +35,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - View setup
+
+- (void)setupTextFields {
+    txtUsername = [[UITextField alloc] initWithFrame:CGRectMake(0,
+                                                                0,
+                                                                348,
+                                                                70)];
+    [txtUsername setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05username"]]];
+    [self.view addSubview:txtUsername];
+    
+    txtPassword = [[UITextField alloc] initWithFrame:CGRectMake(0,
+                                                                100,
+                                                                348,
+                                                                70)];
+    [txtPassword setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05password"]]];
+    [txtPassword setSecureTextEntry:YES];
+    [self.view addSubview:txtPassword];
+}
+
 @end
