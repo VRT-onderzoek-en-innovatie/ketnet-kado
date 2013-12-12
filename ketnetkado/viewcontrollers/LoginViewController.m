@@ -49,7 +49,7 @@
                      action:nil
            forControlEvents:UIControlEventTouchUpInside];
 	[btnLogin setBackgroundImage:[UIImage imageNamed:@"05loginbutton"] forState:UIControlStateNormal];
-//	[btnLogin setBackgroundImage:[UIImage imageNamed:@"05loginbutton"] forState:UIControlStateHighlighted];
+	[btnLogin setBackgroundImage:[UIImage imageNamed:@"05loginbutton_pressed"] forState:UIControlStateHighlighted];
     [self.view addSubview:btnLogin];
     [self.view bringSubviewToFront:btnLogin];
 }
@@ -59,6 +59,7 @@
                                                                 0,
                                                                 348,
                                                                 70)];
+
     [txtUsername setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05username"]]];
     [self.view addSubview:txtUsername];
     [self.view bringSubviewToFront:txtUsername];
