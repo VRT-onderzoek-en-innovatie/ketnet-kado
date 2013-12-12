@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface FilmCameraViewController : UIViewController <AVCaptureFileOutputRecordingDelegate> {
     AVCaptureSession *session;
     AVCaptureMovieFileOutput *filmOutput;
+    
+    MPMoviePlayerController *moviePlayer;
 	
 	UIButton *btnRecord;
     

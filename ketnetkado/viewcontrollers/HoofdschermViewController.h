@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MediaPlayer/MediaPlayer.h>
-
 #import "FilmCameraViewController.h"
 
 @interface HoofdschermViewController : UIViewController {

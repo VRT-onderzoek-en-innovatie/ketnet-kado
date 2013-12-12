@@ -15,6 +15,12 @@
 
 #define kOpnameKnopGrootte 104
 
+#define dag01 @"10/14/2013"
+#define dag02 @"10/19/2013"
+#define dag03 @"10/23/2013"
+#define dag04 @"10/26/2013"
+#define dag05 @"10/30/2013"
+
 @interface FilmCameraViewController ()
 
 @end
@@ -35,12 +41,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-    [self setupAVSession];
-    
+	[self setupAVSession];
     [self addRecordButton];
-	
 	NSLog(@"<FilmCameraViewController> OpdrachtID: %@", opdrachtID);
+    
+    if (![opdrachtID isEqualToString:@"0"]) {
+        //Toon opdracht
+        [self toonOpdracht];
+    }
+    else {
+        //Gewoon filmen
+    }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
 }
     
 - (void)viewDidLayoutSubviews {
@@ -69,7 +84,6 @@
 
 - (IBAction)StartStopButtonPressed:(id)sender
     {
-        
         if (!isInOpname)
         {
             NSLog(@"Start opname");
@@ -108,6 +122,100 @@
     [self.navigationController pushViewController:previewVC
                                          animated:YES];
 }
+
+#pragma mark - Opdracht
+
+- (void)toonOpdracht {
+    NSLog(@"<FilmCameraViewController> Toon de opdracht van de dag");
+    moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:[self movieURLForToday]];
+    
+    [moviePlayer.view setFrame:CGRectMake(0,
+                                          0,
+                                          CGRectGetHeight(self.view.bounds),
+                                          CGRectGetWidth(self.view.bounds))];
+    [self.view addSubview:moviePlayer.view];
+    [self.view bringSubviewToFront:moviePlayer.view];
+    
+    // Remove the movie player view controller from the "playback did finish" notification observers
+    [[NSNotificationCenter defaultCenter] removeObserver:moviePlayer
+                                                    name:MPMoviePlayerPlaybackDidFinishNotification
+                                                  object:moviePlayer];
+    
+    // Register this class as an observer instead
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(movieFinishedCallback:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+                                               object:moviePlayer];
+    
+    [moviePlayer setScalingMode:MPMovieScalingModeAspectFit];
+    [moviePlayer setControlStyle:MPMovieControlStyleNone];
+    
+    [moviePlayer play];
+}
+
+- (void)movieFinishedCallback:(NSNotification*)aNotification
+{
+    //Probeer te weten hoe de movieplayer gestopt werd
+    NSNumber *finishReason = [[aNotification userInfo] objectForKey:MPMoviePlayerPlaybackDidFinishReasonUserInfoKey];
+	
+    // Dismiss the view controller ONLY when the reason is not "playback ended"
+    if ([finishReason intValue] == MPMovieFinishReasonPlaybackEnded)
+    {
+		NSLog(@"<FilmCameraViewController> Gebruiker heeft het filmpje uitgekeken. Start nu met filmen...");
+		
+        //Verwijder de notificatie van de movieplayer
+		MPMoviePlayerController *speler = [aNotification object];
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:MPMoviePlayerPlaybackDidFinishNotification
+                                                      object:speler];
+        //Verwijder de view
+        [UIView animateWithDuration:0.25
+                         animations:^{
+                             [moviePlayer.view setAlpha:0];
+                         }
+                         completion:^(BOOL finished) {
+                             [moviePlayer.view removeFromSuperview];
+                             moviePlayer = nil;
+                         }];
+    }
+}
+
+- (NSURL*)movieURLForToday {
+	NSString *videoName = [[NSString alloc] init];
+    
+    NSDateFormatter *mmddccyy = [[NSDateFormatter alloc] init];
+    [mmddccyy  setTimeStyle:NSDateFormatterNoStyle];
+    [mmddccyy setDateFormat:@"MM/dd/yyyy"];
+	
+    NSDate *today = [[NSDate alloc]init];
+    
+    NSDate *day1 = [mmddccyy dateFromString:dag01];
+    NSDate *day2 = [mmddccyy dateFromString:dag02];
+    NSDate *day3 = [mmddccyy dateFromString:dag03];
+    NSDate *day4 = [mmddccyy dateFromString:dag04];
+    NSDate *day5 = [mmddccyy dateFromString:dag05];
+    
+    if([day1 compare:today] == NSOrderedAscending) {
+        videoName=@"01";
+    }
+	else if([day2 compare:today] == NSOrderedAscending) {
+        videoName=@"02";
+    }
+	else if([day3 compare:today] == NSOrderedAscending) {
+        videoName=@"03";
+    }
+	else if([day4 compare:today] == NSOrderedAscending) {
+        videoName=@"04";
+    }
+	else if([day5 compare:today] == NSOrderedAscending) {
+        videoName=@"05";
+    }
+	
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:videoName ofType:@"mov" inDirectory:nil]];
+	
+	return url;
+}
+
     
 #pragma mark - Filmsessie setup
     

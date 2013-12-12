@@ -49,7 +49,7 @@
         {
             if([[cookie domain] rangeOfString:@"ketnet.be"].location != NSNotFound)
             {
-                NSLog(@"Verwijder cookie:\n%@\n", cookie);
+                NSLog(@"<AppDelegate> Verwijder cookie:\n%@\n", cookie);
                 [[NSHTTPCookieStorage sharedHTTPCookieStorage] deleteCookie:cookie];
             }
         }

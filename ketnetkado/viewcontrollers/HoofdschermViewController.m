@@ -41,7 +41,6 @@
     [self.navigationController setNavigationBarHidden:YES];
 	
 	[self maakAchtergrond];
-    
     [self maakKnoppen];
 }
 
@@ -56,31 +55,13 @@
 }
     
 #pragma mark - Knop acties
-    
-- (void)toonOpdracht {
-    NSLog(@"<HoofdschermViewController> Toon de opdracht van de dag");
-    
-	MPMoviePlayerViewController *opdrachtVC = [[MPMoviePlayerViewController alloc] initWithContentURL:[self movieURLForToday]];
-    [opdrachtVC.moviePlayer setControlStyle:MPMovieControlStyleNone];
-	
-	// Remove the movie player view controller from the "playback did finish" notification observers
-    [[NSNotificationCenter defaultCenter] removeObserver:opdrachtVC
-                                                    name:MPMoviePlayerPlaybackDidFinishNotification
-                                                  object:opdrachtVC.moviePlayer];
-	
-    // Register this class as an observer instead
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(movieFinishedCallback:)
-                                                 name:MPMoviePlayerPlaybackDidFinishNotification
-                                               object:opdrachtVC.moviePlayer];
-
-    [self.navigationController pushViewController:opdrachtVC
-                                         animated:YES];
-    
-}
 
 - (void)startFilmenZonderOpdracht {
     [self startFilmenMetOpdrachtID:@"0"];
+}
+
+- (void)startFilmenMetOpdracht {
+    [self startFilmenMetOpdrachtID:[self opdrachtIDForToday]];
 }
     
 - (void)startFilmenMetOpdrachtID:(NSString*)opdrachtID {
@@ -92,84 +73,7 @@
                                          animated:YES];
 }
 
-#pragma mark - Einde opdracht
-
-- (void)movieFinishedCallback:(NSNotification*)aNotification
-{
-    //Probeer te weten hoe de movieplayer gestopt werd
-    NSNumber *finishReason = [[aNotification userInfo] objectForKey:MPMoviePlayerPlaybackDidFinishReasonUserInfoKey];
-	
-    // Dismiss the view controller ONLY when the reason is not "playback ended"
-    if ([finishReason intValue] == MPMovieFinishReasonPlaybackEnded)
-    {
-		NSLog(@"<OpdrachtViewController> Gebruiker heeft het filmpje uitgekeken. Opdracht aanvaard.");
-		
-        //Verwijder de notificatie van de movieplayer
-		MPMoviePlayerController *moviePlayer = [aNotification object];
-        [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                        name:MPMoviePlayerPlaybackDidFinishNotification
-                                                      object:moviePlayer];
-		
-		[[NSNotificationCenter defaultCenter] addObserver:self
-												 selector:@selector(opdrachtIsVerdwenen)
-													 name:@"OpdrachtIsVerdwenenMelding"
-												   object:nil];
-        //Verwijder de viewcontroller
-        [self.navigationController dismissViewControllerAnimated:YES
-													  completion:^{
-														  [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"OpdrachtIsVerdwenenMelding" object:nil]];
-													  }];
-    }
-	else if ([finishReason intValue] == MPMovieFinishReasonUserExited) {
-		NSLog(@"<OpdrachtViewController> Gebruiker heeft het filmpje gestopt. Geen opdracht aanvaard.");
-		
-		//Verwijder de viewcontroller
-        [self.navigationController dismissMoviePlayerViewControllerAnimated];
-	}
-}
-		 
-- (void)opdrachtIsVerdwenen {
-	[self startFilmenMetOpdrachtID:[self opdrachtIDForToday]];
-}
-			 
-
 #pragma mark - Opdracht
-
-- (NSURL*)movieURLForToday {
-	NSString *videoName = [[NSString alloc] init];
-    
-    NSDateFormatter *mmddccyy = [[NSDateFormatter alloc] init];
-    [mmddccyy  setTimeStyle:NSDateFormatterNoStyle];
-    [mmddccyy setDateFormat:@"MM/dd/yyyy"];
-	
-    NSDate *today = [[NSDate alloc]init];
-    
-    NSDate *day1 = [mmddccyy dateFromString:dag01];
-    NSDate *day2 = [mmddccyy dateFromString:dag02];
-    NSDate *day3 = [mmddccyy dateFromString:dag03];
-    NSDate *day4 = [mmddccyy dateFromString:dag04];
-    NSDate *day5 = [mmddccyy dateFromString:dag05];
-    
-    if([day1 compare:today] == NSOrderedAscending) {
-        videoName=@"01";
-    }
-	else if([day2 compare:today] == NSOrderedAscending) {
-        videoName=@"02";
-    }
-	else if([day3 compare:today] == NSOrderedAscending) {
-        videoName=@"03";
-    }
-	else if([day4 compare:today] == NSOrderedAscending) {
-        videoName=@"04";
-    }
-	else if([day5 compare:today] == NSOrderedAscending) {
-        videoName=@"05";
-    }
-	
-    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:videoName ofType:@"mov" inDirectory:nil]];
-	
-	return url;
-}
 
 - (NSString*)opdrachtIDForToday {
 	NSString* opdrachtID = @"0";
@@ -230,7 +134,7 @@
                                                              kKnopBreedte,
                                                              kKnopHoogte)];
     [btnOpdracht addTarget:self
-                    action:@selector(toonOpdracht)
+                    action:@selector(startFilmenMetOpdracht)
           forControlEvents:UIControlEventTouchUpInside];
 	[btnOpdracht setBackgroundImage:[UIImage imageNamed:@"opdrachtbekijken"] forState:UIControlStateNormal];
 	[btnOpdracht setBackgroundImage:[UIImage imageNamed:@"opdrachtbekijken_pressed"] forState:UIControlStateHighlighted];
