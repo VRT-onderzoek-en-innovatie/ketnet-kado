@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginManager.h"
 
-@interface LoginViewController : UIViewController {   
+@interface LoginViewController : UIViewController <LoginManagerDelegate> {
     UITextField *txtUsername;
     UITextField *txtPassword;
     UIButton *btnLogin;

@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
 	
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05achtergrond"]]];
     [self setupTextFields];
     [self setupLoginButton];
 }
@@ -62,14 +63,24 @@
     [self.view addSubview:txtUsername];
     [self.view bringSubviewToFront:txtUsername];
     
-    txtPassword = [[UITextField alloc] initWithFrame:CGRectMake(0,
-                                                                100,
+    txtPassword = [[UITextField alloc] initWithFrame:CGRectMake(200,
+                                                                200,
                                                                 348,
                                                                 70)];
     [txtPassword setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05password"]]];
     [txtPassword setSecureTextEntry:YES];
     [self.view addSubview:txtPassword];
     [self.view bringSubviewToFront:txtPassword];
+}
+
+#pragma mark - LoginManager delegate
+
+- (void)isIngelogdMetSessieID:(NSString *)sessieID {
+    
+}
+
+- (void)isNietIngelogdMetFout:(NSError *)fout {
+    
 }
 
 @end

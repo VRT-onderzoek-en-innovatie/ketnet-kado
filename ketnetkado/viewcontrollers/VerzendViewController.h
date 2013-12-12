@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LoginManager.h"
+#import "LoginViewController.h"
 
 @interface VerzendViewController : UIViewController {
     NSURL *videoLocatie;
