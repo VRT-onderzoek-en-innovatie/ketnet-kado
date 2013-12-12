@@ -67,7 +67,7 @@
                                                                 200,
                                                                 348,
                                                                 70)];
-    [txtPassword setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05password"]]];
+    [txtPassword setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05paswoord"]]];
     [txtPassword setSecureTextEntry:YES];
     [self.view addSubview:txtPassword];
     [self.view bringSubviewToFront:txtPassword];

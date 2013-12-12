@@ -20,7 +20,7 @@
 		1002AF331859E3D100566840 /* 05achtergrond@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF2F1859E3D100566840 /* 05achtergrond@2x.png */; };
 		1002AF341859E3D100566840 /* 05loginbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF301859E3D100566840 /* 05loginbutton@2x.png */; };
 		1002AF361859E3D100566840 /* 05username@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF321859E3D100566840 /* 05username@2x.png */; };
-		1002AF3D1859F0C700566840 /* 05password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF3C1859F0C700566840 /* 05password@2x.png */; };
+		1002AF3F1859F14100566840 /* 05paswoord@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF3E1859F14100566840 /* 05paswoord@2x.png */; };
 		10111A6218587C2000179450 /* Ovink-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6118587C2000179450 /* Ovink-Black.otf */; };
 		10111A6618587C3A00179450 /* achtergrond@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6318587C3A00179450 /* achtergrond@2x.png */; };
 		10111A6718587C3A00179450 /* filmen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6418587C3A00179450 /* filmen@2x.png */; };
@@ -88,7 +88,7 @@
 		1002AF2F1859E3D100566840 /* 05achtergrond@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "05achtergrond@2x.png"; path = "assets/images/05achtergrond@2x.png"; sourceTree = "<group>"; };
 		1002AF301859E3D100566840 /* 05loginbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "05loginbutton@2x.png"; path = "assets/images/05loginbutton@2x.png"; sourceTree = "<group>"; };
 		1002AF321859E3D100566840 /* 05username@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "05username@2x.png"; path = "assets/images/05username@2x.png"; sourceTree = "<group>"; };
-		1002AF3C1859F0C700566840 /* 05password@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "05password@2x.png"; path = "assets/images/05password@2x.png"; sourceTree = "<group>"; };
+		1002AF3E1859F14100566840 /* 05paswoord@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "05paswoord@2x.png"; path = "assets/images/05paswoord@2x.png"; sourceTree = "<group>"; };
 		10111A6118587C2000179450 /* Ovink-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ovink-Black.otf"; path = "assets/fonts/Ovink-Black.otf"; sourceTree = "<group>"; };
 		10111A6318587C3A00179450 /* achtergrond@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "achtergrond@2x.png"; path = "assets/images/achtergrond@2x.png"; sourceTree = "<group>"; };
 		10111A6418587C3A00179450 /* filmen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "filmen@2x.png"; path = "assets/images/filmen@2x.png"; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				1002AF2F1859E3D100566840 /* 05achtergrond@2x.png */,
-				1002AF3C1859F0C700566840 /* 05password@2x.png */,
+				1002AF3E1859F14100566840 /* 05paswoord@2x.png */,
 				1002AF301859E3D100566840 /* 05loginbutton@2x.png */,
 				1002AF321859E3D100566840 /* 05username@2x.png */,
 			);
@@ -456,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10111A7C18589A3C00179450 /* 04.mov in Resources */,
+				1002AF3F1859F14100566840 /* 05paswoord@2x.png in Resources */,
 				1002AF271859D3E500566840 /* 04achtergrond@2x.png in Resources */,
 				1002AF281859D3E500566840 /* 04maaknieuwe_pressed@2x.png in Resources */,
 				10111A8A18589D5100179450 /* record_pushme@2x.png in Resources */,
@@ -466,7 +467,6 @@
 				10111A8318589CF900179450 /* filmen_pressed@2x.png in Resources */,
 				10111A8018589A3C00179450 /* 02.mov in Resources */,
 				1002AF291859D3E500566840 /* 04maaknieuwe@2x.png in Resources */,
-				1002AF3D1859F0C700566840 /* 05password@2x.png in Resources */,
 				10111A7D18589A3C00179450 /* 03.mov in Resources */,
 				10111A6618587C3A00179450 /* achtergrond@2x.png in Resources */,
 				10111A7F18589A3C00179450 /* 01.mov in Resources */,
