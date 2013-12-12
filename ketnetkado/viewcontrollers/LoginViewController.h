@@ -8,24 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class LoginViewController;
-
-@protocol LoginViewControllerDelegate <NSObject>
-
-@required
-- (void)isIngelogdMetSessieID:(NSString*)sessieID;
-- (void)isNietIngelogdMetFout:(NSError*)fout;
-
-@end
-
-@interface LoginViewController : UIViewController {
-    id<LoginViewControllerDelegate>delegate;
-    
+@interface LoginViewController : UIViewController {   
     UITextField *txtUsername;
     UITextField *txtPassword;
     UIButton *btnLogin;
 }
-
-@property (nonatomic, retain) id<LoginViewControllerDelegate>delegate;
 
 @end

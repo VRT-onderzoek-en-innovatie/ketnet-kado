@@ -13,13 +13,17 @@
 
 @protocol LoginManagerDelegate <NSObject>
 
-@optional
+@required
+- (void)isIngelogdMetSessieID:(NSString*)sessieID;
+- (void)isNietIngelogdMetFout:(NSError*)fout;
 
 @end
 
-@interface LoginManager : NSObject <LoginViewControllerDelegate> {
-    
+@interface LoginManager : NSObject {
+    id<LoginManagerDelegate>delegate;
 }
+
+@property (nonatomic, retain) id<LoginManagerDelegate>delegate;
 
 + (BOOL)isIngelogd;
 

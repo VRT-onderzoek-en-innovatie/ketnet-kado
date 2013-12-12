@@ -11,19 +11,14 @@
 
 @implementation LoginManager
 
+@synthesize delegate;
+
 + (BOOL)isIngelogd {
     return NO;
 }
 
 - (void)logGebruikerIn {
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    LoginViewController *loginVC = [[LoginViewController alloc] init];
-    
-    [appDelegate.window.rootViewController.navigationController presentViewController:loginVC
-                                                                             animated:YES
-                                                                           completion:nil];
-    
-    [loginVC setDelegate:self];
+
 }
 
 #pragma mark - LoginViewController
