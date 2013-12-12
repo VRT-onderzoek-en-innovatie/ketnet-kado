@@ -66,7 +66,7 @@
     [self.view bringSubviewToFront:txtUsername];
     
     txtPassword = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMidY(self.view.bounds) - 348/2,
-                                                                150,
+                                                                100,
                                                                 348,
                                                                 70)];
     [txtPassword setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05paswoord"]]];
@@ -96,11 +96,17 @@
 #pragma mark - LoginManager delegate
 
 - (void)isIngelogdMetSessieID:(NSString *)sessieID {
-    
+    NSLog(@"<LoginViewController> SessieID (%@) ontvangen, doorgaan met upload", sessieID);
 }
 
 - (void)isNietIngelogdMetFout:(NSError *)fout {
-    
+    NSLog(@"<LoginViewController> Foutmelding tonen");
+    UIAlertView *foutmelding = [[UIAlertView alloc] initWithTitle:@"Oeps!"
+                                                          message:@"Je gebruikersnaam of je paswoord zijn niet helemaal juist. Vul je ze even opnieuw in?"
+                                                         delegate:self
+                                                cancelButtonTitle:@"Ja"
+                                                otherButtonTitles:nil];
+    [foutmelding show];
 }
 
 @end
