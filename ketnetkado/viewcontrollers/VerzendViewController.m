@@ -47,6 +47,13 @@
 
 - (void)maakNieuwFilmpje {
     NSLog(@"<VerzendViewController> De gebruiker wil een nieuw filmpje maken met dezelfde opdrachtID");
+    //Terugschakelen naar de FilmCameraViewcontroller
+    for (UIViewController *childView in [self.navigationController childViewControllers]) {
+        if ([childView isKindOfClass:[FilmCameraViewController class]]) {
+            [self.navigationController popToViewController:childView animated:YES];
+            return;
+        }
+    }
 }
 
 - (void)stuurFilmpjeDoor {
