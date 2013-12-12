@@ -17,6 +17,10 @@
 		1002AF2A1859D3E500566840 /* 04stuurdoor_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF251859D3E500566840 /* 04stuurdoor_pressed@2x.png */; };
 		1002AF2B1859D3E500566840 /* 04stuurdoor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF261859D3E500566840 /* 04stuurdoor@2x.png */; };
 		1002AF2E1859DF3700566840 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1002AF2D1859DF3700566840 /* LoginViewController.m */; };
+		1002AF331859E3D100566840 /* 05achtergrond@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF2F1859E3D100566840 /* 05achtergrond@2x.png */; };
+		1002AF341859E3D100566840 /* 05loginbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF301859E3D100566840 /* 05loginbutton@2x.png */; };
+		1002AF351859E3D100566840 /* 05password@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF311859E3D100566840 /* 05password@2X.png */; };
+		1002AF361859E3D100566840 /* 05username@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF321859E3D100566840 /* 05username@2x.png */; };
 		10111A6218587C2000179450 /* Ovink-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6118587C2000179450 /* Ovink-Black.otf */; };
 		10111A6618587C3A00179450 /* achtergrond@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6318587C3A00179450 /* achtergrond@2x.png */; };
 		10111A6718587C3A00179450 /* filmen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6418587C3A00179450 /* filmen@2x.png */; };
@@ -81,6 +85,10 @@
 		1002AF261859D3E500566840 /* 04stuurdoor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "04stuurdoor@2x.png"; path = "assets/images/04stuurdoor@2x.png"; sourceTree = "<group>"; };
 		1002AF2C1859DF3700566840 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = viewcontrollers/LoginViewController.h; sourceTree = "<group>"; };
 		1002AF2D1859DF3700566840 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = viewcontrollers/LoginViewController.m; sourceTree = "<group>"; };
+		1002AF2F1859E3D100566840 /* 05achtergrond@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "05achtergrond@2x.png"; path = "assets/images/05achtergrond@2x.png"; sourceTree = "<group>"; };
+		1002AF301859E3D100566840 /* 05loginbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "05loginbutton@2x.png"; path = "assets/images/05loginbutton@2x.png"; sourceTree = "<group>"; };
+		1002AF311859E3D100566840 /* 05password@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "05password@2X.png"; path = "assets/images/05password@2X.png"; sourceTree = "<group>"; };
+		1002AF321859E3D100566840 /* 05username@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "05username@2x.png"; path = "assets/images/05username@2x.png"; sourceTree = "<group>"; };
 		10111A6118587C2000179450 /* Ovink-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ovink-Black.otf"; path = "assets/fonts/Ovink-Black.otf"; sourceTree = "<group>"; };
 		10111A6318587C3A00179450 /* achtergrond@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "achtergrond@2x.png"; path = "assets/images/achtergrond@2x.png"; sourceTree = "<group>"; };
 		10111A6418587C3A00179450 /* filmen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "filmen@2x.png"; path = "assets/images/filmen@2x.png"; sourceTree = "<group>"; };
@@ -205,6 +213,17 @@
 			name = verzendviewcontroller;
 			sourceTree = "<group>";
 		};
+		1002AF371859E3D400566840 /* loginviewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				1002AF2F1859E3D100566840 /* 05achtergrond@2x.png */,
+				1002AF301859E3D100566840 /* 05loginbutton@2x.png */,
+				1002AF311859E3D100566840 /* 05password@2X.png */,
+				1002AF321859E3D100566840 /* 05username@2x.png */,
+			);
+			name = loginviewcontroller;
+			sourceTree = "<group>";
+		};
 		10111A5E18587BF200179450 /* assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +245,7 @@
 		10111A6018587C0100179450 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1002AF371859E3D400566840 /* loginviewcontroller */,
 				1002AF211859D38500566840 /* verzendviewcontroller */,
 				1002AF111859C8D700566840 /* previewviewcontroller */,
 				1002AF101859C8BC00566840 /* hoofdscherm */,
@@ -439,7 +459,9 @@
 				1002AF271859D3E500566840 /* 04achtergrond@2x.png in Resources */,
 				1002AF281859D3E500566840 /* 04maaknieuwe_pressed@2x.png in Resources */,
 				10111A8A18589D5100179450 /* record_pushme@2x.png in Resources */,
+				1002AF361859E3D100566840 /* 05username@2x.png in Resources */,
 				10111A6818587C3A00179450 /* opdrachtbekijken@2x.png in Resources */,
+				1002AF331859E3D100566840 /* 05achtergrond@2x.png in Resources */,
 				1002AF1B1859C93700566840 /* opdrachtbekijken_pressed@2x.png in Resources */,
 				10111A8318589CF900179450 /* filmen_pressed@2x.png in Resources */,
 				10111A8018589A3C00179450 /* 02.mov in Resources */,
@@ -452,7 +474,9 @@
 				10111A931858AFD000179450 /* Default-568h@2x.png in Resources */,
 				10111A6718587C3A00179450 /* filmen@2x.png in Resources */,
 				10111A8818589D5100179450 /* record_busy@2x.png in Resources */,
+				1002AF351859E3D100566840 /* 05password@2X.png in Resources */,
 				1002AF2B1859D3E500566840 /* 04stuurdoor@2x.png in Resources */,
+				1002AF341859E3D100566840 /* 05loginbutton@2x.png in Resources */,
 				102619321855B6DC004D6D2F /* InfoPlist.strings in Resources */,
 				10111A7E18589A3C00179450 /* 05.mov in Resources */,
 				10111A6218587C2000179450 /* Ovink-Black.otf in Resources */,
