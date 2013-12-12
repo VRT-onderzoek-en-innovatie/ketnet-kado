@@ -34,6 +34,9 @@
 		[VideoAlbumManager addAlbumWithAlbumName:@"Ketnet Kado"];
 	}
     
+    //Zet de cookies aan zodat we aan sessies kunnen doen
+    [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
+    
     //Maak de loginmanager aan
     loginManager = [[LoginManager alloc] init];
 

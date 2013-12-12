@@ -13,7 +13,7 @@
 @protocol LoginManagerDelegate <NSObject>
 
 @required
-- (void)isIngelogdMetSessieID:(NSString*)sessieID;
+- (void)isIngelogdMetGebruikersGegevens:(NSDictionary*)gebruikersGegevens;
 - (void)isNietIngelogdMetFout:(NSError*)fout;
 
 @end

@@ -167,10 +167,10 @@
 
 #pragma mark - LoginManager delegate
 
-- (void)isIngelogdMetSessieID:(NSString *)sessieID {
+- (void)isIngelogdMetGebruikersGegevens:(NSDictionary *)gebruikersGegevens {
     [self verbergBezig];
     
-    NSLog(@"<LoginViewController> SessieID (%@) ontvangen, doorgaan met upload", sessieID);
+    NSLog(@"<LoginViewController> Gebruikersgegevens (%@) ontvangen, doorgaan met upload...", gebruikersGegevens);
     
     [self.presentingViewController dismissViewControllerAnimated:YES
                                                       completion:^{

@@ -61,22 +61,79 @@
         NSDictionary *resultDictionary = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&error];
         if ([[resultDictionary objectForKey:@"success"] isEqualToNumber:[NSNumber numberWithInt:1]]) {
             NSLog(@"<LoginManager> Login succesvol!");
-            if ([self.delegate respondsToSelector:@selector(isIngelogdMetSessieID:)]) {
-                NSLog(@"<LoginManager> SessieID doorgeven");
-                [self.delegate isIngelogdMetSessieID:[resultDictionary objectForKey:@"session_id"]];
-            }
+            //Sla de sessie op in een cookie
+            [self maakCookieVoorSessie:[resultDictionary objectForKey:@"session_id"]];
+            //Haal de gegevens op
+            [self haalGebruikersgegevensOpVoorSessieID:[resultDictionary objectForKey:@"session_id"]];
         }
         else {
             NSLog(@"<LoginManager> Login gefaald, geen correcte gegevens!");
             if ([self.delegate respondsToSelector:@selector(isNietIngelogdMetFout:)]) {
-                NSLog(@"<LoginManager> Boodschap doorgeven");
-                [self.delegate isNietIngelogdMetFout:nil];
+                NSLog(@"<LoginManager> Boodschap doorgeven.");
+                [self.delegate isNietIngelogdMetFout:error];
             }
         }
     }
     else {
         NSLog(@"<LoginManager> Antwoord van server is niet goed, login heeft gefaald.");
     }
+}
+
+- (void)maakCookieVoorSessie:(NSString*)sessieID {
+    NSMutableDictionary *cookieProperties = [NSMutableDictionary dictionary];
+    [cookieProperties setObject:@"session_id" forKey:NSHTTPCookieName];
+    [cookieProperties setObject:sessieID forKey:NSHTTPCookieValue];
+    [cookieProperties setObject:@"www.ketnet.be" forKey:NSHTTPCookieDomain];
+    [cookieProperties setObject:@"www.ketnet.be" forKey:NSHTTPCookieOriginURL];
+    [cookieProperties setObject:@"/" forKey:NSHTTPCookiePath];
+    [cookieProperties setObject:@"0" forKey:NSHTTPCookieVersion];
+    
+    //Vervaldatum (van een maand) zetten zodat onze sessie blijft doorlopen in de app en over het systeem heen.
+    //Wegdoen = cookie vernietigen bij exist
+    [cookieProperties setObject:[[NSDate date] dateByAddingTimeInterval:2629743] forKey:NSHTTPCookieExpires];
+    
+    NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:cookieProperties];
+    [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
+}
+
+- (void)haalGebruikersgegevensOpVoorSessieID:(NSString*)sessieID {
+    NSLog(@"<LoginManager> Met sessieID gebruikersgegevens ophalen...");
+    NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    
+    //Cookies in de headers plaatsen
+    NSDictionary *headers = [NSHTTPCookie requestHeaderFieldsWithCookies:[cookieJar cookies]];
+    [request setAllHTTPHeaderFields:headers];
+    
+    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.ketnet.be/ws/user"]]];
+    [request setHTTPMethod:@"GET"];
+    
+    NSHTTPURLResponse* urlResponse = nil;
+    NSError *error = [[NSError alloc] init];
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
+    
+    if ([urlResponse statusCode] == 200) {
+        NSDictionary *resultDictionary = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&error];
+        if ([[resultDictionary objectForKey:@"success"] isEqualToNumber:[NSNumber numberWithInt:1]]) {
+            NSLog(@"<LoginManager> Gebruikersgegevens ophalen succesvol!");
+            if ([self.delegate respondsToSelector:@selector(isIngelogdMetGebruikersGegevens:)]) {
+                NSLog(@"<LoginManager> Gebruikersgegevens doorgeven.");
+                [self.delegate isIngelogdMetGebruikersGegevens:[resultDictionary objectForKey:@"user"]];
+            }
+        }
+        else {
+            NSLog(@"<LoginManager> Gebruikersgegevens ophalen heeft gefaald!");
+            if ([self.delegate respondsToSelector:@selector(isNietIngelogdMetFout:)]) {
+                NSLog(@"<LoginManager> Boodschap doorgeven");
+                [self.delegate isNietIngelogdMetFout:error];
+            }
+        }
+    }
+    else {
+        NSLog(@"<LoginManager> Antwoord van server is niet goed, login heeft gefaald.");
+    }
+    
+
 }
 
 @end
