@@ -7,7 +7,7 @@
 //
 
 #import "VerzendViewController.h"
-#import "LoginManager.h"
+#import "AppDelegate.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -50,9 +50,15 @@
 }
 
 - (void)stuurFilmpjeDoor {
-    if (![LoginManager isIngelogd]) {
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    if (![appDelegate.loginManager isIngelogd]) {
         NSLog(@"<VerzendViewController> De gebruiker is nog niet aangemeld. Toont loginscherm...");
-        
+        LoginViewController *loginVC = [[LoginViewController alloc] init];
+        [self.navigationController presentViewController:loginVC
+                                                animated:YES
+                                              completion:^{
+                                                  
+                                              }];
     }
     else {
         NSLog(@"<VerzendViewController> De gebruiker is aangemeld, we kunnen verzenden...");

@@ -13,12 +13,33 @@
 
 @synthesize delegate;
 
-+ (BOOL)isIngelogd {
+- (id)init {
+    self = [super init];
+    if (self) {
+        //We bestaan! Hoera!
+        //Check of er al credentials zijn opgeslagen en log al in indien ja.
+        if (![self heeftCredentials]) {
+            NSLog(@"<LoginManager> Er zijn nog geen credentials te vinden, gebruiker zal moeten inloggen straks");
+        }
+        else {
+            NSLog(@"<LoginManager> Credentials gevonden, inloggen...");
+        }
+    }
+    
+    return self;
+}
+
+- (BOOL)heeftCredentials {
     return NO;
 }
 
-- (void)logGebruikerIn {
+- (BOOL)isIngelogd {
+    NSLog(@"<LoginManager> Aanvraag of de gebruiker is ingelogd.");
+    return [self heeftCredentials];
+}
 
+- (void)logGebruikerInMetGebruikersnaam:(NSString*)username enPaswoord:(NSString*)password {
+    
 }
 
 #pragma mark - LoginViewController

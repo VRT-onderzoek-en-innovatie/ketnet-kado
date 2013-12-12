@@ -15,6 +15,8 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+@synthesize loginManager;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -31,6 +33,9 @@
 		NSLog(@"<AppDelegate> Album bestaat nog niet, aanmaken...");
 		[VideoAlbumManager addAlbumWithAlbumName:@"Ketnet Kado"];
 	}
+    
+    //Maak de loginmanager aan
+    loginManager = [[LoginManager alloc] init];
 
     return YES;
 }

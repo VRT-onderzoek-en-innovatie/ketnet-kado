@@ -25,8 +25,7 @@
 
 @property (nonatomic, retain) id<LoginManagerDelegate>delegate;
 
-+ (BOOL)isIngelogd;
-
-- (void)logGebruikerIn;
+- (BOOL)isIngelogd;
+- (void)logGebruikerInMetGebruikersnaam:(NSString*)username enPaswoord:(NSString*)password;
 
 @end
