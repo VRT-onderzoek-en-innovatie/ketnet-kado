@@ -7,6 +7,7 @@
 //
 
 #import "VerzendViewController.h"
+#import "LoginManager.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -45,11 +46,16 @@
 #pragma mark - Acties
 
 - (void)maakNieuwFilmpje {
-    
+    NSLog(@"<VerzendViewController> De gebruiker wil een nieuw filmpje maken met dezelfde opdrachtID");
 }
 
 - (void)stuurFilmpjeDoor {
-    
+    if (![LoginManager isIngelogd]) {
+        NSLog(@"<VerzendViewController> De gebruiker is nog niet aangemeld. Toont loginscherm...");
+    }
+    else {
+        NSLog(@"<VerzendViewController> De gebruiker is aangemeld, we kunnen verzenden...");
+    }
 }
 
 - (void)terugNaarStart {

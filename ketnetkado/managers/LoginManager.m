@@ -10,4 +10,8 @@
 
 @implementation LoginManager
 
++ (BOOL)isIngelogd {
+    return NO;
+}
+
 @end

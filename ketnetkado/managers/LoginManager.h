@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LoginManager : NSObject
+@interface LoginManager : NSObject {
+    
+}
+
++ (BOOL)isIngelogd;
 
 @end
