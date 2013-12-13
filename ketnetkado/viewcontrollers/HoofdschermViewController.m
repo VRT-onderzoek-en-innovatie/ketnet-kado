@@ -41,7 +41,7 @@
     
     [self.navigationController setNavigationBarHidden:YES];
 	
-	[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"achtergrond"]]];
+	[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"01achtergrond"]]];
     [self maakKnoppen];
 }
 
@@ -120,8 +120,8 @@
     [btnFilmen addTarget:self
                   action:@selector(startFilmenZonderOpdracht)
         forControlEvents:UIControlEventTouchUpInside];
-	[btnFilmen setBackgroundImage:[UIImage imageNamed:@"filmen"] forState:UIControlStateNormal];
-	[btnFilmen setBackgroundImage:[UIImage imageNamed:@"filmen_pressed"] forState:UIControlStateHighlighted];
+	[btnFilmen setBackgroundImage:[UIImage imageNamed:@"01filmen"] forState:UIControlStateNormal];
+	[btnFilmen setBackgroundImage:[UIImage imageNamed:@"01filmen_pressed"] forState:UIControlStateHighlighted];
     [self.view addSubview:btnFilmen];
     
     btnOpdracht = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMidY(self.view.bounds) + kMargeTussenKnoppen/2,

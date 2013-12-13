@@ -23,15 +23,12 @@
 		1002AF3F1859F14100566840 /* 05paswoord@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF3E1859F14100566840 /* 05paswoord@2x.png */; };
 		1002AF411859F26700566840 /* 05loginbutton_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002AF401859F26700566840 /* 05loginbutton_pressed@2x.png */; };
 		10111A6218587C2000179450 /* Ovink-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6118587C2000179450 /* Ovink-Black.otf */; };
-		10111A6618587C3A00179450 /* achtergrond@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6318587C3A00179450 /* achtergrond@2x.png */; };
-		10111A6718587C3A00179450 /* filmen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6418587C3A00179450 /* filmen@2x.png */; };
 		10111A6818587C3A00179450 /* opdrachtbekijken@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A6518587C3A00179450 /* opdrachtbekijken@2x.png */; };
 		10111A7C18589A3C00179450 /* 04.mov in Resources */ = {isa = PBXBuildFile; fileRef = 10111A7718589A3C00179450 /* 04.mov */; };
 		10111A7D18589A3C00179450 /* 03.mov in Resources */ = {isa = PBXBuildFile; fileRef = 10111A7818589A3C00179450 /* 03.mov */; };
 		10111A7E18589A3C00179450 /* 05.mov in Resources */ = {isa = PBXBuildFile; fileRef = 10111A7918589A3C00179450 /* 05.mov */; };
 		10111A7F18589A3C00179450 /* 01.mov in Resources */ = {isa = PBXBuildFile; fileRef = 10111A7A18589A3C00179450 /* 01.mov */; };
 		10111A8018589A3C00179450 /* 02.mov in Resources */ = {isa = PBXBuildFile; fileRef = 10111A7B18589A3C00179450 /* 02.mov */; };
-		10111A8318589CF900179450 /* filmen_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A8118589CF900179450 /* filmen_pressed@2x.png */; };
 		10111A8418589CF900179450 /* opdrachtbekijken_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A8218589CF900179450 /* opdrachtbekijken_pressed@2x.png */; };
 		10111A8818589D5100179450 /* record_busy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A8518589D5100179450 /* record_busy@2x.png */; };
 		10111A8918589D5100179450 /* record_idle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10111A8618589D5100179450 /* record_idle@2x.png */; };
@@ -62,6 +59,9 @@
 		102AC137185B0A5100333012 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 102AC136185B0A5100333012 /* NetworkManager.m */; };
 		102AC139185B0E7600333012 /* serverdata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 102AC138185B0E7600333012 /* serverdata.plist */; };
 		102AC13C185B411800333012 /* PutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102AC13B185B411800333012 /* PutController.m */; };
+		102AC13F185B527900333012 /* 01filmen_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 102AC13D185B527900333012 /* 01filmen_pressed@2x.png */; };
+		102AC140185B527900333012 /* 01filmen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 102AC13E185B527900333012 /* 01filmen@2x.png */; };
+		102AC142185B52B300333012 /* 01achtergrond@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 102AC141185B52B300333012 /* 01achtergrond@2x.png */; };
 		105257B81859A69300A3D7A6 /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105257B71859A69300A3D7A6 /* PreviewViewController.m */; };
 		105257BB1859A6C200A3D7A6 /* TransportManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 105257BA1859A6C200A3D7A6 /* TransportManager.m */; };
 		105257BE1859A6D000A3D7A6 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 105257BD1859A6D000A3D7A6 /* LoginManager.m */; };
@@ -96,15 +96,12 @@
 		1002AF3E1859F14100566840 /* 05paswoord@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "05paswoord@2x.png"; path = "assets/images/05paswoord@2x.png"; sourceTree = "<group>"; };
 		1002AF401859F26700566840 /* 05loginbutton_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "05loginbutton_pressed@2x.png"; path = "assets/images/05loginbutton_pressed@2x.png"; sourceTree = "<group>"; };
 		10111A6118587C2000179450 /* Ovink-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ovink-Black.otf"; path = "assets/fonts/Ovink-Black.otf"; sourceTree = "<group>"; };
-		10111A6318587C3A00179450 /* achtergrond@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "achtergrond@2x.png"; path = "assets/images/achtergrond@2x.png"; sourceTree = "<group>"; };
-		10111A6418587C3A00179450 /* filmen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "filmen@2x.png"; path = "assets/images/filmen@2x.png"; sourceTree = "<group>"; };
 		10111A6518587C3A00179450 /* opdrachtbekijken@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "opdrachtbekijken@2x.png"; path = "assets/images/opdrachtbekijken@2x.png"; sourceTree = "<group>"; };
 		10111A7718589A3C00179450 /* 04.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 04.mov; path = assets/movies/04.mov; sourceTree = "<group>"; };
 		10111A7818589A3C00179450 /* 03.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 03.mov; path = assets/movies/03.mov; sourceTree = "<group>"; };
 		10111A7918589A3C00179450 /* 05.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 05.mov; path = assets/movies/05.mov; sourceTree = "<group>"; };
 		10111A7A18589A3C00179450 /* 01.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 01.mov; path = assets/movies/01.mov; sourceTree = "<group>"; };
 		10111A7B18589A3C00179450 /* 02.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 02.mov; path = assets/movies/02.mov; sourceTree = "<group>"; };
-		10111A8118589CF900179450 /* filmen_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "filmen_pressed@2x.png"; path = "assets/images/filmen_pressed@2x.png"; sourceTree = "<group>"; };
 		10111A8218589CF900179450 /* opdrachtbekijken_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "opdrachtbekijken_pressed@2x.png"; path = "assets/images/opdrachtbekijken_pressed@2x.png"; sourceTree = "<group>"; };
 		10111A8518589D5100179450 /* record_busy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "record_busy@2x.png"; path = "assets/images/record_busy@2x.png"; sourceTree = "<group>"; };
 		10111A8618589D5100179450 /* record_idle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "record_idle@2x.png"; path = "assets/images/record_idle@2x.png"; sourceTree = "<group>"; };
@@ -144,6 +141,9 @@
 		102AC138185B0E7600333012 /* serverdata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = serverdata.plist; sourceTree = "<group>"; };
 		102AC13A185B411800333012 /* PutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PutController.h; path = utils/PutController/PutController.h; sourceTree = "<group>"; };
 		102AC13B185B411800333012 /* PutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PutController.m; path = utils/PutController/PutController.m; sourceTree = "<group>"; };
+		102AC13D185B527900333012 /* 01filmen_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "01filmen_pressed@2x.png"; path = "assets/images/01filmen_pressed@2x.png"; sourceTree = "<group>"; };
+		102AC13E185B527900333012 /* 01filmen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "01filmen@2x.png"; path = "assets/images/01filmen@2x.png"; sourceTree = "<group>"; };
+		102AC141185B52B300333012 /* 01achtergrond@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "01achtergrond@2x.png"; path = "assets/images/01achtergrond@2x.png"; sourceTree = "<group>"; };
 		105257B61859A69300A3D7A6 /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreviewViewController.h; path = viewcontrollers/PreviewViewController.h; sourceTree = "<group>"; };
 		105257B71859A69300A3D7A6 /* PreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreviewViewController.m; path = viewcontrollers/PreviewViewController.m; sourceTree = "<group>"; };
 		105257B91859A6C200A3D7A6 /* TransportManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransportManager.h; path = managers/TransportManager.h; sourceTree = "<group>"; };
@@ -195,10 +195,10 @@
 		1002AF101859C8BC00566840 /* hoofdscherm */ = {
 			isa = PBXGroup;
 			children = (
-				10111A8118589CF900179450 /* filmen_pressed@2x.png */,
+				102AC141185B52B300333012 /* 01achtergrond@2x.png */,
+				102AC13D185B527900333012 /* 01filmen_pressed@2x.png */,
+				102AC13E185B527900333012 /* 01filmen@2x.png */,
 				10111A8218589CF900179450 /* opdrachtbekijken_pressed@2x.png */,
-				10111A6318587C3A00179450 /* achtergrond@2x.png */,
-				10111A6418587C3A00179450 /* filmen@2x.png */,
 				10111A6518587C3A00179450 /* opdrachtbekijken@2x.png */,
 			);
 			name = hoofdscherm;
@@ -494,23 +494,22 @@
 				10111A7C18589A3C00179450 /* 04.mov in Resources */,
 				1002AF3F1859F14100566840 /* 05paswoord@2x.png in Resources */,
 				1002AF271859D3E500566840 /* 04achtergrond@2x.png in Resources */,
+				102AC142185B52B300333012 /* 01achtergrond@2x.png in Resources */,
 				1002AF281859D3E500566840 /* 04maaknieuwe_pressed@2x.png in Resources */,
 				10111A8A18589D5100179450 /* record_pushme@2x.png in Resources */,
+				102AC13F185B527900333012 /* 01filmen_pressed@2x.png in Resources */,
 				1002AF361859E3D100566840 /* 05username@2x.png in Resources */,
 				10111A6818587C3A00179450 /* opdrachtbekijken@2x.png in Resources */,
 				1002AF331859E3D100566840 /* 05achtergrond@2x.png in Resources */,
 				1002AF411859F26700566840 /* 05loginbutton_pressed@2x.png in Resources */,
 				1002AF1B1859C93700566840 /* opdrachtbekijken_pressed@2x.png in Resources */,
-				10111A8318589CF900179450 /* filmen_pressed@2x.png in Resources */,
 				10111A8018589A3C00179450 /* 02.mov in Resources */,
 				1002AF291859D3E500566840 /* 04maaknieuwe@2x.png in Resources */,
 				10111A7D18589A3C00179450 /* 03.mov in Resources */,
-				10111A6618587C3A00179450 /* achtergrond@2x.png in Resources */,
 				10111A7F18589A3C00179450 /* 01.mov in Resources */,
 				10111A8918589D5100179450 /* record_idle@2x.png in Resources */,
 				1002AF1D1859C93700566840 /* play@2x.png in Resources */,
 				10111A931858AFD000179450 /* Default-568h@2x.png in Resources */,
-				10111A6718587C3A00179450 /* filmen@2x.png in Resources */,
 				10111A8818589D5100179450 /* record_busy@2x.png in Resources */,
 				1002AF2B1859D3E500566840 /* 04stuurdoor@2x.png in Resources */,
 				1002AF341859E3D100566840 /* 05loginbutton@2x.png in Resources */,
@@ -520,6 +519,7 @@
 				10111A8418589CF900179450 /* opdrachtbekijken_pressed@2x.png in Resources */,
 				1002AF1C1859C93700566840 /* opdrachtbekijken@2x.png in Resources */,
 				1026193D1855B6DC004D6D2F /* Images.xcassets in Resources */,
+				102AC140185B527900333012 /* 01filmen@2x.png in Resources */,
 				1002AF2A1859D3E500566840 /* 04stuurdoor_pressed@2x.png in Resources */,
 				102AC139185B0E7600333012 /* serverdata.plist in Resources */,
 			);
