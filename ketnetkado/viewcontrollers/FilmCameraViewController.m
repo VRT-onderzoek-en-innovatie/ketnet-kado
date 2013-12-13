@@ -110,7 +110,7 @@
         {
             NSLog(@"Stop opname");
             isInOpname = NO;
-			[btnRecord setBackgroundImage:[UIImage imageNamed:@"record_idle"] forState:UIControlStateNormal];
+			[btnRecord setBackgroundImage:[UIImage imageNamed:@"record_pushme"] forState:UIControlStateNormal];
             
             [filmOutput stopRecording];
         }
