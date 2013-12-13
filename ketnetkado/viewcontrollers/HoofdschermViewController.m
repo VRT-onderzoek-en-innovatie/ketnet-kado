@@ -14,11 +14,11 @@
 #define kMargeTussenKnoppen 0
 
 //Niet enige datumbepaling >> check ook FilmCameraViewController
-#define dag01 @"10/14/2013"
-#define dag02 @"10/19/2013"
-#define dag03 @"10/23/2013"
-#define dag04 @"10/26/2013"
-#define dag05 @"10/30/2013"
+#define dag01 @"12/18/2013"
+#define dag02 @"12/21/2013"
+#define dag03 @"12/25/2013"
+#define dag04 @"12/28/2013"
+#define dag05 @"01/01/2014"
 
 @interface HoofdschermViewController ()
 
