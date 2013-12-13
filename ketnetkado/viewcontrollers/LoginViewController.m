@@ -16,6 +16,8 @@
 
 @implementation LoginViewController
 
+@synthesize delegate;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -24,7 +26,7 @@
     }
     return self;
 }
-
+ 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -171,10 +173,14 @@
     [self verbergBezig];
     
     NSLog(@"<LoginViewController> Gebruikersgegevens (%@) ontvangen, doorgaan met upload...", gebruikersGegevens);
-    
+	
+	if ([self.delegate respondsToSelector:@selector(inloggenBeeindigdMetGebruikersGegevens:)]) {
+		[self.delegate inloggenBeeindigdMetGebruikersGegevens:gebruikersGegevens];
+	}
+	
     [self.presentingViewController dismissViewControllerAnimated:YES
                                                       completion:^{
-                                                          NSLog(@"<LoginViewController> Start the dance...");
+                                                          NSLog(@"<LoginViewController> Gegevens doorgegeven.");
                                                       }];
 }
 

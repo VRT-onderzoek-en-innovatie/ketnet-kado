@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LoginViewController.h"
 
-@interface VerzendViewController : UIViewController {
+@interface VerzendViewController : UIViewController <LoginViewControllerDelegate, TransportManagerDelegate> {
     NSURL *videoLocatie;
     NSString *opdrachtID;
     

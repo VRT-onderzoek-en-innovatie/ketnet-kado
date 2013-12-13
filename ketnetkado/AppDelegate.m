@@ -21,7 +21,7 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
-@synthesize loginManager;
+@synthesize loginManager, transportManager;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -57,6 +57,9 @@
     
     //Maak de loginmanager aan
     loginManager = [[LoginManager alloc] init];
+	
+	//Maak de transportmanager aan
+	transportManager = [[TransportManager alloc] init];
 
     return YES;
 }

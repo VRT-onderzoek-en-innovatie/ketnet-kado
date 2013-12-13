@@ -42,7 +42,8 @@
     NSLog(@"<LoginManager> Logingegevens ontvangen, aanvraag doen...");
     NSString *post = [NSString stringWithFormat:@"name=%@&pass=%@",username, password];
     NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
-    NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
+	//NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
+    NSString *postLength = [NSString stringWithFormat:@"%lu",(unsigned long)[postData length]];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.ketnet.be/ketnet_com/login"]]];
@@ -56,7 +57,8 @@
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
 //     NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     
-    NSLog(@"<LoginManager> Antwoord van de server: %d", [urlResponse statusCode]);
+	//NSLog(@"<LoginManager> Antwoord van de server: %d", [urlResponse statusCode]);
+    NSLog(@"<LoginManager> Antwoord van de server: %ld", (long)[urlResponse statusCode]);
     if ([urlResponse statusCode] == 200) {
         NSDictionary *resultDictionary = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&error];
         if ([[resultDictionary objectForKey:@"success"] isEqualToNumber:[NSNumber numberWithInt:1]]) {

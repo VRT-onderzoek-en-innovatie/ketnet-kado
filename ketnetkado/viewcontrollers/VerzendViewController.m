@@ -61,11 +61,10 @@
     if (![appDelegate.loginManager isIngelogd]) {
         NSLog(@"<VerzendViewController> De gebruiker is nog niet aangemeld. Toont loginscherm...");
         LoginViewController *loginVC = [[LoginViewController alloc] init];
+		[loginVC setDelegate:self];
         [self.navigationController presentViewController:loginVC
                                                 animated:YES
-                                              completion:^{
-                                                  
-                                              }];
+                                              completion:^{}];
     }
     else {
         NSLog(@"<VerzendViewController> De gebruiker is aangemeld, we kunnen verzenden...");
@@ -74,6 +73,39 @@
 
 - (void)terugNaarStart {
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+#pragma mark - LoginViewControllerDelegate
+
+- (void)inloggenBeeindigdMetGebruikersGegevens:(NSDictionary*)gebruikersGegevens {
+	NSLog(@"<VerzendViewController> File hernoemen en verzenden");
+	
+	NSString *reportageNaam = [NSString stringWithFormat:@"%@_%@_%@.mov", opdrachtID, [gebruikersGegevens objectForKey:@"uid"], [gebruikersGegevens objectForKey:@"name"]];
+	
+	AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+	__block TransportManager *transporter = appDelegate.transportManager;
+	[transporter setDelegate:self];
+	
+	ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+	[library assetForURL:videoLocatie
+			 resultBlock:^(ALAsset *asset) {
+				 [transporter writeAsset:asset withFilename:reportageNaam];
+			 }
+			failureBlock:^(NSError *error) {
+				//Fout bij het vinden van de video
+			}];
+}
+
+#pragma mark - TransportManagerDelegate
+
+- (void)transportBeeindigdMetStatus:(NSString *)status {
+	if ([status isEqualToString:@"ok"]) {
+		NSLog(@"<VerzendViewController> Transport geslaagd! Terug naar begin.");
+		[self.navigationController popToRootViewControllerAnimated:YES];
+	}
+	else {
+		NSLog(@"<VerzendViewController> Er liep iets fout bij het versturen!");
+	}
 }
 
 #pragma mark - View setup

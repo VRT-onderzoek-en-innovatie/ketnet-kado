@@ -10,9 +10,11 @@
 
 #import "HoofdschermViewController.h"
 #import "LoginManager.h"
+#import "TransportManager.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
     LoginManager *loginManager;
+	TransportManager *transportManager;
 }
 
 @property (strong, nonatomic) UIWindow *window;
@@ -22,6 +24,7 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 @property (nonatomic, retain) LoginManager *loginManager;
+@property (nonatomic, retain) TransportManager *transportManager;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

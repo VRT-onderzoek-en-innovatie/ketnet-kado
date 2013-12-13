@@ -15,6 +15,7 @@
 
 #define kOpnameKnopGrootte 104
 
+//Niet enige datumbepaling >> check ook HoofdschermViewController
 #define dag01 @"10/14/2013"
 #define dag02 @"10/19/2013"
 #define dag03 @"10/23/2013"

@@ -58,6 +58,10 @@
 		102619631855C950004D6D2F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102619621855C950004D6D2F /* AVFoundation.framework */; };
 		102619651855EBB8004D6D2F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102619641855EBB8004D6D2F /* AssetsLibrary.framework */; };
 		1026196818571D7F004D6D2F /* VideoAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1026196718571D7F004D6D2F /* VideoAlbumManager.m */; };
+		102AC132185B09FA00333012 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102AC131185B09FA00333012 /* CFNetwork.framework */; };
+		102AC137185B0A5100333012 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 102AC136185B0A5100333012 /* NetworkManager.m */; };
+		102AC139185B0E7600333012 /* serverdata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 102AC138185B0E7600333012 /* serverdata.plist */; };
+		102AC13C185B411800333012 /* PutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102AC13B185B411800333012 /* PutController.m */; };
 		105257B81859A69300A3D7A6 /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105257B71859A69300A3D7A6 /* PreviewViewController.m */; };
 		105257BB1859A6C200A3D7A6 /* TransportManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 105257BA1859A6C200A3D7A6 /* TransportManager.m */; };
 		105257BE1859A6D000A3D7A6 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 105257BD1859A6D000A3D7A6 /* LoginManager.m */; };
@@ -134,6 +138,12 @@
 		102619641855EBB8004D6D2F /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		1026196618571D7F004D6D2F /* VideoAlbumManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoAlbumManager.h; path = managers/VideoAlbumManager.h; sourceTree = "<group>"; };
 		1026196718571D7F004D6D2F /* VideoAlbumManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoAlbumManager.m; path = managers/VideoAlbumManager.m; sourceTree = "<group>"; };
+		102AC131185B09FA00333012 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		102AC135185B0A5100333012 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkManager.h; path = utils/NetworkManager/NetworkManager.h; sourceTree = "<group>"; };
+		102AC136185B0A5100333012 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkManager.m; path = utils/NetworkManager/NetworkManager.m; sourceTree = "<group>"; };
+		102AC138185B0E7600333012 /* serverdata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = serverdata.plist; sourceTree = "<group>"; };
+		102AC13A185B411800333012 /* PutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PutController.h; path = utils/PutController/PutController.h; sourceTree = "<group>"; };
+		102AC13B185B411800333012 /* PutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PutController.m; path = utils/PutController/PutController.m; sourceTree = "<group>"; };
 		105257B61859A69300A3D7A6 /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreviewViewController.h; path = viewcontrollers/PreviewViewController.h; sourceTree = "<group>"; };
 		105257B71859A69300A3D7A6 /* PreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreviewViewController.m; path = viewcontrollers/PreviewViewController.m; sourceTree = "<group>"; };
 		105257B91859A6C200A3D7A6 /* TransportManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransportManager.h; path = managers/TransportManager.h; sourceTree = "<group>"; };
@@ -147,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				102AC132185B09FA00333012 /* CFNetwork.framework in Frameworks */,
 				10111A8E1858A2F500179450 /* MediaPlayer.framework in Frameworks */,
 				102619651855EBB8004D6D2F /* AssetsLibrary.framework in Frameworks */,
 				102619631855C950004D6D2F /* AVFoundation.framework in Frameworks */,
@@ -292,6 +303,7 @@
 		102619241855B6DC004D6D2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				102AC131185B09FA00333012 /* CFNetwork.framework */,
 				10111A8D1858A2F500179450 /* MediaPlayer.framework */,
 				10111A8B1858A28200179450 /* CoreMedia.framework */,
 				102619641855EBB8004D6D2F /* AssetsLibrary.framework */,
@@ -308,6 +320,7 @@
 		1026192D1855B6DC004D6D2F /* ketnetkado */ = {
 			isa = PBXGroup;
 			children = (
+				102AC133185B0A3A00333012 /* Utils */,
 				1026196918571D83004D6D2F /* Managers */,
 				1026195B1855B7DA004D6D2F /* Viewcontrollers */,
 				102619361855B6DC004D6D2F /* AppDelegate.h */,
@@ -327,6 +340,7 @@
 				102619301855B6DC004D6D2F /* InfoPlist.strings */,
 				102619331855B6DC004D6D2F /* main.m */,
 				102619351855B6DC004D6D2F /* ketnetkado-Prefix.pch */,
+				102AC138185B0E7600333012 /* serverdata.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -379,6 +393,25 @@
 			name = Managers;
 			sourceTree = "<group>";
 		};
+		102AC133185B0A3A00333012 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				102AC134185B0A4400333012 /* NetworkManager */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		102AC134185B0A4400333012 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				102AC13A185B411800333012 /* PutController.h */,
+				102AC13B185B411800333012 /* PutController.m */,
+				102AC135185B0A5100333012 /* NetworkManager.h */,
+				102AC136185B0A5100333012 /* NetworkManager.m */,
+			);
+			name = NetworkManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -428,7 +461,7 @@
 				ORGANIZATIONNAME = "VRT Onderzoek en Innovatie";
 				TargetAttributes = {
 					102619211855B6DC004D6D2F = {
-						DevelopmentTeam = 78U3SVG38Y;
+						DevelopmentTeam = 79BMQESM94;
 					};
 					102619411855B6DC004D6D2F = {
 						TestTargetID = 102619211855B6DC004D6D2F;
@@ -488,6 +521,7 @@
 				1002AF1C1859C93700566840 /* opdrachtbekijken@2x.png in Resources */,
 				1026193D1855B6DC004D6D2F /* Images.xcassets in Resources */,
 				1002AF2A1859D3E500566840 /* 04stuurdoor_pressed@2x.png in Resources */,
+				102AC139185B0E7600333012 /* serverdata.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,7 +559,9 @@
 				102619381855B6DC004D6D2F /* AppDelegate.m in Sources */,
 				1002AF201859D19400566840 /* VerzendViewController.m in Sources */,
 				1026196818571D7F004D6D2F /* VideoAlbumManager.m in Sources */,
+				102AC13C185B411800333012 /* PutController.m in Sources */,
 				102619341855B6DC004D6D2F /* main.m in Sources */,
+				102AC137185B0A5100333012 /* NetworkManager.m in Sources */,
 				105257BE1859A6D000A3D7A6 /* LoginManager.m in Sources */,
 				1026193B1855B6DC004D6D2F /* ketnetkado.xcdatamodeld in Sources */,
 				105257B81859A69300A3D7A6 /* PreviewViewController.m in Sources */,
