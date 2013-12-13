@@ -49,9 +49,9 @@ enum {
     void *buffer = [rawData mutableBytes];
     [representation getBytes:buffer fromOffset:0 length:size error:nil];
     NSData *assetData = [[NSData alloc] initWithBytes:buffer length:size];
-    [assetData writeToFile:repoNaam atomically:YES];
+    [assetData writeToFile:[NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), repoNaam] atomically:YES];
 	
-	[self startSend:[NSString stringWithFormat:@"%@/reportage.mov", NSTemporaryDirectory()]];
+	[self startSend:[NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), repoNaam]];
 }
 
 - (void)leegTemporaryFiles
