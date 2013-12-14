@@ -10,17 +10,12 @@
 #import "VideoAlbumManager.h"
 #import "PreviewViewController.h"
 
+#import "opdrachtdatums.h"
+
 #define kMaxAantalSeconden 60
 #define kFramesPerSeconde 50
 
 #define kOpnameKnopGrootte 104
-
-//Niet enige datumbepaling >> check ook HoofdschermViewController
-#define dag01 @"12/18/2013"
-#define dag02 @"12/21/2013"
-#define dag03 @"12/25/2013"
-#define dag04 @"12/28/2013"
-#define dag05 @"01/01/2014"
 
 @interface FilmCameraViewController ()
 

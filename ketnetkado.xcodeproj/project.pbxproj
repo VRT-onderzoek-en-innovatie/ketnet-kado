@@ -97,6 +97,7 @@
 		1002AF321859E3D100566840 /* 05username@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "05username@2x.png"; path = "assets/images/05username@2x.png"; sourceTree = "<group>"; };
 		1002AF3E1859F14100566840 /* 05paswoord@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "05paswoord@2x.png"; path = "assets/images/05paswoord@2x.png"; sourceTree = "<group>"; };
 		1002AF401859F26700566840 /* 05loginbutton_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "05loginbutton_pressed@2x.png"; path = "assets/images/05loginbutton_pressed@2x.png"; sourceTree = "<group>"; };
+		1007F0E1185C9B9C00A2326E /* opdrachtdatums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opdrachtdatums.h; sourceTree = "<group>"; };
 		10111A6118587C2000179450 /* Ovink-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ovink-Black.otf"; path = "assets/fonts/Ovink-Black.otf"; sourceTree = "<group>"; };
 		10111A7718589A3C00179450 /* 04.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 04.mov; path = assets/movies/04.mov; sourceTree = "<group>"; };
 		10111A7818589A3C00179450 /* 03.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 03.mov; path = assets/movies/03.mov; sourceTree = "<group>"; };
@@ -346,6 +347,7 @@
 		1026192E1855B6DC004D6D2F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1007F0E1185C9B9C00A2326E /* opdrachtdatums.h */,
 				1026193C1855B6DC004D6D2F /* Images.xcassets */,
 				10111A5E18587BF200179450 /* assets */,
 				1026192F1855B6DC004D6D2F /* ketnetkado-Info.plist */,

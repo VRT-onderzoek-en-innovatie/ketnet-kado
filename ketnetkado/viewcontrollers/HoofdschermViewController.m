@@ -7,6 +7,7 @@
 //
 
 #import "HoofdschermViewController.h"
+#import "opdrachtdatums.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -14,13 +15,6 @@
 #define kKnopHoogte 125
 
 #define kMargeTussenKnoppen 0
-
-//Niet enige datumbepaling >> check ook FilmCameraViewController
-#define dag01 @"12/18/2013"
-#define dag02 @"12/21/2013"
-#define dag03 @"12/25/2013"
-#define dag04 @"12/28/2013"
-#define dag05 @"01/01/2014"
 
 @interface HoofdschermViewController ()
 
