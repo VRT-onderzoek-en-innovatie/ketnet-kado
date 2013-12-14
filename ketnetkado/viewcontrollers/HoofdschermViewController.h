@@ -12,6 +12,10 @@
 @interface HoofdschermViewController : UIViewController {
     UIButton *btnFilmen;
     UIButton *btnOpdracht;
+	UIButton *btnVoorwaarden;
+	
+	UILabel *lblFilmen;
+	UILabel *lblOpdracht;
 	
 	UIImageView *gordijn;
 }
