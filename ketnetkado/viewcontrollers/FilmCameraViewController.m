@@ -16,8 +16,8 @@
 #define kOpnameKnopGrootte 104
 
 //Niet enige datumbepaling >> check ook HoofdschermViewController
-#define dag01 @"12/18/2013"
-#define dag02 @"12/21/2013"
+#define dag01 @"12/10/2013"
+#define dag02 @"12/13/2013"
 #define dag03 @"12/25/2013"
 #define dag04 @"12/28/2013"
 #define dag05 @"01/01/2014"
@@ -46,7 +46,7 @@
     [self addRecordButton];
 	NSLog(@"<FilmCameraViewController> OpdrachtID: %@", opdrachtID);
     
-    if (![opdrachtID isEqualToString:@"0"]) {
+    if ([opdrachtID isEqualToString:@"0"]) {
         //Toon opdracht
         [self toonOpdracht];
     }
@@ -199,16 +199,16 @@
     if([day1 compare:today] == NSOrderedAscending) {
         videoName=@"01";
     }
-	else if([day2 compare:today] == NSOrderedAscending) {
+	if([day2 compare:today] == NSOrderedAscending) {
         videoName=@"02";
     }
-	else if([day3 compare:today] == NSOrderedAscending) {
+	if([day3 compare:today] == NSOrderedAscending) {
         videoName=@"03";
     }
-	else if([day4 compare:today] == NSOrderedAscending) {
+	if([day4 compare:today] == NSOrderedAscending) {
         videoName=@"04";
     }
-	else if([day5 compare:today] == NSOrderedAscending) {
+	if([day5 compare:today] == NSOrderedAscending) {
         videoName=@"05";
     }
 	
