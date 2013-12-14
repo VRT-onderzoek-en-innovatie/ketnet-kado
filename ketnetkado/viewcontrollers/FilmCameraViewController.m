@@ -12,7 +12,7 @@
 
 #import "opdrachtdatums.h"
 
-#define kMaxAantalSeconden 60
+#define kMaxAantalSeconden 300
 #define kFramesPerSeconde 50
 
 #define kOpnameKnopGrootte 104

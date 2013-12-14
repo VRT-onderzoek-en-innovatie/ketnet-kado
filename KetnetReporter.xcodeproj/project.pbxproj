@@ -294,8 +294,8 @@
 		102619191855B6DB004D6D2F = {
 			isa = PBXGroup;
 			children = (
-				1026192D1855B6DC004D6D2F /* ketnetkado */,
-				1026194A1855B6DC004D6D2F /* ketnetkadoTests */,
+				1026192D1855B6DC004D6D2F /* KetnetReporter */,
+				1026194A1855B6DC004D6D2F /* KetnetReporterTests */,
 				102619241855B6DC004D6D2F /* Frameworks */,
 				102619231855B6DC004D6D2F /* Products */,
 			);
@@ -327,7 +327,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1026192D1855B6DC004D6D2F /* ketnetkado */ = {
+		1026192D1855B6DC004D6D2F /* KetnetReporter */ = {
 			isa = PBXGroup;
 			children = (
 				102AC133185B0A3A00333012 /* Utils */,
@@ -338,6 +338,7 @@
 				102619391855B6DC004D6D2F /* ketnetkado.xcdatamodeld */,
 				1026192E1855B6DC004D6D2F /* Supporting Files */,
 			);
+			name = KetnetReporter;
 			path = ketnetkado;
 			sourceTree = "<group>";
 		};
@@ -356,12 +357,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1026194A1855B6DC004D6D2F /* ketnetkadoTests */ = {
+		1026194A1855B6DC004D6D2F /* KetnetReporterTests */ = {
 			isa = PBXGroup;
 			children = (
 				102619501855B6DC004D6D2F /* ketnetkadoTests.m */,
 				1026194B1855B6DC004D6D2F /* Supporting Files */,
 			);
+			name = KetnetReporterTests;
 			path = ketnetkadoTests;
 			sourceTree = "<group>";
 		};
