@@ -16,8 +16,8 @@
 #define kOpnameKnopGrootte 104
 
 //Niet enige datumbepaling >> check ook HoofdschermViewController
-#define dag01 @"12/10/2013"
-#define dag02 @"12/13/2013"
+#define dag01 @"12/18/2013"
+#define dag02 @"12/21/2013"
 #define dag03 @"12/25/2013"
 #define dag04 @"12/28/2013"
 #define dag05 @"01/01/2014"
@@ -46,13 +46,13 @@
     [self addRecordButton];
 	NSLog(@"<FilmCameraViewController> OpdrachtID: %@", opdrachtID);
     
-    if ([opdrachtID isEqualToString:@"0"]) {
-        //Toon opdracht
+//    if ([opdrachtID isEqualToString:@"0"]) {
+//        //Toon opdracht
         [self toonOpdracht];
-    }
-    else {
-        //Gewoon filmen
-    }
+//    }
+//    else {
+//        //Gewoon filmen
+//    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -127,9 +127,12 @@
 #pragma mark - Opdracht
 
 - (void)toonOpdracht {
+	if ([opdrachtID isEqualToString:@"0"]) {
+		return;
+	}
     NSLog(@"<FilmCameraViewController> Toon de opdracht van de dag");
     moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:[self movieURLForToday]];
-    
+
     [moviePlayer.view setFrame:CGRectMake(0,
                                           0,
                                           CGRectGetHeight(self.view.bounds),

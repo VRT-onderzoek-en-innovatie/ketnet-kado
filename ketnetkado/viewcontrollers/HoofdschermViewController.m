@@ -16,8 +16,8 @@
 #define kMargeTussenKnoppen 0
 
 //Niet enige datumbepaling >> check ook FilmCameraViewController
-#define dag01 @"12/10/2013"
-#define dag02 @"12/13/2013"
+#define dag01 @"12/18/2013"
+#define dag02 @"12/21/2013"
 #define dag03 @"12/25/2013"
 #define dag04 @"12/28/2013"
 #define dag05 @"01/01/2014"
@@ -80,7 +80,7 @@
 #pragma mark - Opdracht
 
 - (NSString*)opdrachtIDForToday {
-	NSString* opdrachtID = @"0";
+	NSString* opdrachtID = @"1";
 	
 	NSDateFormatter *mmddccyy = [[NSDateFormatter alloc] init];
     [mmddccyy  setTimeStyle:NSDateFormatterNoStyle];
