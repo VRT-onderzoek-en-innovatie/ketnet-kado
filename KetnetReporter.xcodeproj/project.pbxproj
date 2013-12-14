@@ -109,22 +109,22 @@
 		10111A8B1858A28200179450 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		10111A8D1858A2F500179450 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		10111A921858AFD000179450 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "assets/images/Default-568h@2x.png"; sourceTree = "<group>"; };
-		102619221855B6DC004D6D2F /* ketnetkado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ketnetkado.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		102619221855B6DC004D6D2F /* KetnetReporter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KetnetReporter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		102619251855B6DC004D6D2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		102619271855B6DC004D6D2F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		102619291855B6DC004D6D2F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1026192B1855B6DC004D6D2F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		1026192F1855B6DC004D6D2F /* ketnetkado-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ketnetkado-Info.plist"; sourceTree = "<group>"; };
+		1026192F1855B6DC004D6D2F /* KetnetReporter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KetnetReporter-Info.plist"; sourceTree = "<group>"; };
 		102619311855B6DC004D6D2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		102619331855B6DC004D6D2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		102619351855B6DC004D6D2F /* ketnetkado-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ketnetkado-Prefix.pch"; sourceTree = "<group>"; };
+		102619351855B6DC004D6D2F /* KetnetReporter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KetnetReporter-Prefix.pch"; sourceTree = "<group>"; };
 		102619361855B6DC004D6D2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		102619371855B6DC004D6D2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1026193A1855B6DC004D6D2F /* ketnetkado.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ketnetkado.xcdatamodel; sourceTree = "<group>"; };
 		1026193C1855B6DC004D6D2F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		102619421855B6DC004D6D2F /* ketnetkadoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ketnetkadoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		102619421855B6DC004D6D2F /* KetnetReporterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KetnetReporterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		102619431855B6DC004D6D2F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		1026194C1855B6DC004D6D2F /* ketnetkadoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ketnetkadoTests-Info.plist"; sourceTree = "<group>"; };
+		1026194C1855B6DC004D6D2F /* KetnetReporterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KetnetReporterTests-Info.plist"; sourceTree = "<group>"; };
 		1026194E1855B6DC004D6D2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		102619501855B6DC004D6D2F /* ketnetkadoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ketnetkadoTests.m; sourceTree = "<group>"; };
 		1026195C1855B7FB004D6D2F /* HoofdschermViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HoofdschermViewController.h; path = viewcontrollers/HoofdschermViewController.h; sourceTree = "<group>"; };
@@ -304,8 +304,8 @@
 		102619231855B6DC004D6D2F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				102619221855B6DC004D6D2F /* ketnetkado.app */,
-				102619421855B6DC004D6D2F /* ketnetkadoTests.xctest */,
+				102619221855B6DC004D6D2F /* KetnetReporter.app */,
+				102619421855B6DC004D6D2F /* KetnetReporterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -347,10 +347,10 @@
 				1007F0E1185C9B9C00A2326E /* opdrachtdatums.h */,
 				1026193C1855B6DC004D6D2F /* Images.xcassets */,
 				10111A5E18587BF200179450 /* assets */,
-				1026192F1855B6DC004D6D2F /* ketnetkado-Info.plist */,
+				1026192F1855B6DC004D6D2F /* KetnetReporter-Info.plist */,
 				102619301855B6DC004D6D2F /* InfoPlist.strings */,
 				102619331855B6DC004D6D2F /* main.m */,
-				102619351855B6DC004D6D2F /* ketnetkado-Prefix.pch */,
+				102619351855B6DC004D6D2F /* KetnetReporter-Prefix.pch */,
 				102AC138185B0E7600333012 /* serverdata.plist */,
 			);
 			name = "Supporting Files";
@@ -368,7 +368,7 @@
 		1026194B1855B6DC004D6D2F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1026194C1855B6DC004D6D2F /* ketnetkadoTests-Info.plist */,
+				1026194C1855B6DC004D6D2F /* KetnetReporterTests-Info.plist */,
 				1026194D1855B6DC004D6D2F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -424,9 +424,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		102619211855B6DC004D6D2F /* ketnetkado */ = {
+		102619211855B6DC004D6D2F /* KetnetReporter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 102619541855B6DC004D6D2F /* Build configuration list for PBXNativeTarget "ketnetkado" */;
+			buildConfigurationList = 102619541855B6DC004D6D2F /* Build configuration list for PBXNativeTarget "KetnetReporter" */;
 			buildPhases = (
 				1026191E1855B6DC004D6D2F /* Sources */,
 				1026191F1855B6DC004D6D2F /* Frameworks */,
@@ -437,14 +437,14 @@
 			);
 			dependencies = (
 			);
-			name = ketnetkado;
+			name = KetnetReporter;
 			productName = ketnetkado;
-			productReference = 102619221855B6DC004D6D2F /* ketnetkado.app */;
+			productReference = 102619221855B6DC004D6D2F /* KetnetReporter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		102619411855B6DC004D6D2F /* ketnetkadoTests */ = {
+		102619411855B6DC004D6D2F /* KetnetReporterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 102619571855B6DC004D6D2F /* Build configuration list for PBXNativeTarget "ketnetkadoTests" */;
+			buildConfigurationList = 102619571855B6DC004D6D2F /* Build configuration list for PBXNativeTarget "KetnetReporterTests" */;
 			buildPhases = (
 				1026193E1855B6DC004D6D2F /* Sources */,
 				1026193F1855B6DC004D6D2F /* Frameworks */,
@@ -455,9 +455,9 @@
 			dependencies = (
 				102619491855B6DC004D6D2F /* PBXTargetDependency */,
 			);
-			name = ketnetkadoTests;
+			name = KetnetReporterTests;
 			productName = ketnetkadoTests;
-			productReference = 102619421855B6DC004D6D2F /* ketnetkadoTests.xctest */;
+			productReference = 102619421855B6DC004D6D2F /* KetnetReporterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -477,7 +477,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1026191D1855B6DB004D6D2F /* Build configuration list for PBXProject "ketnetkado" */;
+			buildConfigurationList = 1026191D1855B6DB004D6D2F /* Build configuration list for PBXProject "KetnetReporter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -489,8 +489,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				102619211855B6DC004D6D2F /* ketnetkado */,
-				102619411855B6DC004D6D2F /* ketnetkadoTests */,
+				102619211855B6DC004D6D2F /* KetnetReporter */,
+				102619411855B6DC004D6D2F /* KetnetReporterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -597,7 +597,7 @@
 /* Begin PBXTargetDependency section */
 		102619491855B6DC004D6D2F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 102619211855B6DC004D6D2F /* ketnetkado */;
+			target = 102619211855B6DC004D6D2F /* KetnetReporter */;
 			targetProxy = 102619481855B6DC004D6D2F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -701,9 +701,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ketnetkado/ketnetkado-Prefix.pch";
-				INFOPLIST_FILE = "ketnetkado/ketnetkado-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "ketnetkado/KetnetReporter-Prefix.pch";
+				INFOPLIST_FILE = "ketnetkado/KetnetReporter-Info.plist";
+				PRODUCT_NAME = KetnetReporter;
 				PROVISIONING_PROFILE = "1E948644-C961-4E20-ABF3-14F7CB23EE54";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -717,9 +717,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ketnetkado/ketnetkado-Prefix.pch";
-				INFOPLIST_FILE = "ketnetkado/ketnetkado-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "ketnetkado/KetnetReporter-Prefix.pch";
+				INFOPLIST_FILE = "ketnetkado/KetnetReporter-Info.plist";
+				PRODUCT_NAME = KetnetReporter;
 				PROVISIONING_PROFILE = "1E948644-C961-4E20-ABF3-14F7CB23EE54";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -742,8 +742,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "ketnetkadoTests/ketnetkadoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "ketnetkadoTests/KetnetReporterTests-Info.plist";
+				PRODUCT_NAME = KetnetReporterTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -761,8 +761,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ketnetkado/ketnetkado-Prefix.pch";
-				INFOPLIST_FILE = "ketnetkadoTests/ketnetkadoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "ketnetkadoTests/KetnetReporterTests-Info.plist";
+				PRODUCT_NAME = KetnetReporterTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -771,7 +771,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1026191D1855B6DB004D6D2F /* Build configuration list for PBXProject "ketnetkado" */ = {
+		1026191D1855B6DB004D6D2F /* Build configuration list for PBXProject "KetnetReporter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				102619521855B6DC004D6D2F /* Debug */,
@@ -780,7 +780,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		102619541855B6DC004D6D2F /* Build configuration list for PBXNativeTarget "ketnetkado" */ = {
+		102619541855B6DC004D6D2F /* Build configuration list for PBXNativeTarget "KetnetReporter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				102619551855B6DC004D6D2F /* Debug */,
@@ -789,7 +789,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		102619571855B6DC004D6D2F /* Build configuration list for PBXNativeTarget "ketnetkadoTests" */ = {
+		102619571855B6DC004D6D2F /* Build configuration list for PBXNativeTarget "KetnetReporterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				102619581855B6DC004D6D2F /* Debug */,

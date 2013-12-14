@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "102619211855B6DC004D6D2F"
                BuildableName = "ketnetkado.app"
-               BlueprintName = "ketnetkado"
-               ReferencedContainer = "container:ketnetkado.xcodeproj">
+               BlueprintName = "KetnetReporter"
+               ReferencedContainer = "container:KetnetReporter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "102619411855B6DC004D6D2F"
                BuildableName = "ketnetkadoTests.xctest"
-               BlueprintName = "ketnetkadoTests"
-               ReferencedContainer = "container:ketnetkado.xcodeproj">
+               BlueprintName = "KetnetReporterTests"
+               ReferencedContainer = "container:KetnetReporter.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "102619211855B6DC004D6D2F"
             BuildableName = "ketnetkado.app"
-            BlueprintName = "ketnetkado"
-            ReferencedContainer = "container:ketnetkado.xcodeproj">
+            BlueprintName = "KetnetReporter"
+            ReferencedContainer = "container:KetnetReporter.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "102619211855B6DC004D6D2F"
             BuildableName = "ketnetkado.app"
-            BlueprintName = "ketnetkado"
-            ReferencedContainer = "container:ketnetkado.xcodeproj">
+            BlueprintName = "KetnetReporter"
+            ReferencedContainer = "container:KetnetReporter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "102619211855B6DC004D6D2F"
             BuildableName = "ketnetkado.app"
-            BlueprintName = "ketnetkado"
-            ReferencedContainer = "container:ketnetkado.xcodeproj">
+            BlueprintName = "KetnetReporter"
+            ReferencedContainer = "container:KetnetReporter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
