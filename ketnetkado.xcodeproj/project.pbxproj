@@ -54,7 +54,6 @@
 		102AC132185B09FA00333012 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102AC131185B09FA00333012 /* CFNetwork.framework */; };
 		102AC137185B0A5100333012 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 102AC136185B0A5100333012 /* NetworkManager.m */; };
 		102AC139185B0E7600333012 /* serverdata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 102AC138185B0E7600333012 /* serverdata.plist */; };
-		102AC13C185B411800333012 /* PutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102AC13B185B411800333012 /* PutController.m */; };
 		102AC142185B52B300333012 /* 01achtergrond@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 102AC141185B52B300333012 /* 01achtergrond@2x.png */; };
 		105257B81859A69300A3D7A6 /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105257B71859A69300A3D7A6 /* PreviewViewController.m */; };
 		105257BB1859A6C200A3D7A6 /* TransportManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 105257BA1859A6C200A3D7A6 /* TransportManager.m */; };
@@ -140,8 +139,6 @@
 		102AC135185B0A5100333012 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkManager.h; path = utils/NetworkManager/NetworkManager.h; sourceTree = "<group>"; };
 		102AC136185B0A5100333012 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkManager.m; path = utils/NetworkManager/NetworkManager.m; sourceTree = "<group>"; };
 		102AC138185B0E7600333012 /* serverdata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = serverdata.plist; sourceTree = "<group>"; };
-		102AC13A185B411800333012 /* PutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PutController.h; path = utils/PutController/PutController.h; sourceTree = "<group>"; };
-		102AC13B185B411800333012 /* PutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PutController.m; path = utils/PutController/PutController.m; sourceTree = "<group>"; };
 		102AC141185B52B300333012 /* 01achtergrond@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "01achtergrond@2x.png"; path = "assets/images/01achtergrond@2x.png"; sourceTree = "<group>"; };
 		105257B61859A69300A3D7A6 /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreviewViewController.h; path = viewcontrollers/PreviewViewController.h; sourceTree = "<group>"; };
 		105257B71859A69300A3D7A6 /* PreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreviewViewController.m; path = viewcontrollers/PreviewViewController.m; sourceTree = "<group>"; };
@@ -418,8 +415,6 @@
 		102AC134185B0A4400333012 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
-				102AC13A185B411800333012 /* PutController.h */,
-				102AC13B185B411800333012 /* PutController.m */,
 				102AC135185B0A5100333012 /* NetworkManager.h */,
 				102AC136185B0A5100333012 /* NetworkManager.m */,
 			);
@@ -577,7 +572,6 @@
 				102619381855B6DC004D6D2F /* AppDelegate.m in Sources */,
 				1002AF201859D19400566840 /* VerzendViewController.m in Sources */,
 				1026196818571D7F004D6D2F /* VideoAlbumManager.m in Sources */,
-				102AC13C185B411800333012 /* PutController.m in Sources */,
 				102619341855B6DC004D6D2F /* main.m in Sources */,
 				102AC137185B0A5100333012 /* NetworkManager.m in Sources */,
 				105257BE1859A6D000A3D7A6 /* LoginManager.m in Sources */,
