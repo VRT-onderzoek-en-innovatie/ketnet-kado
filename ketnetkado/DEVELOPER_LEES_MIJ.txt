@@ -1,0 +1,31 @@
+De app is vrij organisch gegroeid over een spanne van een aantal dagen. Er is dus wel nog heel wat ruimte voor optimalisatie en verbetering.
+Suggesties:
+- Maak een model Opdracht.[h/m] met de volgende properties:
+	- opdrachtID
+	- opdrachtDate > datum waarop de opdracht moet getriggerd worden
+	- opdrachtTitle
+	- opdrachtDescription
+	- opdrachtAssets (NSDictionary)
+		- images (NSDictionary)
+			- identifierIcon > om te gebruiken doorheen de app (facultatief)
+			- homeButton > knop voor home
+			- homeButton_pressed > ingedrukte state voor home
+		- movie > moviefile.mov
+	- opdrachtDuration (NSDictionary)
+		- minimumDuration (seconds)
+		- maximumDuration (seconds)
+- De opdrachten zouden best opgelijst staan in een plist.
+- De opdrachten-plist kan over het internet worden gewijzgd en worden bijgewerkt
+- De movie-assets zitten nu hard in de app ingewerkt. Ze zouden beter streamen over het web om de package kleiner te maken
+- Nog niet geïmplementeerd:
+	- Catch voor de maximumduur van een filmpje
+	- Tijdsaanduiding voor maximumduur van een filmpje
+	- Gestijlde weergave van de alertview achter de ?-knop
+	- Sessie op ketnet bijhouden en dus niet telkens opnieuw moeten inloggen (LoginManager uitbreiden)
+	- Video's die gemaakt zijn met de standaardcamera kunnen openen en inladen
+	- Overzicht van de video's die gemaakt zijn met deze app en de mogelijkheid om ze te verwijderen
+	- Support voor 3,5"-schermen (eigenlijk ontbreekt een degelijke test en een paar extra layoutfuncties, vermoedelijk al 90% ok)
+	- Support voor iPad
+	- Support voor non-retina displays
+	- Guide voor eerste gebruik
+	- ...
