@@ -71,6 +71,15 @@
                                          animated:YES];
 }
 
+- (void)toonInfo {
+	UIAlertView *altVoorwaarden = [[UIAlertView alloc] initWithTitle:@"Info"
+															 message:@"Dit is een testversie van de \nKetnet Reporter-applicatie.\nDit is geen finaal product.\nProblemen met de app? Mail naar panel@deproeftuin.vrt.be.\n Gebruikersvoorwaarden op\nhttp://deproeftuin.vrt.be/node/123"
+															delegate:self
+												   cancelButtonTitle:@"OK"
+												   otherButtonTitles:nil];
+	[altVoorwaarden show];
+}
+
 #pragma mark - Opdracht
 
 - (NSString*)opdrachtIDForToday {
@@ -124,8 +133,8 @@
     NSDate *day5 = [mmddccyy dateFromString:dag05];
     
     if([day1 compare:today] == NSOrderedAscending) {
-		icoon = [UIImage imageNamed:@"01filmen"];
-		icoon_ingedrukt = [UIImage imageNamed:@"01filmen_pressed"];
+		icoon = [UIImage imageNamed:@"01opdracht"];
+		icoon_ingedrukt = [UIImage imageNamed:@"01opdracht_pressed"];
     }
 	if([day2 compare:today] == NSOrderedAscending) {
         icoon = [UIImage imageNamed:@"01huisdier"];
@@ -208,16 +217,16 @@
 	[btnOpdracht setBackgroundImage:[[self iconForToday] objectAtIndex:1] forState:UIControlStateHighlighted];
     [self.view addSubview:btnOpdracht];
 	
-//	btnVoorwaarden = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetHeight(self.view.bounds) - 50,
-//																CGRectGetWidth(self.view.bounds) - 50,
-//																50,
-//																50)];
-//    [btnVoorwaarden addTarget:self
-//                    action:nil
-//          forControlEvents:UIControlEventTouchUpInside];
-//	[btnVoorwaarden setBackgroundImage:[UIImage imageNamed:@"01help"] forState:UIControlStateNormal];
-//	[btnVoorwaarden setBackgroundImage:[UIImage imageNamed:@"01help_pressed"] forState:UIControlStateHighlighted];
-//    [self.view addSubview:btnVoorwaarden];
+	btnVoorwaarden = [[UIButton alloc] initWithFrame:CGRectMake(420,
+																230,
+																214,
+																104)];
+    [btnVoorwaarden addTarget:self
+                    action:@selector(toonInfo)
+          forControlEvents:UIControlEventTouchUpInside];
+	[btnVoorwaarden setBackgroundImage:[UIImage imageNamed:@"01vraagteken"] forState:UIControlStateNormal];
+	[btnVoorwaarden setBackgroundImage:[UIImage imageNamed:@"01vraagteken_pressed"] forState:UIControlStateHighlighted];
+    [self.view addSubview:btnVoorwaarden];
 }
 
 - (void)maakLabels {

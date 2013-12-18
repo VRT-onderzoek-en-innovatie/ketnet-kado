@@ -125,8 +125,8 @@
     [btnAfspelenUitleg addTarget:self
                           action:@selector(speelVideoAf)
                 forControlEvents:UIControlEventTouchUpInside];
-	[btnAfspelenUitleg setBackgroundImage:[UIImage imageNamed:@"opdrachtbekijken"] forState:UIControlStateNormal];
-	[btnAfspelenUitleg setBackgroundImage:[UIImage imageNamed:@"opdrachtbekijken_pressed"] forState:UIControlStateHighlighted];
+	[btnAfspelenUitleg setBackgroundImage:[UIImage imageNamed:@"03herbekijk"] forState:UIControlStateNormal];
+	[btnAfspelenUitleg setBackgroundImage:[UIImage imageNamed:@"03herbekijk_pressed"] forState:UIControlStateHighlighted];
     [self.view addSubview:btnAfspelenUitleg];
     [self.view bringSubviewToFront:btnAfspelenUitleg];
     
