@@ -141,12 +141,12 @@
 		icoon_ingedrukt = [UIImage imageNamed:@"01huisdier_pressed"];
     }
 	if([day3 compare:today] == NSOrderedAscending) {
-        icoon = [UIImage imageNamed:@"01schrikken"];
-		icoon_ingedrukt = [UIImage imageNamed:@"01schrikken_pressed"];
+        icoon = [UIImage imageNamed:@"01sidool"];
+		icoon_ingedrukt = [UIImage imageNamed:@"01idool_pressed"];
     }
 	if([day4 compare:today] == NSOrderedAscending) {
-        icoon = [UIImage imageNamed:@"01idool"];
-		icoon_ingedrukt = [UIImage imageNamed:@"01idool_pressed"];
+        icoon = [UIImage imageNamed:@"01schrikken"];
+		icoon_ingedrukt = [UIImage imageNamed:@"01schrikken_pressed"];
     }
 	if([day5 compare:today] == NSOrderedAscending) {
         icoon = [UIImage imageNamed:@"01interviewstraat"];
@@ -180,10 +180,10 @@
 		opdrachtTekst = @"Huisdier";
     }
 	if([day3 compare:today] == NSOrderedAscending) {
-		opdrachtTekst = @"Schrikken";
+		opdrachtTekst = @"Idool";
     }
 	if([day4 compare:today] == NSOrderedAscending) {
-		opdrachtTekst = @"Idool";
+		opdrachtTekst = @"Schrikken";
     }
 	if([day5 compare:today] == NSOrderedAscending) {
 		opdrachtTekst = @"Interview";

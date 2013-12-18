@@ -490,7 +490,7 @@
 				ORGANIZATIONNAME = "VRT Onderzoek en Innovatie";
 				TargetAttributes = {
 					102619211855B6DC004D6D2F = {
-						DevelopmentTeam = 79BMQESM94;
+						DevelopmentTeam = HV5KGK9C4L;
 					};
 					102619411855B6DC004D6D2F = {
 						TestTargetID = 102619211855B6DC004D6D2F;
@@ -730,7 +730,7 @@
 				GCC_PREFIX_HEADER = "ketnetkado/KetnetReporter-Prefix.pch";
 				INFOPLIST_FILE = "ketnetkado/KetnetReporter-Info.plist";
 				PRODUCT_NAME = KetnetReporter;
-				PROVISIONING_PROFILE = "1E948644-C961-4E20-ABF3-14F7CB23EE54";
+				PROVISIONING_PROFILE = "8D9058E9-DD3D-4799-811A-D561FC70D24C";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -746,7 +746,7 @@
 				GCC_PREFIX_HEADER = "ketnetkado/KetnetReporter-Prefix.pch";
 				INFOPLIST_FILE = "ketnetkado/KetnetReporter-Info.plist";
 				PRODUCT_NAME = KetnetReporter;
-				PROVISIONING_PROFILE = "1E948644-C961-4E20-ABF3-14F7CB23EE54";
+				PROVISIONING_PROFILE = "8D9058E9-DD3D-4799-811A-D561FC70D24C";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
