@@ -132,7 +132,7 @@
 - (void)inloggenBeeindigdMetGebruikersGegevens:(NSDictionary*)gebruikersGegevens {
 	NSLog(@"<VerzendViewController> File hernoemen en verzenden");
 	
-	NSString *reportageNaam = [NSString stringWithFormat:@"%@_%@_%@.mov", opdrachtID, [gebruikersGegevens objectForKey:@"uid"], [gebruikersGegevens objectForKey:@"name"]];
+	NSString *reportageNaam = [NSString stringWithFormat:@"%@_%@_%@_%f.mov", opdrachtID, [gebruikersGegevens objectForKey:@"uid"], [gebruikersGegevens objectForKey:@"name"], [NSDate timeIntervalSinceReferenceDate]];
 	
 	AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
 	__block TransportManager *transporter = appDelegate.transportManager;
