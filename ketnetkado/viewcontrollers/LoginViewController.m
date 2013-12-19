@@ -33,9 +33,11 @@
 	
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05achtergrond"]]];
     
-    [self setupUitleg];
-    [self setupTextFields];
-    [self setupLoginButton];
+	if ([self setupScrollView]) {
+		[self setupUitleg];
+		[self setupTextFields];
+		[self setupLoginButton];
+	}
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,6 +48,22 @@
 
 #pragma mark - View setup
 
+- (BOOL)setupScrollView {
+	loginScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0,
+																	 0,
+																	 CGRectGetHeight(self.view.bounds),
+																	 CGRectGetWidth(self.view.bounds))];
+	[loginScrollView setContentSize:CGSizeMake(CGRectGetHeight(self.view.bounds),
+											   CGRectGetWidth(self.view.bounds) + 140)];
+	[loginScrollView setBackgroundColor:[UIColor clearColor]];
+	[loginScrollView setScrollEnabled:NO];
+	[loginScrollView setScrollsToTop:YES];
+	[loginScrollView setBounces:YES];
+	[self.view addSubview:loginScrollView];
+	
+	return YES;
+}
+
 - (void)setupUitleg {
     UILabel *uitleg = [[UILabel alloc] initWithFrame:CGRectMake(0,
                                                                 25,
@@ -55,7 +73,7 @@
     [uitleg setFont:[UIFont fontWithName:@"Ovink-Black" size:20.0]];
     [uitleg setTextAlignment:NSTextAlignmentCenter];
     [uitleg setTextColor:UIColorFromRGB(0xed145b)];
-    [self.view addSubview:uitleg];
+    [loginScrollView addSubview:uitleg];
 }
 
 - (void)setupLoginButton  {
@@ -69,39 +87,52 @@
            forControlEvents:UIControlEventTouchUpInside];
 	[btnLogin setBackgroundImage:[UIImage imageNamed:@"05loginbutton"] forState:UIControlStateNormal];
 	[btnLogin setBackgroundImage:[UIImage imageNamed:@"05loginbutton_pressed"] forState:UIControlStateHighlighted];
-    [self.view addSubview:btnLogin];
-    [self.view bringSubviewToFront:btnLogin];
+	[btnLogin setTag:3];
+    [loginScrollView addSubview:btnLogin];
+    [loginScrollView bringSubviewToFront:btnLogin];
 }
 
 - (void)setupTextFields {
     txtUsername = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMidY(self.view.bounds) - 348/2,
                                                                 50,
-                                                                348,
+                                                                280,
                                                                 114)];
     [txtUsername setFont:[UIFont fontWithName:@"Ovink-Black" size:20.0]];
     [txtUsername setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05username"]]];
+	[txtUsername setPlaceholder:@"Gebruikersnaam"];
+	[txtUsername setClearsOnBeginEditing:YES];
+	[txtUsername setClearButtonMode:UITextFieldViewModeWhileEditing];
+	[txtUsername setTag:1];
+	[txtUsername setDelegate:self];
+	[txtUsername setReturnKeyType:UIReturnKeyNext];
     
     UIView *spacerViewUser = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 45, 10)];
     [txtUsername setLeftViewMode:UITextFieldViewModeAlways];
     [txtUsername setLeftView:spacerViewUser];
     
-    [self.view addSubview:txtUsername];
-    [self.view bringSubviewToFront:txtUsername];
+    [loginScrollView addSubview:txtUsername];
+    [loginScrollView bringSubviewToFront:txtUsername];
     
     txtPassword = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMidY(self.view.bounds) - 348/2,
                                                                 125,
-                                                                348,
+                                                                260,
                                                                 114)];
     [txtPassword setFont:[UIFont fontWithName:@"Ovink-Black" size:20.0]];
     [txtPassword setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05paswoord"]]];
+	[txtPassword setPlaceholder:@"Wachtwoord"];
+	[txtPassword setClearsOnBeginEditing:YES];
+	[txtPassword setClearButtonMode:UITextFieldViewModeWhileEditing];
     [txtPassword setSecureTextEntry:YES];
+	[txtPassword setTag:2];
+	[txtPassword setDelegate:self];
+	[txtPassword setReturnKeyType:UIReturnKeyDone];
     
     UIView *spacerViewPass = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 45, 10)];
     [txtPassword setLeftViewMode:UITextFieldViewModeAlways];
     [txtPassword setLeftView:spacerViewPass];
     
-    [self.view addSubview:txtPassword];
-    [self.view bringSubviewToFront:txtPassword];
+    [loginScrollView addSubview:txtPassword];
+    [loginScrollView bringSubviewToFront:txtPassword];
 }
 
 - (void)toonBezig {
@@ -150,13 +181,12 @@
 #pragma mark - Acties
 
 - (void)logGebruikerIn {
+	[self toonBezig];
+	
     NSLog(@"<LoginViewController> Login starten...");
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     loginManager = appDelegate.loginManager;
     [loginManager setDelegate:self];
-    
-    [self toonBezig];
-    
     [loginManager logGebruikerInMetGebruikersnaam:txtUsername.text enPaswoord:txtPassword.text];
 }
 
@@ -165,6 +195,44 @@
 		if ([view isKindOfClass:[UITextField class]])
 			[view resignFirstResponder];
 	}
+}
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+	[loginScrollView setScrollEnabled:YES];
+	
+	if (textField.tag == 1) {
+		//Niks doen
+	}
+	else {
+		//Offset bijschakelen
+		[loginScrollView setContentOffset:CGPointMake(0, 125)];
+	}
+	
+	return YES;
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField*)textField;
+{
+	NSInteger nextTag = textField.tag + 1;
+	// Try to find next responder
+	UIResponder* nextResponder = [textField.superview viewWithTag:nextTag];
+	if (nextResponder) {
+		// Found next responder, so set it.
+		[nextResponder becomeFirstResponder];
+		if (nextTag == 2) {
+			[loginScrollView setContentOffset:CGPointMake(0, 125)];
+		}
+		if (nextTag == 3) {
+			[textField resignFirstResponder];
+			[loginScrollView setContentOffset:CGPointMake(0, 0)];
+			[self logGebruikerIn];
+		}
+	} else {
+		// Not found, so remove keyboard.
+		[textField resignFirstResponder];
+		[loginScrollView setContentOffset:CGPointMake(0, 0)];
+	}
+	return NO; // We do not want UITextField to insert line-breaks.
 }
 
 #pragma mark - LoginManager delegate

@@ -493,7 +493,7 @@
 				ORGANIZATIONNAME = "VRT Onderzoek en Innovatie";
 				TargetAttributes = {
 					102619211855B6DC004D6D2F = {
-						DevelopmentTeam = HV5KGK9C4L;
+						DevelopmentTeam = 79BMQESM94;
 					};
 					102619411855B6DC004D6D2F = {
 						TestTargetID = 102619211855B6DC004D6D2F;
@@ -727,14 +727,14 @@
 		102619551855B6DC004D6D2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ketnetkado/KetnetReporter-Prefix.pch";
 				INFOPLIST_FILE = "ketnetkado/KetnetReporter-Info.plist";
 				PRODUCT_NAME = KetnetReporter;
-				PROVISIONING_PROFILE = "8D9058E9-DD3D-4799-811A-D561FC70D24C";
+				PROVISIONING_PROFILE = "CDF9E224-FFD0-424B-8CEC-6498C4711FFE";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -743,7 +743,7 @@
 		102619561855B6DC004D6D2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

@@ -19,8 +19,10 @@
 
 @end
 
-@interface LoginViewController : UIViewController <LoginManagerDelegate> {
+@interface LoginViewController : UIViewController <LoginManagerDelegate, UITextFieldDelegate> {
 	id<LoginViewControllerDelegate>delegate;
+	
+	UIScrollView *loginScrollView;
 	
     UITextField *txtUsername;
     UITextField *txtPassword;
