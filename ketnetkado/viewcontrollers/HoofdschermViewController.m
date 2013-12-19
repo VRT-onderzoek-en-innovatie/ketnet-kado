@@ -72,12 +72,83 @@
 }
 
 - (void)toonInfo {
-	UIAlertView *altVoorwaarden = [[UIAlertView alloc] initWithTitle:@"Info"
-															 message:@"Dit is een testversie van de \nKetnet Reporter-applicatie.\nDit is geen finaal product.\nProblemen met de app? Mail naar panel@deproeftuin.vrt.be.\n Gebruikersvoorwaarden op\nhttp://deproeftuin.vrt.be/node/123"
-															delegate:self
-												   cancelButtonTitle:@"OK"
-												   otherButtonTitles:nil];
-	[altVoorwaarden show];
+//	UIAlertView *altVoorwaarden = [[UIAlertView alloc] initWithTitle:@"Info"
+//															 message:@"Dit is een testversie van de \nKetnet Reporter-applicatie.\nDit is geen finaal product.\nProblemen met de app? Mail naar panel@deproeftuin.vrt.be.\n Gebruikersvoorwaarden op\nhttp://deproeftuin.vrt.be/node/123"
+//															delegate:self
+//												   cancelButtonTitle:@"OK"
+//												   otherButtonTitles:nil];
+//	[altVoorwaarden show];
+	
+	infoView = [[UIView alloc] initWithFrame:CGRectMake(0,
+														0,
+														self.view.frame.size.width,
+														self.view.frame.size.height)];
+				
+	[infoView setBackgroundColor:[UIColor clearColor]];
+	
+	//Achtergrond (545 x 294)
+	UIImageView *achtergrond = [[UIImageView alloc] initWithFrame:infoView.frame];
+	[achtergrond setImage:[UIImage imageNamed:@"01infovenster"]];
+	[achtergrond setContentMode:UIViewContentModeCenter];
+	[infoView addSubview:achtergrond];
+	
+	//Label
+	UITextView *infoTekst = [[UITextView alloc] initWithFrame:CGRectMake((self.view.frame.size.width - 545)/2 + 25,
+																		 (self.view.frame.size.height - 294)/2 + 25,
+																		 545 - 2*25,
+																		 294 - 2*25)];
+	[infoTekst setBackgroundColor:[UIColor clearColor]];
+	[infoTekst setText:@"Dit is een testversie van de \nKetnet Reporter-applicatie.\nDit is geen finaal product.\n\nProblemen met de app?\nMail naar panel@deproeftuin.vrt.be.\n\n Gebruikersvoorwaarden op\nhttp://deproeftuin.vrt.be/node/123"];
+	[infoTekst setFont:[UIFont fontWithName:@"Ovink-Black" size:25.0]];
+	[infoTekst setTextColor:[UIColor whiteColor]];
+	[infoTekst setTextAlignment:NSTextAlignmentCenter];
+	[infoTekst setEditable:NO];
+	[infoTekst setScrollEnabled:NO];
+	[infoTekst setUserInteractionEnabled:NO];
+	[infoView addSubview:infoTekst];
+	[infoTekst bringSubviewToFront:infoTekst];
+	[self.view addSubview:infoView];
+	
+	//Sluitgesture
+	UISwipeGestureRecognizer *infoSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+																					action:@selector(sluitInfo)];
+	[infoSwipe setDirection:UISwipeGestureRecognizerDirectionDown];
+	[infoView addGestureRecognizer:infoSwipe];
+
+	//Klaarzetten off screen
+	[infoView setFrame:CGRectMake(0,
+								  self.view.frame.size.height,
+								  self.view.frame.size.width,
+								  self.view.frame.size.height)];
+	//Verschijnen
+	[UIView animateWithDuration:0.25
+					 animations:^{
+						 [infoView setFrame:CGRectMake(0,
+													   0,
+													   self.view.frame.size.width,
+													   self.view.frame.size.height)];
+					 }
+					 completion:^(BOOL finished) {
+						 NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:5.0
+																		   target:self
+																		 selector:@selector(sluitInfo)
+																		 userInfo:nil
+																		  repeats:NO];
+					 }];
+}
+
+- (void)sluitInfo {
+	[UIView animateWithDuration:0.25
+					 animations:^{
+						 [infoView setFrame:CGRectMake(0,
+													   self.view.frame.size.height,
+													   self.view.frame.size.width,
+													   self.view.frame.size.height)];
+					 }
+					 completion:^(BOOL finished) {
+						 [infoView removeFromSuperview];
+						 infoView = nil;
+					 }];
 }
 
 #pragma mark - Opdracht

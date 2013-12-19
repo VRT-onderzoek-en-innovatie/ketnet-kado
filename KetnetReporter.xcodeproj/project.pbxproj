@@ -75,6 +75,7 @@
 		10A1E7561861975500AC7014 /* 01vraagteken.png in Resources */ = {isa = PBXBuildFile; fileRef = 10A1E7521861975500AC7014 /* 01vraagteken.png */; };
 		10A1E759186199F000AC7014 /* 03herbekijk_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 10A1E757186199F000AC7014 /* 03herbekijk_pressed.png */; };
 		10A1E75A186199F000AC7014 /* 03herbekijk.png in Resources */ = {isa = PBXBuildFile; fileRef = 10A1E758186199F000AC7014 /* 03herbekijk.png */; };
+		10D393DC1863253E008C6B7F /* 01infovenster@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D393DB1863253E008C6B7F /* 01infovenster@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +171,7 @@
 		10A1E7521861975500AC7014 /* 01vraagteken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 01vraagteken.png; path = assets/images/01vraagteken.png; sourceTree = "<group>"; };
 		10A1E757186199F000AC7014 /* 03herbekijk_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 03herbekijk_pressed.png; path = assets/images/03herbekijk_pressed.png; sourceTree = "<group>"; };
 		10A1E758186199F000AC7014 /* 03herbekijk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 03herbekijk.png; path = assets/images/03herbekijk.png; sourceTree = "<group>"; };
+		10D393DB1863253E008C6B7F /* 01infovenster@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "01infovenster@2x.png"; path = "assets/images/01infovenster@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,23 +204,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1002AF0F1859C8A500566840 /* filmcameraviewcontroller */ = {
+		1002AF0F1859C8A500566840 /* 02 FilmCameraViewController */ = {
 			isa = PBXGroup;
 			children = (
 				10111A8518589D5100179450 /* record_busy@2x.png */,
 				10111A8618589D5100179450 /* record_idle@2x.png */,
 				10111A8718589D5100179450 /* record_pushme@2x.png */,
 			);
-			name = filmcameraviewcontroller;
+			name = "02 FilmCameraViewController";
 			sourceTree = "<group>";
 		};
-		1002AF101859C8BC00566840 /* hoofdscherm */ = {
+		1002AF101859C8BC00566840 /* 01 Hoofdscherm */ = {
 			isa = PBXGroup;
 			children = (
 				10A1E74F1861975500AC7014 /* 01opdracht_pressed.png */,
 				10A1E7501861975500AC7014 /* 01opdracht.png */,
 				10A1E7511861975500AC7014 /* 01vraagteken_pressed.png */,
 				10A1E7521861975500AC7014 /* 01vraagteken.png */,
+				10D393DB1863253E008C6B7F /* 01infovenster@2x.png */,
 				109925AD185B6E9F00978E1B /* 01filmen_pressed@2x.png */,
 				109925AE185B6E9F00978E1B /* 01filmen@2x.png */,
 				109925AF185B6E9F00978E1B /* 01huisdier_pressed@2x.png */,
@@ -231,20 +234,20 @@
 				109925B6185B6E9F00978E1B /* 01schrikken@2x.png */,
 				102AC141185B52B300333012 /* 01achtergrond@2x.png */,
 			);
-			name = hoofdscherm;
+			name = "01 Hoofdscherm";
 			sourceTree = "<group>";
 		};
-		1002AF111859C8D700566840 /* previewviewcontroller */ = {
+		1002AF111859C8D700566840 /* 03 PreviewViewController */ = {
 			isa = PBXGroup;
 			children = (
 				10A1E757186199F000AC7014 /* 03herbekijk_pressed.png */,
 				10A1E758186199F000AC7014 /* 03herbekijk.png */,
 				1002AF1A1859C93700566840 /* play@2x.png */,
 			);
-			name = previewviewcontroller;
+			name = "03 PreviewViewController";
 			sourceTree = "<group>";
 		};
-		1002AF211859D38500566840 /* verzendviewcontroller */ = {
+		1002AF211859D38500566840 /* 04 VerzendViewController */ = {
 			isa = PBXGroup;
 			children = (
 				1002AF221859D3E500566840 /* 04achtergrond@2x.png */,
@@ -253,10 +256,10 @@
 				1002AF251859D3E500566840 /* 04stuurdoor_pressed@2x.png */,
 				1002AF261859D3E500566840 /* 04stuurdoor@2x.png */,
 			);
-			name = verzendviewcontroller;
+			name = "04 VerzendViewController";
 			sourceTree = "<group>";
 		};
-		1002AF371859E3D400566840 /* loginviewcontroller */ = {
+		1002AF371859E3D400566840 /* 05 LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
 				1002AF2F1859E3D100566840 /* 05achtergrond@2x.png */,
@@ -265,7 +268,7 @@
 				1002AF301859E3D100566840 /* 05loginbutton@2x.png */,
 				1002AF321859E3D100566840 /* 05username@2x.png */,
 			);
-			name = loginviewcontroller;
+			name = "05 LoginViewController";
 			sourceTree = "<group>";
 		};
 		10111A5E18587BF200179450 /* assets */ = {
@@ -289,11 +292,11 @@
 		10111A6018587C0100179450 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				1002AF371859E3D400566840 /* loginviewcontroller */,
-				1002AF211859D38500566840 /* verzendviewcontroller */,
-				1002AF111859C8D700566840 /* previewviewcontroller */,
-				1002AF101859C8BC00566840 /* hoofdscherm */,
-				1002AF0F1859C8A500566840 /* filmcameraviewcontroller */,
+				1002AF101859C8BC00566840 /* 01 Hoofdscherm */,
+				1002AF0F1859C8A500566840 /* 02 FilmCameraViewController */,
+				1002AF111859C8D700566840 /* 03 PreviewViewController */,
+				1002AF211859D38500566840 /* 04 VerzendViewController */,
+				1002AF371859E3D400566840 /* 05 LoginViewController */,
 				10111A921858AFD000179450 /* Default-568h@2x.png */,
 			);
 			name = images;
@@ -549,6 +552,7 @@
 				10111A8818589D5100179450 /* record_busy@2x.png in Resources */,
 				10A1E7551861975500AC7014 /* 01vraagteken_pressed.png in Resources */,
 				109925B8185B6E9F00978E1B /* 01filmen@2x.png in Resources */,
+				10D393DC1863253E008C6B7F /* 01infovenster@2x.png in Resources */,
 				1002AF2B1859D3E500566840 /* 04stuurdoor@2x.png in Resources */,
 				10A1E7561861975500AC7014 /* 01vraagteken.png in Resources */,
 				109925C0185B6E9F00978E1B /* 01schrikken@2x.png in Resources */,

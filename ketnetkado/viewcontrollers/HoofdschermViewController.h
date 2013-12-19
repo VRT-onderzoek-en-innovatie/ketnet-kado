@@ -17,7 +17,7 @@
 	UILabel *lblFilmen;
 	UILabel *lblOpdracht;
 	
-	UIImageView *gordijn;
+	UIView *infoView;
 }
 
 @end
