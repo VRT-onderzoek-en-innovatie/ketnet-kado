@@ -75,6 +75,58 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+- (void)toonBezig {
+    UIView *bezigView = [[UIView alloc] initWithFrame:CGRectMake(0,
+                                                                 0,
+                                                                 self.view.frame.size.width,
+                                                                 self.view.frame.size.height)];
+    [bezigView setBackgroundColor:UIColorFromRGB(0xed145b)];
+    
+    UILabel *bezigLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,
+                                                                    self.view.frame.size.height/2 - 50/2 - 50,
+                                                                    self.view.frame.size.width,
+                                                                    50)];
+    [bezigLabel setText:@"We versturen nu je filmpje..."];
+    [bezigLabel setFont:[UIFont fontWithName:@"Ovink-Black" size:25.0]];
+    [bezigLabel setTextAlignment:NSTextAlignmentCenter];
+    [bezigLabel setTextColor:[UIColor whiteColor]];
+	[bezigView addSubview:bezigLabel];
+	
+	UIActivityIndicatorView *bezigSpinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+	[bezigSpinner setFrame:CGRectMake(self.view.frame.size.width/2 - 100/2,
+									  self.view.frame.size.height/2 - 100/2 + 20,
+									  100,
+									  100)];
+	[bezigView addSubview:bezigSpinner];
+	[bezigSpinner startAnimating];
+    
+    [bezigView setTag:99];
+    [bezigView setAlpha:0];
+    [self.view addSubview:bezigView];
+    [self.view bringSubviewToFront:bezigView];
+    [UIView animateWithDuration:0.25
+                     animations:^{
+                         [bezigView setAlpha:1];
+                     }
+                     completion:^(BOOL finished) {
+                         
+                     }];
+}
+
+- (void)verbergBezig {
+    for (UIView *subView in [self.view subviews]) {
+        if (subView.tag == 99) {
+            [UIView animateWithDuration:0.25
+                             animations:^{
+                                 [subView setAlpha:0];
+                             }
+                             completion:^(BOOL finished) {
+                                 [subView removeFromSuperview];
+                             }];
+        }
+    }
+}
+
 #pragma mark - LoginViewControllerDelegate
 
 - (void)inloggenBeeindigdMetGebruikersGegevens:(NSDictionary*)gebruikersGegevens {
@@ -98,9 +150,14 @@
 
 #pragma mark - TransportManagerDelegate
 
+- (void)transportBegonnenMetStatus:(NSString *)status {
+	[self toonBezig];
+}
+
 - (void)transportBeeindigdMetStatus:(NSString *)status {
 	if ([status isEqualToString:@"ok"]) {
 		NSLog(@"<VerzendViewController> Transport geslaagd! Terug naar begin.");
+		[self verbergBezig];
 		[self.navigationController popToRootViewControllerAnimated:YES];
 	}
 	else {

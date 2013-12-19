@@ -43,6 +43,12 @@ enum {
 
 - (void)writeAsset:(ALAsset*)asset withFilename:(NSString *)repoNaam
 {
+	//Laat eerst de invokerende vc weten dat we gestart zijn
+	if ([self.delegate respondsToSelector:@selector(transportBegonnenMetStatus:)]) {
+		[self.delegate transportBegonnenMetStatus:@""];
+	}
+	
+	//Sla op en vervolg met zending
     ALAssetRepresentation *representation = asset.defaultRepresentation;
 	long long size = representation.size;
     NSMutableData *rawData = [[NSMutableData alloc] initWithCapacity:size];
@@ -51,6 +57,7 @@ enum {
     NSData *assetData = [[NSData alloc] initWithBytes:buffer length:size];
     [assetData writeToFile:[NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), repoNaam] atomically:YES];
 	
+	//Start de zending
 	[self startSend:[NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), repoNaam]];
 }
 

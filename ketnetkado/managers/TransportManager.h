@@ -15,6 +15,7 @@
 @protocol TransportManagerDelegate <NSObject>
 
 @required
+- (void)transportBegonnenMetStatus:(NSString*)status;
 - (void)transportBeeindigdMetStatus:(NSString*)status;
 
 @end

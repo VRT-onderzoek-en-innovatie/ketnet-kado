@@ -140,16 +140,25 @@
                                                                  0,
                                                                  self.view.frame.size.height,
                                                                  self.view.frame.size.width)];
-    [bezigView setBackgroundColor:UIColorFromRGB(0xed145b)];
+    [bezigView setBackgroundColor:UIColorFromRGB(0x3cc0f0)];
     
     UILabel *bezigLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,
-                                                                    self.view.frame.size.width/2 - 50/2,
-                                                                    self.view.frame.size.height,
+                                                                    self.view.frame.size.height/2 - 50/2 - 50,
+                                                                    self.view.frame.size.width,
                                                                     50)];
-    [bezigLabel setText:@"Even wachten..."];
+    [bezigLabel setText:@"We melden je nu aan bij Ketnet..."];
     [bezigLabel setFont:[UIFont fontWithName:@"Ovink-Black" size:25.0]];
     [bezigLabel setTextAlignment:NSTextAlignmentCenter];
     [bezigLabel setTextColor:[UIColor whiteColor]];
+	[bezigView addSubview:bezigLabel];
+	
+	UIActivityIndicatorView *bezigSpinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+	[bezigSpinner setFrame:CGRectMake(self.view.frame.size.width/2 - 100/2,
+									  self.view.frame.size.height/2 - 100/2 + 20,
+									  100,
+									  100)];
+	[bezigView addSubview:bezigSpinner];
+	[bezigSpinner startAnimating];
     
     [bezigView setTag:99];
     [bezigView setAlpha:0];
