@@ -95,13 +95,13 @@
 - (void)setupTextFields {
     txtUsername = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMidY(self.view.bounds) - 348/2,
                                                                 50,
-                                                                280,
+                                                                348,
                                                                 114)];
     [txtUsername setFont:[UIFont fontWithName:@"Ovink-Black" size:20.0]];
     [txtUsername setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05username"]]];
 	[txtUsername setPlaceholder:@"Gebruikersnaam"];
 	[txtUsername setClearsOnBeginEditing:YES];
-	[txtUsername setClearButtonMode:UITextFieldViewModeWhileEditing];
+//	[txtUsername setClearButtonMode:UITextFieldViewModeWhileEditing];
 	[txtUsername setTag:1];
 	[txtUsername setDelegate:self];
 	[txtUsername setReturnKeyType:UIReturnKeyNext];
@@ -115,13 +115,13 @@
     
     txtPassword = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMidY(self.view.bounds) - 348/2,
                                                                 125,
-                                                                260,
+                                                                348,
                                                                 114)];
     [txtPassword setFont:[UIFont fontWithName:@"Ovink-Black" size:20.0]];
     [txtPassword setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"05paswoord"]]];
 	[txtPassword setPlaceholder:@"Wachtwoord"];
 	[txtPassword setClearsOnBeginEditing:YES];
-	[txtPassword setClearButtonMode:UITextFieldViewModeWhileEditing];
+//	[txtPassword setClearButtonMode:UITextFieldViewModeWhileEditing];
     [txtPassword setSecureTextEntry:YES];
 	[txtPassword setTag:2];
 	[txtPassword setDelegate:self];
