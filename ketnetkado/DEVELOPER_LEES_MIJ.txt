@@ -20,6 +20,7 @@ Suggesties:
 - Nog niet geïmplementeerd:
 	- Catch voor de maximumduur van een filmpje
 	- Tijdsaanduiding voor maximumduur van een filmpje
+	- Multitasking support
 	- Gestijlde weergave van de alertview achter de ?-knop
 	- Sessie op ketnet bijhouden en dus niet telkens opnieuw moeten inloggen (LoginManager uitbreiden)
 	- Video's die gemaakt zijn met de standaardcamera kunnen openen en inladen
