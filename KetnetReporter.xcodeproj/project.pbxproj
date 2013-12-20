@@ -77,8 +77,8 @@
 		10D393DF18644A06008C6B7F /* UpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D393DE18644A06008C6B7F /* UpdateManager.m */; };
 		10D393E218646F2B008C6B7F /* 01welkom_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D393E018646F2B008C6B7F /* 01welkom_pressed@2x.png */; };
 		10D393E318646F2B008C6B7F /* 01welkom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D393E118646F2B008C6B7F /* 01welkom@2x.png */; };
-		10D393E618646F5A008C6B7F /* 01herbekijk_rond_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D393E418646F5A008C6B7F /* 01herbekijk_rond_pressed@2x.png */; };
-		10D393E718646F5A008C6B7F /* 01herbekijk_rond@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D393E518646F5A008C6B7F /* 01herbekijk_rond@2x.png */; };
+		10D393E618646F5A008C6B7F /* 03herbekijk_rond_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D393E418646F5A008C6B7F /* 03herbekijk_rond_pressed@2x.png */; };
+		10D393E718646F5A008C6B7F /* 03herbekijk_rond@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D393E518646F5A008C6B7F /* 03herbekijk_rond@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,8 +177,8 @@
 		10D393DE18644A06008C6B7F /* UpdateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdateManager.m; path = managers/UpdateManager.m; sourceTree = "<group>"; };
 		10D393E018646F2B008C6B7F /* 01welkom_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "01welkom_pressed@2x.png"; path = "assets/images/01welkom_pressed@2x.png"; sourceTree = "<group>"; };
 		10D393E118646F2B008C6B7F /* 01welkom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "01welkom@2x.png"; path = "assets/images/01welkom@2x.png"; sourceTree = "<group>"; };
-		10D393E418646F5A008C6B7F /* 01herbekijk_rond_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "01herbekijk_rond_pressed@2x.png"; path = "assets/images/01herbekijk_rond_pressed@2x.png"; sourceTree = "<group>"; };
-		10D393E518646F5A008C6B7F /* 01herbekijk_rond@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "01herbekijk_rond@2x.png"; path = "assets/images/01herbekijk_rond@2x.png"; sourceTree = "<group>"; };
+		10D393E418646F5A008C6B7F /* 03herbekijk_rond_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "03herbekijk_rond_pressed@2x.png"; path = "assets/images/03herbekijk_rond_pressed@2x.png"; sourceTree = "<group>"; };
+		10D393E518646F5A008C6B7F /* 03herbekijk_rond@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "03herbekijk_rond@2x.png"; path = "assets/images/03herbekijk_rond@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,8 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				10A1E757186199F000AC7014 /* 03herbekijk_pressed@2x.png */,
-				10D393E418646F5A008C6B7F /* 01herbekijk_rond_pressed@2x.png */,
-				10D393E518646F5A008C6B7F /* 01herbekijk_rond@2x.png */,
+				10D393E418646F5A008C6B7F /* 03herbekijk_rond_pressed@2x.png */,
+				10D393E518646F5A008C6B7F /* 03herbekijk_rond@2x.png */,
 				10A1E758186199F000AC7014 /* 03herbekijk@2x.png */,
 				1002AF1A1859C93700566840 /* play@2x.png */,
 			);
@@ -547,7 +547,7 @@
 				10111A8A18589D5100179450 /* record_pushme@2x.png in Resources */,
 				1002AF361859E3D100566840 /* 05username@2x.png in Resources */,
 				109925BE185B6E9F00978E1B /* 01interviewstraat@2x.png in Resources */,
-				10D393E618646F5A008C6B7F /* 01herbekijk_rond_pressed@2x.png in Resources */,
+				10D393E618646F5A008C6B7F /* 03herbekijk_rond_pressed@2x.png in Resources */,
 				1002AF331859E3D100566840 /* 05achtergrond@2x.png in Resources */,
 				1002AF411859F26700566840 /* 05loginbutton_pressed@2x.png in Resources */,
 				10111A8018589A3C00179450 /* 02.mov in Resources */,
@@ -568,7 +568,7 @@
 				10D393DC1863253E008C6B7F /* 01infovenster@2x.png in Resources */,
 				1002AF2B1859D3E500566840 /* 04stuurdoor@2x.png in Resources */,
 				10A1E7561861975500AC7014 /* 01vraagteken@2x.png in Resources */,
-				10D393E718646F5A008C6B7F /* 01herbekijk_rond@2x.png in Resources */,
+				10D393E718646F5A008C6B7F /* 03herbekijk_rond@2x.png in Resources */,
 				109925C0185B6E9F00978E1B /* 01schrikken@2x.png in Resources */,
 				1002AF341859E3D100566840 /* 05loginbutton@2x.png in Resources */,
 				109925BF185B6E9F00978E1B /* 01schrikken_pressed@2x.png in Resources */,
