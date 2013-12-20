@@ -204,8 +204,8 @@
     NSDate *day5 = [mmddccyy dateFromString:dag05];
     
     if([day1 compare:today] == NSOrderedAscending) {
-		icoon = [UIImage imageNamed:@"01opdracht"];
-		icoon_ingedrukt = [UIImage imageNamed:@"01opdracht_pressed"];
+		icoon = [UIImage imageNamed:@"01welkom"];
+		icoon_ingedrukt = [UIImage imageNamed:@"01welkom_pressed"];
     }
 	if([day2 compare:today] == NSOrderedAscending) {
         icoon = [UIImage imageNamed:@"01huisdier"];
