@@ -60,6 +60,10 @@
 	
 	//Maak de transportmanager aan
 	transportManager = [[TransportManager alloc] init];
+	
+	//Check voor eventuele update
+	UpdateManager *updater = [[UpdateManager alloc] init];
+	[updater checkForUpdate];
 
     return YES;
 }
@@ -185,6 +189,18 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+#pragma mark - UpdateManager
+
+- (void)heeftUpdateKlaar {
+	UIAlertView *updateMelding = [[UIAlertView alloc] initWithTitle:@"Nieuwe versie!"
+															message:@"Er is een nieuwere versie van de Ketnet Reporter te downloaden. Haal je die even op?"
+														   delegate:self
+												  cancelButtonTitle:@"Zal ik doen!"
+												  otherButtonTitles:nil];
+	[updateMelding show];
+	
 }
 
 @end

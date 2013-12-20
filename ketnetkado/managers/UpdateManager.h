@@ -8,6 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UpdateManager : NSObject
+@class UpdateManager;
+
+@protocol UpdateManagerDelegate <NSObject>
+
+@required
+- (void)heeftUpdateKlaar;
+
+@end
+
+@interface UpdateManager : NSObject <NSURLConnectionDataDelegate> {
+	id<UpdateManagerDelegate>delegate;
+}
+
+@property (nonatomic, retain) id<UpdateManagerDelegate>delegate;
+
+- (void)checkForUpdate;
 
 @end

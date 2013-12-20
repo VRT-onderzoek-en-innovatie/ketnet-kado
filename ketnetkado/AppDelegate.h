@@ -11,8 +11,9 @@
 #import "HoofdschermViewController.h"
 #import "LoginManager.h"
 #import "TransportManager.h"
+#import "UpdateManager.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UpdateManagerDelegate> {
     LoginManager *loginManager;
 	TransportManager *transportManager;
 }
