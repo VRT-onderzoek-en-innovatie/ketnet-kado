@@ -31,10 +31,7 @@
 	NSDictionary *versions = [NSJSONSerialization JSONObjectWithData:data
 															 options:kNilOptions
 															   error:nil];
-	
-	NSLog(@"%f", [[versions objectForKey:@"version"] doubleValue]);
-	NSLog(@"%f", [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] doubleValue]);
-	
+
 	if ([[versions objectForKey:@"version"] doubleValue] > [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] doubleValue]) {
 		NSLog(@"<UpdateManager> Update beschikbaar. Boodschap tonen.");
 		if ([self.delegate respondsToSelector:@selector(heeftUpdateKlaar)]) {
