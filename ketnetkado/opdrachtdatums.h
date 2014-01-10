@@ -9,10 +9,10 @@
 #ifndef ketnetkado_opdrachtdatums_h
 #define ketnetkado_opdrachtdatums_h
 
-#define dag01 @"12/18/2013" //Welkom, introductie
-#define dag02 @"12/21/2013" //Huisdier
-#define dag03 @"12/25/2013" //Idool
-#define dag04 @"12/28/2013" //Schrikken
-#define dag05 @"01/01/2014" //Interview
+#define dag01 @"01/13/2014" //Welkom, introductie
+#define dag02 @"01/14/2014" //Huisdier
+#define dag03 @"01/15/2014" //Idool
+#define dag04 @"01/16/2014" //Schrikken
+#define dag05 @"01/17/2014" //Interview
 
 #endif

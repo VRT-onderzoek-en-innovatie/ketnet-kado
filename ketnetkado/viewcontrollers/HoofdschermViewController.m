@@ -212,7 +212,7 @@
 		icoon_ingedrukt = [UIImage imageNamed:@"01huisdier_pressed"];
     }
 	if([day3 compare:today] == NSOrderedAscending) {
-        icoon = [UIImage imageNamed:@"01sidool"];
+        icoon = [UIImage imageNamed:@"01idool"];
 		icoon_ingedrukt = [UIImage imageNamed:@"01idool_pressed"];
     }
 	if([day4 compare:today] == NSOrderedAscending) {
