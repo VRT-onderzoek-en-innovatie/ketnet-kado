@@ -254,10 +254,10 @@
 		opdrachtTekst = @"Idool";
     }
 	if([day4 compare:today] == NSOrderedAscending) {
-		opdrachtTekst = @"Schrikken";
+		opdrachtTekst = @"Verschieten";
     }
 	if([day5 compare:today] == NSOrderedAscending) {
-		opdrachtTekst = @"Interview";
+		opdrachtTekst = @"Reporter";
     }
 	
 	return opdrachtTekst;
